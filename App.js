@@ -4,7 +4,7 @@ import TextCentral from './src/components/TextCentral';
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
         <TextCentral />
      </SafeAreaView>
   );
