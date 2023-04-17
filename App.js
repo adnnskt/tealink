@@ -31,12 +31,12 @@ function MyTabs() {
 
             if (route.name === 'Home') {
               iconName = focused
-                ? 'ios-information-circle'
-                : 'ios-information-circle-outline';
+                ? 'home'
+                : 'home';
             } else if (route.name === 'Settings') {
-              iconName = focused ? 'ios-list-box' : 'ios-list';
+              iconName = focused ? 'list' : 'list';
             }
-
+  
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
