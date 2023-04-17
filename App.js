@@ -30,11 +30,9 @@ function MyTabs() {
             let iconName;
 
             if (route.name === 'Home') {
-              iconName = focused
-                ? 'home'
-                : 'home';
+              iconName = 'home';
             } else if (route.name === 'Settings') {
-              iconName = focused ? 'list' : 'list';
+              iconName = 'list';
             }
   
             // You can return any component that you like here!
