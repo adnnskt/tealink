@@ -6,17 +6,23 @@ export default props => {
 
     const lado = 50 
     return (
+    <>  
         <View style={style.flex}>
             <View style={style.card}></View>
+            <View style={style.card}></View>
+            <View style={style.card}></View>
         </View>
-         
+
+    </>  
     )
 }
 
 
 const style = StyleSheet.create({
     flex: {
-        flexGrow: 1,
+        //flexGrow: 1,
+        flexDirection: 'row',
+        height: '100%',
         width: '100%',
         justifyContent: "space-between",
         alignItems: 'center',
