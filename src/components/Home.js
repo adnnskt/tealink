@@ -8,6 +8,8 @@ export default props => {
     return (
     <>  
         <View style={style.containner}>
+            <View style={style.topColor}></View>
+
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <View style={style.card}></View>
@@ -37,7 +39,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     boxGroup: {
-        height: '50%',
+        height: '30%',
         width: '100%',
         borderWidth: 3,
         borderColor: 'red',
@@ -53,7 +55,7 @@ const style = StyleSheet.create({
     },
     card: {
         backgroundColor: "#000",
-        height: '20%',
+        height: '80%',
         width: '30%'        
     }
 })
