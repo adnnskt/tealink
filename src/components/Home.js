@@ -1,6 +1,6 @@
 import React from 'react'
-import {Text, View, StyleSheet} from 'react-native'
-
+import {Text, View, StyleSheet, ImageBackground} from 'react-native'
+const backGround = require("../../src/img/background.png") 
 
 export default props => {
 
@@ -8,6 +8,11 @@ export default props => {
     return (
     <>  
         <View style={style.containner}>
+            <ImageBackground 
+                source={backGround} 
+                resizeMode="cover"
+                style={style.image}>
+            
             <View style={style.topColor}></View>
 
             <View style={style.boxGroup}>
@@ -24,6 +29,7 @@ export default props => {
                     <View style={style.card}></View>
                 </View>
             </View>
+        </ImageBackground>    
         </View>
     </>  
     )
@@ -43,7 +49,10 @@ const style = StyleSheet.create({
         width: '100%',
         borderWidth: 3,
         borderColor: 'red',
-
+    },
+    image:{
+        flex: 1,
+        justifyContent: 'center',
     },
     flex: {
         //flexGrow: 1,
