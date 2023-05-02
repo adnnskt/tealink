@@ -8,16 +8,19 @@ export default props => {
     return (
     <>  
         <View style={style.containner}>
-            <View style={style.flex}>
-                <View style={style.card}></View>
-                <View style={style.card}></View>
-                <View style={style.card}></View>
+            <View style={style.boxGroup}>
+                <View style={style.flex}>
+                    <View style={style.card}></View>
+                    <View style={style.card}></View>
+                    <View style={style.card}></View>
+                </View>
             </View>
-
-            <View style={style.flex}>
-                <View style={style.card}></View>
-                <View style={style.card}></View>
-                <View style={style.card}></View>
+            <View style={style.boxGroup}>
+                <View style={style.flex}>
+                    <View style={style.card}></View>
+                    <View style={style.card}></View>
+                    <View style={style.card}></View>
+                </View>
             </View>
         </View>
     </>  
@@ -30,13 +33,20 @@ const style = StyleSheet.create({
         //flexGrow: 1,
         height: '100%',
         width: '100%',
-        justifyContent: 'space-between',
+        //justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    boxGroup: {
+        height: '50%',
+        width: '100%',
+        borderWidth: 3,
+        borderColor: 'red',
+
     },
     flex: {
         //flexGrow: 1,
         flexDirection: 'row',
-        height: '50%',
+        height: '100%',
         width: '100%',
         justifyContent: "space-around",
         alignItems: 'center',
