@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text, View, StyleSheet, ImageBackground} from 'react-native'
+import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 
 export default props => {
@@ -15,9 +16,9 @@ export default props => {
 
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <View style={style.card}></View>
-                    <View style={style.card}></View>
-                    <View style={style.card}></View>
+                    <Card />
+                    <Card />
+                    <Card />
                 </View>
             </View>
             <View style={style.boxGroup}>
