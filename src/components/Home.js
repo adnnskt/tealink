@@ -12,8 +12,6 @@ export default props => {
                 source={backGround} 
                 resizeMode="cover"
                 style={style.image}>
-            
-            <View style={style.topColor}></View>
 
             <View style={style.boxGroup}>
                 <View style={style.flex}>
@@ -47,8 +45,9 @@ const style = StyleSheet.create({
     boxGroup: {
         height: '30%',
         width: '100%',
-        borderWidth: 3,
-        borderColor: 'red',
+        //borderWidth: 3,
+        //borderColor: 'red',
+        backgroundColor: '#e88181',
     },
     image:{
         flex: 1,
@@ -63,8 +62,9 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     card: {
-        backgroundColor: "#000",
+        backgroundColor: "#fdf3f3",
         height: '80%',
-        width: '30%'        
+        width: '30%',        
+        borderRadius: 10,
     }
 })
