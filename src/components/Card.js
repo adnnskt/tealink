@@ -1,17 +1,20 @@
 import React from 'react'
-import {View, Text, StyleSheet, ImageBackground } from 'react-native'
+import {View, Text, StyleSheet, ImageBackground, Image } from 'react-native'
 
 
 export default props =>{
 
 
     return (
-        <ImageBackground 
+      <>  
+        <View style={style.card}>
+            <Image
                 source={props.image} 
                 resizeMode="cover"
                 style={style.image}>
-            <View style={style.card}></View>
-        </ImageBackground>
+            </Image>
+        </View>
+      </>  
     )
 }
 
@@ -24,5 +27,13 @@ const style = StyleSheet.create({
         height: '80%',
         width: '30%',        
         borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+    image:{
+        height:'60%',
+        width: '60%',
+        
     }
 })

@@ -2,8 +2,10 @@ import React from 'react'
 import {Text, View, StyleSheet, ImageBackground} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
-const backGround = require("../../src/img/background.png") 
-const backGround = require("../../src/img/background.png") 
+const hiperfoco = require("../../src/img/hiperfoco.png") 
+const crise = require("../../src/img/crise.png") 
+const introvertido = require("../../src/img/introvertido.png") 
+
 
 
 export default props => {
@@ -19,9 +21,9 @@ export default props => {
 
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card image={crise}/>
+                    <Card image={hiperfoco}/>
+                    <Card image={introvertido}/>
                 </View>
             </View>
             <View style={style.boxGroup}>
