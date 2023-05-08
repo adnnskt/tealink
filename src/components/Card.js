@@ -1,12 +1,17 @@
 import React from 'react'
-import {View, Text, StyleSheet } from 'react-native'
+import {View, Text, StyleSheet, ImageBackground } from 'react-native'
 
 
 export default props =>{
 
 
     return (
-        <View style={style.card}></View>
+        <ImageBackground 
+                source={props.image} 
+                resizeMode="cover"
+                style={style.image}>
+            <View style={style.card}></View>
+        </ImageBackground>
     )
 }
 

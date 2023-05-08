@@ -2,6 +2,9 @@ import React from 'react'
 import {Text, View, StyleSheet, ImageBackground} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
+const backGround = require("../../src/img/background.png") 
+const backGround = require("../../src/img/background.png") 
+
 
 export default props => {
 
