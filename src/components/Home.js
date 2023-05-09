@@ -21,9 +21,9 @@ export default props => {
 
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card image={crise}/>
-                    <Card image={hiperfoco}/>
-                    <Card image={introvertido}/>
+                    <Card image={crise} text='Crise'/>
+                    <Card image={hiperfoco} text='Hiperfoco'/>
+                    <Card image={introvertido} text='Introvertido'/>
                 </View>
             </View>
             <View style={style.boxGroup}>

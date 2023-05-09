@@ -13,6 +13,7 @@ export default props =>{
                 resizeMode="cover"
                 style={style.image}>
             </Image>
+            <Text>{props.text}</Text>
         </View>
       </>  
     )
