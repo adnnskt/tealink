@@ -13,7 +13,7 @@ export default props =>{
                 resizeMode="cover"
                 style={style.image}>
             </Image>
-            <Text>{props.text}</Text>
+            <Text style={style.text}>{props.text}</Text>
         </View>
       </>  
     )
@@ -30,11 +30,17 @@ const style = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-
+        shadowColor: 'black',
     },
     image:{
         height:'60%',
         width: '60%',
         
+    },
+    text:{
+        paddingTop: '4%',
+        fontFamily: 'constructa-regular',
+        fontSize: 15, 
+        color: '#742828',
     }
 })
