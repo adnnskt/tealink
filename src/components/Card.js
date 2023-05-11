@@ -30,7 +30,9 @@ const style = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        shadowColor: 'black',
+        elevation: 10,
+        //boxShadow: '2%', 
+        //shadowColor: 'black',
     },
     image:{
         height:'60%',
@@ -39,7 +41,7 @@ const style = StyleSheet.create({
     },
     text:{
         paddingTop: '4%',
-        fontFamily: 'constructa-regular',
+        //fontFamily: 'constructa-regular',
         fontSize: 15, 
         color: '#742828',
     }
