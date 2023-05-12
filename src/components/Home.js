@@ -54,6 +54,7 @@ const style = StyleSheet.create({
         //borderWidth: 3,
         //borderColor: 'red',
         backgroundColor: '#e88181',
+        elevation: 5,
     },
     image:{
         flex: 1,
