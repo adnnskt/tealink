@@ -12,7 +12,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function DetailsScreen() {
+function CalendarScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
@@ -31,8 +31,8 @@ function MyTabs() {
 
             if (route.name === 'Home') {
               iconName = 'home';
-            } else if (route.name === 'Settings') {
-              iconName = 'list';
+            } else if (route.name === 'Calendario') {
+              iconName = 'calendar';
             }
   
             // You can return any component that you like here!
@@ -43,7 +43,7 @@ function MyTabs() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={DetailsScreen} />
+        <Tab.Screen name="Calendario" component={CalendarScreen} />
       </Tab.Navigator>
   );
 }
