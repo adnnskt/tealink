@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Home from './src/components/Home'
+import Calendar from './src/components/Calendar'
 
 
 function HomeScreen({ navigation }) {
@@ -14,9 +15,9 @@ function HomeScreen({ navigation }) {
 
 function CalendarScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
+    
+    <Calendar />
+    
   );
 }
 
