@@ -18,10 +18,25 @@ export default props => {
           }}
           
           renderItem={(item, firstItemInDay) => {
-            return <Text>teste</Text>;
+            return (
+                <View style = {style.event}>
+                    <Text>{item.name}</Text>
+                </View>
+            )
           }}
-
+          
         />
     )
 }
 
+const style = StyleSheet.create({
+    event:{
+        //backgroundColor: 'white',
+        flex: 1,
+        borderRadius: 5,
+        padding: 10,
+        marginRight: 10,
+        marginTop: '12%',
+    },
+
+})
