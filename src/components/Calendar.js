@@ -9,7 +9,16 @@ export default props => {
 
 
     return (
-        <Agenda />
+        <Agenda 
+        
+        items={{
+            '2023-05-22': [{name: 'item 1 - any js object'}],
+            '2023-05-23': [{name: 'item 2 - any js object', height: 80}],
+            '2023-05-25': [{name: 'item 3 - any js object'}, {name: 'any js object'}]
+          }}
+          
+
+        />
     )
 }
 
