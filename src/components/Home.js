@@ -5,6 +5,7 @@ const backGround = require("../../src/img/background.png")
 const hiperfoco = require("../../src/img/hiperfoco.png") 
 const crise = require("../../src/img/crise.png") 
 const introvertido = require("../../src/img/introvertido.png") 
+const terapia = require("../../src/img/terapia.png") 
 
 
 
@@ -28,7 +29,7 @@ export default props => {
             </View>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <View style={style.card}></View>
+                    <Card image={terapia} text='Terapia'/>
                     <View style={style.card}></View>
                     <View style={style.card}></View>
                 </View>
