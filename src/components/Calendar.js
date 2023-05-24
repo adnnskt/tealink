@@ -12,9 +12,9 @@ export default props => {
         <Agenda 
         
         items={{
-            '2023-05-22': [{name: 'item 1 - any js object'}],
-            '2023-05-23': [{name: 'item 2 - any js object'}],
-            '2023-05-25': [{name: 'item 3 - any js object'}]
+            '2023-05-22': [{name: 'Consulta neuro'}],
+            '2023-05-23': [{name: 'Agenda T.O'}],
+            '2023-05-25': [{name: 'Agenda Fono'}]
           }}
           
           renderItem={(item, firstItemInDay) => {
@@ -23,6 +23,10 @@ export default props => {
                     <Text>{item.name}</Text>
                 </View>
             )
+          }}
+
+          onDayPress={day => {
+            '';
           }}
           
         />

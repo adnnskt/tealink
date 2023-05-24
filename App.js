@@ -32,7 +32,7 @@ function MyTabs() {
 
             if (route.name === 'Home') {
               iconName = 'home';
-            } else if (route.name === 'Calendario') {
+            } else if (route.name === 'Calendário') {
               iconName = 'calendar';
             }
   
@@ -44,7 +44,7 @@ function MyTabs() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Calendario" component={CalendarScreen} />
+        <Tab.Screen name="Calendário" component={CalendarScreen} />
       </Tab.Navigator>
   );
 }
