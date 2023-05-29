@@ -6,6 +6,8 @@ const hiperfoco = require("../../src/img/hiperfoco.png")
 const crise = require("../../src/img/crise.png") 
 const introvertido = require("../../src/img/introvertido.png") 
 const terapia = require("../../src/img/terapia.png") 
+const desfralde = require("../../src/img/desfralde.png") 
+const remedio = require("../../src/img/remedio.png") 
 
 
 
@@ -24,14 +26,14 @@ export default props => {
                 <View style={style.flex}>
                     <Card image={crise} text='Crise'/>
                     <Card image={hiperfoco} text='Hiperfoco'/>
-                    <Card image={introvertido} text='Introvertido'/>
+                    <Card image={remedio} text='Introvertido'/>
                 </View>
             </View>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <Card image={terapia} text='Terapia'/>
-                    <View style={style.card}></View>
-                    <View style={style.card}></View>
+                    <Card image={desfralde} text='Desfralde'/>
+                    <Card image={desfralde} text='Medicação'/>
                 </View>
             </View>
         </ImageBackground>    
