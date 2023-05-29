@@ -24,6 +24,11 @@ export default props => {
           onDayPress={day => {
             '';
           }}
+
+          renderEmptyData={() => {
+            return console.warn('noting here');
+          }}
+
           
         />
     )
