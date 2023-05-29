@@ -26,14 +26,14 @@ export default props => {
                 <View style={style.flex}>
                     <Card image={crise} text='Crise'/>
                     <Card image={hiperfoco} text='Hiperfoco'/>
-                    <Card image={remedio} text='Introvertido'/>
+                    <Card image={introvertido} text='Introvertido'/>
                 </View>
             </View>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <Card image={terapia} text='Terapia'/>
                     <Card image={desfralde} text='Desfralde'/>
-                    <Card image={desfralde} text='Medicação'/>
+                    <Card image={remedio} text='Medicação'/>
                 </View>
             </View>
         </ImageBackground>    
@@ -56,7 +56,7 @@ const style = StyleSheet.create({
         width: '100%',
         //borderWidth: 3,
         //borderColor: 'red',
-        backgroundColor: '#e88181',
+        backgroundColor: '#fff',
         elevation: 5,
     },
     image:{
