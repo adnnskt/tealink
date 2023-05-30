@@ -1,10 +1,19 @@
 import React from "react";
-import { NativeBaseProvider, Box } from "native-base";
+import { NativeBaseProvider, Text, Box } from "native-base";
 
-export default function App() {
+export default props => {
   return (
     <NativeBaseProvider>
-      <Box>Hello world</Box>
+      <Box 
+            //flex={1} 
+            bg="#000" 
+            alignItems="center" 
+            justifyContent="center"
+            width='50%'
+            height='30%'
+            >
+        <Text>Open up App.js to start working on your app!</Text>
+      </Box>
     </NativeBaseProvider>
   );
 }

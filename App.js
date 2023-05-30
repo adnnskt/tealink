@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
+import Fup from './src/components/Fup'
 
 
 function HomeScreen({ navigation }) {
@@ -24,7 +25,7 @@ function CalendarScreen() {
 function FupScreen() {
   return (
     
-    <Calendar />
+    <Fup />
     
   );
 }
