@@ -21,6 +21,16 @@ function CalendarScreen() {
   );
 }
 
+function FupScreen() {
+  return (
+    
+    <Calendar />
+    
+  );
+}
+
+
+
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
@@ -34,6 +44,8 @@ function MyTabs() {
               iconName = 'home';
             } else if (route.name === 'Calendário') {
               iconName = 'calendar';
+            } else if (route.name === 'Acompanhamento') {
+              iconName = 'bar-chart';
             }
   
             // You can return any component that you like here!
@@ -45,6 +57,8 @@ function MyTabs() {
       >
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Calendário" component={CalendarScreen} />
+        <Tab.Screen name="Acompanhamento" component={FupScreen} />
+        
       </Tab.Navigator>
   );
 }
