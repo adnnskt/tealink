@@ -1,19 +1,37 @@
 import React from "react";
-import { NativeBaseProvider, Text, Box } from "native-base";
+import { NativeBaseProvider, Text, Box, Center } from "native-base";
+
+const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
+    const Component = () => {
+        return <Box bg={{
+          linearGradient: {
+            colors: ['danger.200', 'danger.500'],
+            start: [0, 0],
+            end: [1, 0]
+          }
+        }} p="12" rounded="xl" _text={{
+          fontSize: 'md',
+          fontWeight: 'medium',
+          color: 'warmGray.50',
+          textAlign: 'center'
+        }}>
+            This is a Box with Linear Gradient
+          </Box>;
+      };
+      
+      const config = {
+        dependencies: {
+          'linear-gradient': LinearGradient
+        }
+      }
+
   return (
-    <NativeBaseProvider>
-      <Box 
-            //flex={1} 
-            bg="#000" 
-            alignItems="center" 
-            justifyContent="center"
-            width='50%'
-            height='30%'
-            >
-        <Text>Open up App.js to start working on your app!</Text>
-      </Box>
+    <NativeBaseProvider config={config}>
+      <Center flex={1} px="3">
+        <Component />
+      </Center>
     </NativeBaseProvider>
   );
 }
