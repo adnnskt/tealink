@@ -14,28 +14,30 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
     const Component = () => {
-        return <Box bg={{
-          linearGradient: {
-            colors: ['danger.200', 'danger.500'],
-            start: [0, 0],
-            end: [1, 0]
-          }
-        }} p="12" rounded="xl" _text={{
-          fontSize: 'md',
-          fontWeight: 'medium',
-          color: 'warmGray.50',
-          textAlign: 'center'
-        }}>
-            This is a Box with Linear Gradient
-          </Box>;
-      };
+        return <>  
+            <View style={style.boxGroup}>
+                <View style={style.flex}>
+                    <Card image={crise} text='Crise'/>
+                    <Card image={hiperfoco} text='Hiperfoco'/>
+                    <Card image={introvertido} text='Introvertido'/>
+                </View>
+            </View>
+            <View style={style.boxGroup}>
+                <View style={style.flex}>
+                    <Card image={terapia} text='Terapia'/>
+                    <Card image={desfralde} text='Desfralde'/>
+                    <Card image={remedio} text='Medicação'/>
+                </View>
+            </View>
+    </>  
+}
       
       const config = {
         dependencies: {
           'linear-gradient': LinearGradient
         }
       }
-
+    
   return (
     <NativeBaseProvider config={config}>
       <Center flex={1} bg={{
@@ -50,3 +52,31 @@ export default props => {
     </NativeBaseProvider>
   );
 }
+
+
+
+const style = StyleSheet.create({
+   
+    boxGroup: {
+        height: '30%',
+        width: '100%',
+        //borderWidth: 3,
+        //borderColor: 'red',
+        backgroundColor: '#fff',
+        elevation: 5,
+    },
+    flex: {
+        //flexGrow: 1,
+        flexDirection: 'row',
+        height: '100%',
+        width: '100%',
+        justifyContent: "space-around",
+        alignItems: 'center',
+    },
+    card: {
+        backgroundColor: "#fdf3f3",
+        height: '80%',
+        width: '30%',        
+        borderRadius: 10,
+    }
+})
