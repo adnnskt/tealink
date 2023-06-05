@@ -42,7 +42,7 @@ export default props => {
     <NativeBaseProvider config={config}>
       <Center flex={1} bg={{
           linearGradient: {
-            colors: ['danger.200', 'danger.500'],
+            colors: ['rose.100', 'rose.400', 'rose.500'],
             start: [0, 0],
             end: [1.2, 0]
           }
