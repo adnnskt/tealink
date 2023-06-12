@@ -1,21 +1,21 @@
 import React from 'react'
-import {View, Text, StyleSheet, ImageBackground, Image } from 'react-native'
+import {View, Text, StyleSheet, ImageBackground, Image, TouchableHighlight } from 'react-native'
 
 
 export default props =>{
 
 
     return (
-      <>  
-        <View style={style.card}>
-            <Image
-                source={props.image} 
-                resizeMode="cover"
-                style={style.image}>
-            </Image>
-            <Text style={style.text}>{props.text}</Text>
-        </View>
-      </>  
+        <>    
+            <View style={style.card}>
+                <Image
+                    source={props.image} 
+                    resizeMode="cover"
+                    style={style.image}>
+                </Image>
+                <Text style={style.text}>{props.text}</Text>
+            </View>
+        </>  
     )
 }
 
@@ -44,5 +44,8 @@ const style = StyleSheet.create({
         //fontFamily: 'constructa-regular',
         fontSize: 15, 
         color: '#742828',
+    },
+    press:{
+        width: '50%',
     }
 })

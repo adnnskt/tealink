@@ -1,5 +1,5 @@
 import React from "react";
-import { NativeBaseProvider, Text, Box, Center } from "native-base";
+import { NativeBaseProvider, Text, Box, Center, TouchableHighlight } from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
@@ -13,11 +13,13 @@ const remedio = require("../../src/img/remedio.png")
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
-    const Component = () => {
-        return <>  
+        return (  
+        <>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card image={crise} text='Crise'/>
+                    <TouchableHighlight onPress = {console.warn('teste')}>
+                      <Card image={crise} text='Crise'/>
+                    </TouchableHighlight>
                     <Card image={hiperfoco} text='Hiperfoco'/>
                     <Card image={introvertido} text='Introvertido'/>
                 </View>
@@ -29,32 +31,10 @@ export default props => {
                     <Card image={remedio} text='Medicação'/>
                 </View>
             </View>
-    </>  
+        </>  
+    )
 }
       
-      const config = {
-        dependencies: {
-          'linear-gradient': LinearGradient
-        }
-      }
-    
-  return (
-    <NativeBaseProvider config={config}>
-      <Center flex={1} bg={{
-          linearGradient: {
-            colors: ['rose.100', 'rose.400', 'rose.500'],
-            start: [0, 0],
-            end: [1.2, 0]
-          }
-        }}>
-        <Component />
-      </Center>
-    </NativeBaseProvider>
-  );
-}
-
-
-
 const style = StyleSheet.create({
    
     boxGroup: {

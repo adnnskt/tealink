@@ -1,7 +1,7 @@
 
 import React from "react";
-import { NativeBaseProvider, Text, Box, Center } from "native-base";
-import {View, StyleSheet, ImageBackground} from 'react-native'
+import { NativeBaseProvider, Text, Box, Center, Pressable } from "native-base";
+import {View, StyleSheet, ImageBackground, TouchableHighlight} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 const hiperfoco = require("../../src/img/hiperfoco.png") 
@@ -78,6 +78,11 @@ const style = StyleSheet.create({
         backgroundColor: "#fdf3f3",
         height: '80%',
         width: '30%',        
+        borderRadius: 10,
+    },
+    press: {
+        width: '30%',
+        height: '80%',    
         borderRadius: 10,
     }
 })

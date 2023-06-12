@@ -6,12 +6,20 @@ import { Ionicons } from '@expo/vector-icons';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
 import Fup from './src/components/Fup'
+import Content from './src/views/Content'
+
 
 
 function HomeScreen({ navigation }) {
   return (
-    <Home />
+    <Home navigation = {navigation}/>
   );
+}
+
+function ContentView(){
+  return(
+    <Content />
+  )
 }
 
 function CalendarScreen() {
