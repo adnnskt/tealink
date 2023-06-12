@@ -18,16 +18,30 @@ export default props => {
         return <>  
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card image={crise} text='Crise'/>
-                    <Card image={hiperfoco} text='Hiperfoco'/>
-                    <Card image={introvertido} text='Introvertido'/>
+                    <TouchableHighlight style= {style.card} onPress = {()=> console.warn('teste')}>
+                        <Card image={crise} text='Crise'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={hiperfoco} text='Hiperfoco'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={introvertido} text='Introvertido'/>
+                    </TouchableHighlight>
                 </View>
+
             </View>
+            
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card image={terapia} text='Terapia'/>
-                    <Card image={desfralde} text='Desfralde'/>
-                    <Card image={remedio} text='Medicação'/>
+                    <TouchableHighlight style= {style.card} onPress = {null}>   
+                        <Card image={terapia} text='Terapia'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={desfralde} text='Desfralde'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={remedio} text='Medicação'/>
+                    </TouchableHighlight>
                 </View>
             </View>
     </>  
@@ -75,10 +89,15 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     card: {
-        backgroundColor: "#fdf3f3",
-        height: '80%',
-        width: '30%',        
-        borderRadius: 10,
+      //backgroundColor: "#fdf3f3",
+      height: '80%',
+      width: '30%',        
+      borderRadius: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      elevation: 10,
+      //boxShadow: '2%', 
+      //shadowColor: 'black',
     },
     press: {
         width: '30%',

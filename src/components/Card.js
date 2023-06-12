@@ -25,8 +25,8 @@ export default props =>{
 const style = StyleSheet.create({
     card: {
         backgroundColor: "#fdf3f3",
-        height: '80%',
-        width: '30%',        
+        height: '100%',
+        width: '100%',        
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',

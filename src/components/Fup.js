@@ -14,39 +14,34 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
 
-    function CardType(props: MyComponentProps){
-        return (
-            <>    
-            <View {...props} style={style.card}>
-                <Image
-                    source={props.image} 
-                    resizeMode="cover"
-                    style={style.image}>
-                </Image>
-                <Text style={style.text}>{props.text}</Text>
-            </View>
-            </>
-        )
-    }
-
         return (  
         <>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <TouchableHighlight onPress = {null}>
-                        <CardType image={terapia} text='Terapia'/>
+                    <TouchableHighlight style= {style.card} onPress = {()=> console.warn('teste')}>
+                        <Card image={crise} text='Crise'/>
                     </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
                         <Card image={hiperfoco} text='Hiperfoco'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
                         <Card image={introvertido} text='Introvertido'/>
-                   
+                    </TouchableHighlight>
                 </View>
+
             </View>
             
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <Card image={terapia} text='Terapia'/>
-                    <Card image={desfralde} text='Desfralde'/>
-                    <Card image={remedio} text='Medicação'/>
+                    <TouchableHighlight style= {style.card} onPress = {null}>   
+                        <Card image={terapia} text='Terapia'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={desfralde} text='Desfralde'/>
+                    </TouchableHighlight>
+                    <TouchableHighlight style= {style.card} onPress = {null}>
+                        <Card image={remedio} text='Medicação'/>
+                    </TouchableHighlight>
                 </View>
             </View>
 
@@ -73,7 +68,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     card: {
-        backgroundColor: "#fdf3f3",
+        //backgroundColor: "#fdf3f3",
         height: '80%',
         width: '30%',        
         borderRadius: 10,
