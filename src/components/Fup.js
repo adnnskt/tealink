@@ -1,6 +1,6 @@
 import React from "react";
-import { NativeBaseProvider, Text, Box, Center, TouchableHighlight } from "native-base";
-import {View, StyleSheet, ImageBackground} from 'react-native'
+//import { NativeBaseProvider, Text, Box, Center } from "native-base";
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 const hiperfoco = require("../../src/img/hiperfoco.png") 
@@ -13,17 +13,35 @@ const remedio = require("../../src/img/remedio.png")
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
+
+    function CardType(props: MyComponentProps){
+        return (
+            <>    
+            <View {...props} style={style.card}>
+                <Image
+                    source={props.image} 
+                    resizeMode="cover"
+                    style={style.image}>
+                </Image>
+                <Text style={style.text}>{props.text}</Text>
+            </View>
+            </>
+        )
+    }
+
         return (  
         <>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <TouchableHighlight onPress = {console.warn('teste')}>
-                      <Card image={crise} text='Crise'/>
+                    <TouchableHighlight onPress = {null}>
+                        <CardType image={terapia} text='Terapia'/>
                     </TouchableHighlight>
-                    <Card image={hiperfoco} text='Hiperfoco'/>
-                    <Card image={introvertido} text='Introvertido'/>
+                        <Card image={hiperfoco} text='Hiperfoco'/>
+                        <Card image={introvertido} text='Introvertido'/>
+                   
                 </View>
             </View>
+            
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <Card image={terapia} text='Terapia'/>
@@ -31,6 +49,7 @@ export default props => {
                     <Card image={remedio} text='Medicação'/>
                 </View>
             </View>
+
         </>  
     )
 }
@@ -58,5 +77,14 @@ const style = StyleSheet.create({
         height: '80%',
         width: '30%',        
         borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 10,
+        //boxShadow: '2%', 
+        //shadowColor: 'black',
+    },
+    image:{
+        height:'60%',
+        width: '100%',
     }
 })
