@@ -18,13 +18,6 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 export default props => {
     const Component = () => {
         return <>  
-          <View style = {style.logo}>
-            <Image
-              source={logo} 
-              resizeMode="cover"
-              style={style.image}>    
-          </Image>
-          </View>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <TouchableHighlight style= {style.card} onPress = {()=> console.warn('teste')}>
@@ -64,9 +57,16 @@ export default props => {
     
   return (
     <NativeBaseProvider config={config}>
-      <Center flex={1} bg={{
+      <View style = {style.logo}>
+            <Image
+              source={logo} 
+              resizeMode="cover"
+              style={style.image}>    
+            </Image>
+      </View>
+      <Center /*flex={1}*/ bg={{
           linearGradient: {
-            colors: ['rose.100', 'rose.400', 'rose.500'],
+            colors: ['white', 'lightText'],
             start: [0, 0],
             end: [1.2, 0]
           }
@@ -82,7 +82,7 @@ export default props => {
 const style = StyleSheet.create({
    
     boxGroup: {
-        height: '30%',
+        height: '40%',
         width: '100%',
         //borderWidth: 3,
         //borderColor: 'red',
@@ -108,17 +108,18 @@ const style = StyleSheet.create({
       //boxShadow: '2%', 
       //shadowColor: 'black',
     },
-    press: {
-        width: '30%',
-        height: '80%',    
-        borderRadius: 10,
-    },
     image: {
-      height:'100%',
-      width: '100%',
+      height:'88%',
+      width: '68%',
     },
     logo: {
-      height:'15%',
-      width: '80%',
+      height:'20%',
+      width: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor:'#fff',
+      paddingTop: '5%',
+      //borderWidth: '3',
+      //borderColor: 'blue',
     }
 })

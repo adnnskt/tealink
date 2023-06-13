@@ -26,7 +26,7 @@ export default props => {
           }}
 
           renderEmptyData={() => {
-            return console.warn('noting here');
+            return console.warn('nothing here');
           }}          
         />
     )
