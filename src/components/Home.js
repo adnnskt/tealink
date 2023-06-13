@@ -1,7 +1,7 @@
 
 import React from "react";
 import { NativeBaseProvider, Text, Box, Center, Pressable } from "native-base";
-import {View, StyleSheet, ImageBackground, TouchableHighlight} from 'react-native'
+import {View, Image, StyleSheet, ImageBackground, TouchableHighlight} from 'react-native'
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 const hiperfoco = require("../../src/img/hiperfoco.png") 
@@ -10,12 +10,21 @@ const introvertido = require("../../src/img/introvertido.png")
 const terapia = require("../../src/img/terapia.png") 
 const desfralde = require("../../src/img/desfralde.png") 
 const remedio = require("../../src/img/remedio.png") 
+const logo = require("../../src/img/logo.png") 
+
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
     const Component = () => {
         return <>  
+          <View style = {style.logo}>
+            <Image
+              source={logo} 
+              resizeMode="cover"
+              style={style.image}>    
+          </Image>
+          </View>
             <View style={style.boxGroup}>
                 <View style={style.flex}>
                     <TouchableHighlight style= {style.card} onPress = {()=> console.warn('teste')}>
@@ -103,5 +112,13 @@ const style = StyleSheet.create({
         width: '30%',
         height: '80%',    
         borderRadius: 10,
+    },
+    image: {
+      height:'100%',
+      width: '100%',
+    },
+    logo: {
+      height:'15%',
+      width: '80%',
     }
 })
