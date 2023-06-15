@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { Ionicons } from '@expo/vector-icons';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
@@ -72,13 +74,15 @@ function MyTabs() {
   );
 }
 
-
+const Stack = createNativeStackNavigator();
 
 function App() {
   return (
+  <>
     <NavigationContainer>
       <MyTabs />
     </NavigationContainer>
+  </>
   );
 }
 
