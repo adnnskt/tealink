@@ -43,6 +43,8 @@ function FupScreen() {
 
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
 
 function MyTabs() {
   return (
@@ -69,12 +71,10 @@ function MyTabs() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Calendário" component={CalendarScreen} />
         <Tab.Screen name="Acompanhamento" component={FupScreen} />
-        
       </Tab.Navigator>
   );
 }
 
-const Stack = createNativeStackNavigator();
 
 function App() {
   return (

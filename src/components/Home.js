@@ -20,7 +20,7 @@ export default props => {
         return <>  
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <TouchableHighlight style= {style.card} onPress = {()=> console.warn('teste')}>
+                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Content')}>
                         <Card image={crise} text='Crise'/>
                     </TouchableHighlight>
                     <TouchableHighlight style= {style.card} onPress = {null}>
