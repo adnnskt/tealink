@@ -80,7 +80,15 @@ function App() {
   return (
   <>
     <NavigationContainer>
-      <MyTabs />
+    <Stack.Navigator>
+        <Stack.Screen
+          name="menuTabe"
+          component={MyTabs}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen name="Content" component={ContentView} />
+    </Stack.Navigator>
     </NavigationContainer>
   </>
   );
