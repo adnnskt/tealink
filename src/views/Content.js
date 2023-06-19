@@ -1,41 +1,18 @@
 import React from "react";
-import { NativeBaseProvider, Text, Box, Center } from "native-base";
-import {View, StyleSheet, ImageBackground} from 'react-native'
+import { NativeBaseProvider, Box, Center } from "native-base";
+import {View, StyleSheet, ImageBackground, Text} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
-    const Component = () => {
         return <>  
-            <View style={style.boxGroup}>
+            <View>
               <Text>Teste</Text>
             </View>
     </>  
 }
       
-      const config = {
-        dependencies: {
-          'linear-gradient': LinearGradient
-        }
-      }
-    
-  return (
-    <NativeBaseProvider config={config}>
-      <Center flex={1} bg={{
-          linearGradient: {
-            colors: ['rose.100'],
-            start: [0, 0],
-            end: [1.2, 0]
-          }
-        }}>
-        <Component />
-      </Center>
-    </NativeBaseProvider>
-  );
-}
-
-
-
+ 
 const style = StyleSheet.create({
    
     boxGroup: {
