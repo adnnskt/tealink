@@ -5,11 +5,25 @@ import {View, StyleSheet, ImageBackground, Text} from 'react-native'
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
-        return <>  
-            <View>
-              <Text>Teste</Text>
-            </View>
-    </>  
+
+  const config = {
+    dependencies: {
+      'linear-gradient': LinearGradient
+    }
+  }
+
+  return (
+    <NativeBaseProvider config={config}>
+      <Center flex={1} bg={{
+          linearGradient: {
+            colors: ['primary.100', 'primary.500'],
+            start: [0, 0.2],
+            end: [1.2, 1]
+          }
+        }}>
+      </Center>
+    </NativeBaseProvider>
+  )
 }
       
  
