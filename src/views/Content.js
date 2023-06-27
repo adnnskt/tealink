@@ -11,12 +11,19 @@ export default props => {
     
     return <Box flex={1} bg={{
       linearGradient: {
-        colors: ['primary.50', 'primary.200'],
+        colors: ['primary.200', 'violet.600'],
         start: [0, 0.2],
         end: [1.2, 1]
       }
     }}>
-      BOX teste
+        <Box 
+          bg="primary.500"
+          width="50%"
+          height="10%"
+          borderRightRadius="60"
+          shadow="5"
+        >BOX teste</Box>
+      
     </Box>
   }
 
