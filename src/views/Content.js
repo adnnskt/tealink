@@ -6,6 +6,22 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
 
+
+  const Content = () => {
+    
+    return <Box flex={1} bg={{
+      linearGradient: {
+        colors: ['primary.50', 'primary.200'],
+        start: [0, 0.2],
+        end: [1.2, 1]
+      }
+    }}>
+      BOX teste
+    </Box>
+  }
+
+
+
   const config = {
     dependencies: {
       'linear-gradient': LinearGradient
@@ -14,14 +30,8 @@ export default props => {
 
   return (
     <NativeBaseProvider config={config}>
-      <Center flex={1} bg={{
-          linearGradient: {
-            colors: ['primary.50', 'primary.200'],
-            start: [0, 0.2],
-            end: [1.2, 1]
-          }
-        }}>
-      </Center>
+      <Content>
+      </Content>   
     </NativeBaseProvider>
   )
 }
