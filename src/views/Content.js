@@ -47,12 +47,27 @@ export default props => {
         height="75%"
       >
         <Box
-          bg="purple.900"
+          bg="purple.700"
           width="100%"
           height="100%"
           borderRightRadius="40"
+          shadow="3"
         >
-          
+          <Text
+            paddingLeft="1%"
+            fontSize="xs"
+            color="white"
+          >
+              Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
+              ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
+              ou cognitivas que são mais pronunciadas em pessoas com autismo. Durante uma crise, 
+              a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
+              É importante entender que essas crises não são birras, mas sim respostas a desafios 
+              enfrentados na percepção e processamento de informações do ambiente. 
+              Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
+              pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
+          </Text>
+
         </Box>         
       </Box>
 
