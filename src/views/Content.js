@@ -16,14 +16,29 @@ export default props => {
         end: [1.2, 1]
       }
     }}>
+      <Box
+        paddingTop="3%"
+        height="10%"
+        width="50%"
+      >
         <Box 
           bg="primary.500"
-          width="50%"
-          height="10%"
+          width="100%"
+          height="100%"
           borderRightRadius="60"
-          shadow="5"
-        >BOX teste</Box>
-      
+          shadow="3"
+          justifyContent="center"
+          
+        >
+          <Text
+            paddingLeft="3%"
+
+          >
+             Crise 
+          </Text>
+        </Box>
+      </Box>
+
     </Box>
   }
 
