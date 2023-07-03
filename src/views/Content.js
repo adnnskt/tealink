@@ -1,6 +1,6 @@
 import React from "react";
-import { NativeBaseProvider, Box, Center } from "native-base";
-import {View, StyleSheet, ImageBackground, Text} from 'react-native'
+import { NativeBaseProvider, Box, Center, Text} from "native-base";
+import {View, StyleSheet, ImageBackground} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
@@ -32,11 +32,28 @@ export default props => {
         >
           <Text
             paddingLeft="3%"
-
+            fontSize="xl"
+            color="white"
           >
              Crise 
           </Text>
         </Box>
+
+      </Box>
+ 
+      <Box
+        paddingTop="3%"
+        width="80%"
+        height="75%"
+      >
+        <Box
+          bg="purple.900"
+          width="100%"
+          height="100%"
+          borderRightRadius="40"
+        >
+          
+        </Box>         
       </Box>
 
     </Box>
