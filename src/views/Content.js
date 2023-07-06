@@ -53,6 +53,20 @@ export default props => {
           borderRightRadius="40"
           shadow="3"
         >
+          <Box
+            width="100%"
+            borderBottomWidth= "1"
+            borderColor="grey"
+          >
+            <Text
+              width="100%"
+              fontSize="xl"
+              padding="2%"
+              color="white"              
+            >
+              Resumo
+            </Text>
+          </Box>
           <Text
             paddingLeft="1%"
             fontSize="xs"
