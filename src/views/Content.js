@@ -69,6 +69,7 @@ export default props => {
           </Box>
           <Text
             paddingLeft="1%"
+            paddingTop="3%"
             fontSize="xs"
             color="white"
           >
