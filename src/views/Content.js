@@ -68,8 +68,7 @@ export default props => {
             </Text>
           </Box>
               <ScrollView
-                width="80%"
-                height="10%"
+                width="80%" height="30%"
               >
                 
                 <Text
@@ -87,10 +86,26 @@ export default props => {
                     Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
                     pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
                 </Text>
-              </ScrollView>
-        </Box>         
-      </Box>
 
+              </ScrollView>              
+        </Box>         
+      
+      </Box>
+      <Box
+        paddingTop="3%"
+        width="100%"
+        height="10%"
+      >
+        <Box
+            borderTopWidth= "1"
+            borderColor="grey"
+            width="80%"
+            height="100%"
+            bg="purple.900"
+            borderRightRadius="60"
+          >
+          </Box>
+      </Box>
     </Box>
   }
 
@@ -109,30 +124,3 @@ export default props => {
     </NativeBaseProvider>
   )
 }
-      
- 
-const style = StyleSheet.create({
-   
-    boxGroup: {
-        height: '30%',
-        width: '100%',
-        //borderWidth: 3,
-        //borderColor: 'red',
-        backgroundColor: '#fff',
-        elevation: 5,
-    },
-    flex: {
-        //flexGrow: 1,
-        flexDirection: 'row',
-        height: '100%',
-        width: '100%',
-        justifyContent: "space-around",
-        alignItems: 'center',
-    },
-    card: {
-        backgroundColor: "#fdf3f3",
-        height: '80%',
-        width: '30%',        
-        borderRadius: 10,
-    }
-})
