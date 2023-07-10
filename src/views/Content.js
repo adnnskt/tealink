@@ -1,5 +1,5 @@
 import React from "react";
-import { NativeBaseProvider, Box, Center, Text} from "native-base";
+import { NativeBaseProvider, Box, Center, Text, ScrollView} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
@@ -64,25 +64,30 @@ export default props => {
               padding="2%"
               color="white"              
             >
-              Resumo
+              O que é?
             </Text>
           </Box>
-          <Text
-            paddingLeft="1%"
-            paddingTop="3%"
-            fontSize="xs"
-            color="white"
-          >
-              Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
-              ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
-              ou cognitivas que são mais pronunciadas em pessoas com autismo. Durante uma crise, 
-              a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
-              É importante entender que essas crises não são birras, mas sim respostas a desafios 
-              enfrentados na percepção e processamento de informações do ambiente. 
-              Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
-              pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
-          </Text>
-
+              <ScrollView
+                width="80%"
+                height="10%"
+              >
+                
+                <Text
+                  paddingLeft="1%"
+                  paddingTop="3%"
+                  fontSize="xs"
+                  color="white"
+                >
+                    Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
+                    ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
+                    ou cognitivas que são mais pronunciadas em pessoas com autismo. Durante uma crise, 
+                    a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
+                    É importante entender que essas crises não são birras, mas sim respostas a desafios 
+                    enfrentados na percepção e processamento de informações do ambiente. 
+                    Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
+                    pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
+                </Text>
+              </ScrollView>
         </Box>         
       </Box>
 
