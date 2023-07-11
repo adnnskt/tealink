@@ -103,19 +103,35 @@ export default props => {
             bg="purple.900"
             borderRightRadius="60"
             shadow="2"
-            justifyContent="center"
+            justifyContent="space-around"
+            alignItems="center"
+            flexDirection="row"
           >
             <Text
               fontSize="xl"
               color="white"
-              paddingLeft="3%"
-            >Adicionar marcações
+            >Adicionar frequência
             </Text>
             <Box
-              width='10%'
-              height='100%'
-              bg="red"
+              width='20%'
+              height='90%'
+              bg="purple.500"
+              borderRightRadius="60"
+              borderLeftRadius="60"
+              borderBottomRadius="60"
+              borderTopRadius="60"
+              justifyContent="center"
+              alignItems="center"
+              shadow="2"
+              borderColor="white"
+              borderWidth="1"
+              
             >
+              <Text
+                fontSize="3xl"
+                color="white"
+              >+
+              </Text>
             </Box>
           </Box>
       </Box>
