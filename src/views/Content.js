@@ -98,12 +98,25 @@ export default props => {
       >
         <Box
             borderTopWidth= "1"
-            borderColor="grey"
             width="80%"
             height="100%"
             bg="purple.900"
             borderRightRadius="60"
+            shadow="2"
+            justifyContent="center"
           >
+            <Text
+              fontSize="xl"
+              color="white"
+              paddingLeft="3%"
+            >Adicionar marcações
+            </Text>
+            <Box
+              width='10%'
+              height='100%'
+              bg="red"
+            >
+            </Box>
           </Box>
       </Box>
     </Box>
