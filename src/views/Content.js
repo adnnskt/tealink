@@ -1,5 +1,5 @@
 import React from "react";
-import { NativeBaseProvider, Box, Center, Text, ScrollView} from "native-base";
+import { NativeBaseProvider, Box, Center, Text, ScrollView, Pressable} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
