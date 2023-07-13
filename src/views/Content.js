@@ -125,6 +125,7 @@ export default props => {
               shadow="2"
               borderColor="white"
               borderWidth="1"
+              onPress={()=> console.warn('test perss')}
             >
               <Box
                 width='100%'
