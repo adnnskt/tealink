@@ -112,7 +112,7 @@ export default props => {
               color="white"
             >Adicionar frequência
             </Text>
-            <Box
+            <Pressable
               width='20%'
               height='90%'
               bg="purple.500"
@@ -125,14 +125,24 @@ export default props => {
               shadow="2"
               borderColor="white"
               borderWidth="1"
-              
             >
-              <Text
-                fontSize="3xl"
-                color="white"
-              >+
-              </Text>
-            </Box>
+              <Box
+                width='100%'
+                height='100%'
+                borderRightRadius="60"
+                borderLeftRadius="60"
+                borderBottomRadius="60"
+                borderTopRadius="60"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Text
+                  fontSize="3xl"
+                  color="white"
+                >+
+                </Text>
+              </Box>
+            </Pressable>
           </Box>
       </Box>
     </Box>
