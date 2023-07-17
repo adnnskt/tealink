@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { NativeBaseProvider, Box, Center, Text, ScrollView, Pressable} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 
@@ -9,6 +9,9 @@ export default props => {
 
   const Content = () => {
     
+    const [modalVisible, setModalVisible] = React.useState(false);
+
+
     return <Box flex={1} bg={{
       linearGradient: {
         colors: ['primary.200', 'violet.600'],
