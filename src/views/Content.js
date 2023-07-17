@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { NativeBaseProvider, Box, Center, Text, ScrollView, Pressable} from "native-base";
+import { NativeBaseProvider, Box, Center, Text, ScrollView, Pressable, Modal, FormControl, Input, Button} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
@@ -9,10 +9,11 @@ export default props => {
 
   const Content = () => {
     
-    const [modalVisible, setModalVisible] = React.useState(false);
+    const [showModal, setShowModal] = useState(false)
 
-
-    return <Box flex={1} bg={{
+    return <> 
+    
+  <Box flex={1} bg={{
       linearGradient: {
         colors: ['primary.200', 'violet.600'],
         start: [0, 0.2],
@@ -128,7 +129,7 @@ export default props => {
               shadow="2"
               borderColor="white"
               borderWidth="1"
-              onPress={()=> console.warn('test perss')}
+              onPress={() => setShowModal(true)}
             >
               <Box
                 width='100%'
@@ -150,7 +151,41 @@ export default props => {
           </Box>
       </Box>
     </Box>
-  }
+
+    <Center>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <Modal.Content maxWidth="400px">
+          <Modal.CloseButton />
+          <Modal.Header>Contact Us</Modal.Header>
+          <Modal.Body>
+            <FormControl>
+              <FormControl.Label>Name</FormControl.Label>
+              <Input />
+            </FormControl>
+            <FormControl mt="3">
+              <FormControl.Label>Email</FormControl.Label>
+              <Input />
+            </FormControl>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button.Group space={2}>
+              <Button variant="ghost" colorScheme="blueGray" onPress={() => {
+              setShowModal(false);
+            }}>
+                Cancel
+              </Button>
+              <Button onPress={() => {
+              setShowModal(false);
+            }}>
+                Save
+              </Button>
+            </Button.Group>
+          </Modal.Footer>
+        </Modal.Content>
+      </Modal>
+    </Center>
+  </>
+}
 
 
 
