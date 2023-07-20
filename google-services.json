@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122014028964",
+    "project_id": "tealink-e1160",
+    "storage_bucket": "tealink-e1160.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122014028964:android:dbb7d9af155e3824914231",
+        "android_client_info": {
+          "package_name": "com.tealink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122014028964-pqlin764rh9ttg2k531bji017spcnq0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3-6TZaNMeb5eTYbfVpP10M-mQmRVALNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122014028964-6q0863d2klm8uhcjoji5ppm00d0bvr0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
