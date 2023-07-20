@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { NativeBaseProvider, Box, Center, Text, ScrollView, Pressable, Modal, FormControl, Input, Button} from "native-base";
+import { NativeBaseProvider, Box, Center, Text, TextArea, ScrollView, Pressable, Modal, FormControl, Input, Button} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
@@ -20,7 +20,7 @@ export default props => {
         end: [1.2, 1]
       }
     }}>
-      <Box
+      <Box 
         paddingTop="3%"
         height="10%"
         width="50%"
@@ -32,7 +32,6 @@ export default props => {
           borderRightRadius="60"
           shadow="3"
           justifyContent="center"
-          
         >
           <Text
             paddingLeft="3%"
@@ -131,7 +130,7 @@ export default props => {
               borderWidth="1"
               onPress={() => setShowModal(true)}
             >
-              <Box
+              <Box 
                 width='100%'
                 height='100%'
                 borderRightRadius="60"
@@ -154,18 +153,11 @@ export default props => {
 
     <Center>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <Modal.Content maxWidth="400px">
+        <Modal.Content height="50%" width="90%">
           <Modal.CloseButton />
-          <Modal.Header>Contact Us</Modal.Header>
+          <Modal.Header>frequência</Modal.Header>
           <Modal.Body>
-            <FormControl>
-              <FormControl.Label>Name</FormControl.Label>
-              <Input />
-            </FormControl>
-            <FormControl mt="3">
-              <FormControl.Label>Email</FormControl.Label>
-              <Input />
-            </FormControl>
+            <TextArea h={20} placeholder="Observações" width="100%" paddingTop="10%" />
           </Modal.Body>
           <Modal.Footer>
             <Button.Group space={2}>
