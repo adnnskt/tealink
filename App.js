@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -106,8 +106,6 @@ function App() {
       )
 
       }
-
-
         <Stack.Screen name="Content" component={ContentView} />
     </Stack.Navigator>
     </NavigationContainer>
