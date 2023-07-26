@@ -7,8 +7,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
+import Registration from './src/components/Registration'
+import Login from './src/components/Login'
 import Fup from './src/components/Fup'
 import Content from './src/views/Content'
+
+
+import {decode, encode} from 'base-64'
+if (!global.btoa) {  global.btoa = encode }
+if (!global.atob) { global.atob = decode }
 
 
 
@@ -77,15 +84,29 @@ function MyTabs() {
 
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState(null)
+
   return (
   <>
     <NavigationContainer>
     <Stack.Navigator>
+      {user ?(
         <Stack.Screen
-          name="menuTabe"
-          component={MyTabs}
-          options={{ headerShown: false }}
+        name="menuTabe"
+        component={MyTabs}
+        options={{ headerShown: false }}
         />
+      ) : (
+        <>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Registration" component={Registration} />
+        </>
+      )
+
+      }
+
 
         <Stack.Screen name="Content" component={ContentView} />
     </Stack.Navigator>
