@@ -33,9 +33,9 @@ export default function Registration({navigation}) {
                 saveData = async function(){
                     try {
                         const docRef = await addDoc(collection(db, "users"), {
-                            first: "Ada",
-                            last: "Lovelace",
-                            born: 1815
+                            id: data.id,
+                            email: data.email,
+                            fullName: data.fullName
                         });
                         
                         } 
