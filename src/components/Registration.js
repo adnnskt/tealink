@@ -19,11 +19,31 @@ export default function Registration({navigation}) {
             return
         }
         
-        createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword  (auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                // ...
+                
+                const uid = userCredential.user.uid
+                const data = {
+                    id: uid,
+                    email,
+                    fullName,
+                }
+                saveData = async function(){
+                    try {
+                        const docRef = await addDoc(collection(db, "users"), {
+                            first: "Ada",
+                            last: "Lovelace",
+                            born: 1815
+                        });
+                        
+                        } 
+                            catch (e) {
+                                alert(e);
+                            }                
+                    } 
+                saveData()
             })
             .catch((error) => {
                 const errorCode = error.code;
