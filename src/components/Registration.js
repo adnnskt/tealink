@@ -44,6 +44,12 @@ export default function Registration({navigation}) {
                             }                
                     } 
                 saveData()
+                    .then(() => {
+                        navigation.navigate('Home', {user: data})
+                    })
+                    .catch((error) => {
+                        alert(error)
+                    });
             })
             .catch((error) => {
                 const errorCode = error.code;
