@@ -45,7 +45,7 @@ export default function Registration({navigation}) {
                     } 
                 saveData()
                     .then(() => {
-                        navigation.navigate('Home', {user: data})
+                        navigation.navigate('menuTabe', {user: data})
                     })
                     .catch((error) => {
                         alert(error)
