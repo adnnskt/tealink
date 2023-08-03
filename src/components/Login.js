@@ -12,6 +12,7 @@ export default function Login({navigation}) {
     }
 
     const onLoginPress = () => {
+        return user = !user
     }
 
     return (

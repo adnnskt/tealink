@@ -103,6 +103,7 @@ function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Registration" component={Registration} />
           <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="MenuTab" component={MyTabs} options={{ headerShown: false }}/>
         </>
       )
 
