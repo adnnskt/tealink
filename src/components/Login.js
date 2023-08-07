@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View, StyleSheet} from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import {auth, signInWithEmailAndPassword, db, collection, addDoc } from '../firebase/config'
+
 //import styles from './styles';
 
 export default function Login({navigation}) {
