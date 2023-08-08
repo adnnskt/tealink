@@ -55,7 +55,7 @@ const Stack = createNativeStackNavigator();
 
 function MyTabs({route}) {
   const data = route.params
-  alert(data.user.value)
+  alert(data.user)
   return (
     <Tab.Navigator
         user={data.user}
