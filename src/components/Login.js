@@ -17,7 +17,7 @@ export default function Login({navigation}) {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
-                navigation.navigate('MenuTab')
+                navigation.navigate('MenuTab', {user})
             })
             .catch((error) => {
                 const errorCode = error.code;

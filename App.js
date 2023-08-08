@@ -53,9 +53,12 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 
-function MyTabs() {
+function MyTabs({route}) {
+  const data = route.params
+  alert(data.user.value)
   return (
     <Tab.Navigator
+        user={data.user}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -67,7 +70,7 @@ function MyTabs() {
             } else if (route.name === 'Acompanhamento') {
               iconName = 'bar-chart';
             }
-  
+            
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
