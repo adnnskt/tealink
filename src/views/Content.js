@@ -15,7 +15,7 @@ export default props => {
     
   <Box flex={1} bg={{
       linearGradient: {
-        colors: ['primary.200', 'violet.600'],
+        colors: ['muted.100', 'muted.200'],
         start: [0, 0.2],
         end: [1.2, 1]
       }
@@ -50,7 +50,7 @@ export default props => {
         height="75%"
       >
         <Box
-          bg="purple.700"
+          bg="muted.300"
           width="100%"
           height="100%"
           borderRightRadius="40"
@@ -65,7 +65,7 @@ export default props => {
               width="100%"
               fontSize="xl"
               padding="2%"
-              color="white"              
+              color="grey"              
             >
               O que é?
             </Text>
@@ -78,7 +78,7 @@ export default props => {
                   paddingLeft="1%"
                   paddingTop="3%"
                   fontSize="xs"
-                  color="white"
+                  color="grey"
                 >
                     Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
                     ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
@@ -100,10 +100,10 @@ export default props => {
         height="10%"
       >
         <Box
-            borderTopWidth= "1"
+            borderTopWidth= "0"
             width="80%"
             height="100%"
-            bg="purple.900"
+            bg="muted.100"
             borderRightRadius="60"
             shadow="2"
             justifyContent="space-around"
@@ -112,13 +112,13 @@ export default props => {
           >
             <Text
               fontSize="xl"
-              color="white"
+              color="grey"
             >Adicionar frequência
             </Text>
             <Pressable
               width='20%'
               height='90%'
-              bg="purple.500"
+              bg="muted.200"
               borderRightRadius="60"
               borderLeftRadius="60"
               borderBottomRadius="60"
@@ -127,7 +127,7 @@ export default props => {
               alignItems="center"
               shadow="2"
               borderColor="white"
-              borderWidth="1"
+              borderWidth="0"
               onPress={() => setShowModal(true)}
             >
               <Box 
@@ -142,7 +142,7 @@ export default props => {
               >
                 <Text
                   fontSize="3xl"
-                  color="white"
+                  color="grey"
                 >+
                 </Text>
               </Box>
