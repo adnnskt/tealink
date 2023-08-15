@@ -19,17 +19,22 @@ if (!global.atob) { global.atob = decode }
 
 
 
-function HomeScreen({ navigation }) {
+function HomeScreen({ navigation, route}) {
+  const data = route.params
+  //alert(data.user)
   return (
-    <Home navigation = {navigation} 
-      user = {data.user}
+    <Home navigation = {navigation}
+    user = {data.user}
     />
   );
 }
 
-function ContentView(){
+function ContentView({route}){
+  const data = route.params
   return(
-    <Content />
+    <Content 
+      user = {data.user}
+    />
   )
 }
 
@@ -78,7 +83,7 @@ function MyTabs({route}) {
           tabBarInactiveTintColor: 'gray',
         })}
       >
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} initialParams={{user: data.user}}/>
         <Tab.Screen name="Calendário" component={CalendarScreen} />
         <Tab.Screen name="Acompanhamento" component={FupScreen} />
       </Tab.Navigator>
