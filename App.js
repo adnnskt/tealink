@@ -21,7 +21,9 @@ if (!global.atob) { global.atob = decode }
 
 function HomeScreen({ navigation }) {
   return (
-    <Home navigation = {navigation}/>
+    <Home navigation = {navigation} 
+      user = {data.user}
+    />
   );
 }
 
@@ -47,15 +49,13 @@ function FupScreen() {
   );
 }
 
-
-
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 
 function MyTabs({route}) {
   const data = route.params
-  alert(data.user)
+  //alert(data.user)
   return (
     <Tab.Navigator
         user={data.user}

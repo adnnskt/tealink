@@ -17,10 +17,12 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
     const Component = () => {
+      const data = props.user
+
         return <>  
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Content')}>
+                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Content', {user: data.user})}>
                         <Card image={crise} text='Crise'/>
                     </TouchableHighlight>
                     <TouchableHighlight style= {style.card} onPress = {null}>

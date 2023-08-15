@@ -7,8 +7,8 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 export default props => {
 
 
-  const Content = () => {
-    
+  const Content = ({route}) => {
+    const data = route.params
     const [showModal, setShowModal] = useState(false)
 
     return <> 
@@ -155,7 +155,7 @@ export default props => {
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <Modal.Content height="50%" width="90%">
           <Modal.CloseButton />
-          <Modal.Header>frequência</Modal.Header>
+          <Modal.Header>frequência - {data.user}</Modal.Header>
           <Modal.Body>
             <TextArea h={20} placeholder="Observações" width="100%" paddingTop="10%" />
           </Modal.Body>
