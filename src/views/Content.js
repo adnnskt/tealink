@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { NativeBaseProvider, Box, Center, Text, TextArea, ScrollView, Pressable, Modal, FormControl, Input, Button} from "native-base";
 import {View, StyleSheet, ImageBackground} from 'react-native'
+import {db, collection, addDoc } from '../firebase/config'
+
 
 const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
@@ -153,7 +155,7 @@ export default props => {
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <Modal.Content height="50%" width="90%">
           <Modal.CloseButton />
-          <Modal.Header>frequência - {props.user}</Modal.Header>
+          <Modal.Header>frequência</Modal.Header>
           <Modal.Body>
             <TextArea h={20} placeholder="Observações" width="100%" paddingTop="10%" />
           </Modal.Body>
