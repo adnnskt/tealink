@@ -8,6 +8,22 @@ const LinearGradient = require('expo-linear-gradient').LinearGradient;
 
 export default props => {
 
+  saveData = async function(){
+    try {
+        const docRef = await addDoc(collection(db, "frequence"), {
+            user: props.user,
+            date: Date(),
+            type: 'crise',
+            
+        });
+        
+        } 
+            catch (e) {
+                alert(e);
+            }                
+    }
+
+
   const Content = () => {
     const [showModal, setShowModal] = useState(false)
 
