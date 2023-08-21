@@ -16,8 +16,10 @@ export default props => {
 
     return (  
     <>
-        <View >
+        <View style= {style.container}>
+            <View style= {style.title}>
 
+            </View>
         </View>
     </>  
     )
@@ -25,5 +27,17 @@ export default props => {
       
 const style = StyleSheet.create({
    
-   
+    container: {
+        height: '100%',
+        backgroundColor: 'white'
+    },
+    title: {
+        height: '10%',
+        width: '55%',
+        backgroundColor: 'blue',
+        borderTopRightRadius: 60,
+        borderBottomRightRadius: 60,
+        padding: '15%',
+        
+    }
 })
