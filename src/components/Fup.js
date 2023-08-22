@@ -42,13 +42,15 @@ const style = StyleSheet.create({
     title: {
         height: '100%',
         width: '55%',
-        backgroundColor: 'blue',
+        backgroundColor: '#01b6b6',
         borderTopRightRadius: 60,
         borderBottomRightRadius: 60,
         elevation: 5,
+        justifyContent: 'center',
     },
     textTitle: {
         color: 'white',
-
+        paddingLeft: '5%',
+        fontSize: 25,
     }
 })
