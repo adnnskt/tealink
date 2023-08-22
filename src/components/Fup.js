@@ -17,8 +17,12 @@ export default props => {
     return (  
     <>
         <View style= {style.container}>
-            <View style= {style.title}>
-
+            <View style= {style.overTitle}>
+                <View style= {style.title}>
+                    <Text style= {style.textTitle}>
+                        Crise
+                    </Text>
+                </View>
             </View>
         </View>
     </>  
@@ -31,13 +35,20 @@ const style = StyleSheet.create({
         height: '100%',
         backgroundColor: 'white'
     },
+    overTitle: {
+        height: '15%',
+        paddingTop: '5%',
+    },
     title: {
-        height: '10%',
+        height: '100%',
         width: '55%',
         backgroundColor: 'blue',
         borderTopRightRadius: 60,
         borderBottomRightRadius: 60,
-        padding: '15%',
-        
+        elevation: 5,
+    },
+    textTitle: {
+        color: 'white',
+
     }
 })
