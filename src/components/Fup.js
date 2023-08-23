@@ -26,7 +26,9 @@ export default props => {
             </View>
             <View style= {style.overCard}>
                 <View style= {style.card}>
-
+                    <Text style= {style.textMid}>
+                        O que é?
+                    </Text>
                 </View>
             </View>
         </View>
@@ -67,7 +69,15 @@ const style = StyleSheet.create({
         borderBottomRightRadius: 40,
     },
     card: {
-        borderTopRightRadius: 60,
-        borderBottomRightRadius: 60,
+
+    },
+    textMid: {
+        paddingTop: '5%',
+        paddingLeft: '5%',
+        fontSize: 20,
+        color: 'grey',
+        borderBottomWidth: 1,
+        borderColor: 'black',
+
     }
 })
