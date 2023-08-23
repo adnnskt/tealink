@@ -31,6 +31,13 @@ export default props => {
                     </Text>
                 </View>
             </View>
+            <View style= {style.overAdd}>
+                <View style= {style.add}>
+                    <Text style= {style.textAdd}>
+                        Adicionar frequência
+                    </Text>
+                </View>
+            </View>
         </View>
     </>  
     )
@@ -78,6 +85,21 @@ const style = StyleSheet.create({
         color: 'grey',
         borderBottomWidth: 1,
         borderColor: 'black',
-
+    },
+    overAdd:{
+        height: '8%',
+        width: '80%',
+        backgroundColor: '#d4d6d6',
+        borderTopRightRadius: 40,
+        borderBottomRightRadius: 40,
+    },
+    add:{
+        justifyContent: 'center',
+        height: '100%',
+    },
+    textAdd:{
+        paddingLeft: '5%',
+        fontSize: 20,
+        color: 'grey',
     }
 })
