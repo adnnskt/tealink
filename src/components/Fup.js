@@ -24,6 +24,11 @@ export default props => {
                     </Text>
                 </View>
             </View>
+            <View style= {style.overCard}>
+                <View style= {style.card}>
+
+                </View>
+            </View>
         </View>
     </>  
     )
@@ -33,7 +38,8 @@ const style = StyleSheet.create({
    
     container: {
         height: '100%',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        justifyContent: 'space-between',
     },
     overTitle: {
         height: '15%',
@@ -52,5 +58,16 @@ const style = StyleSheet.create({
         color: 'white',
         paddingLeft: '5%',
         fontSize: 25,
+    },
+    overCard: {
+        height: '70%',
+        width: '80%',
+        backgroundColor: '#d4d6d6',
+        borderTopRightRadius: 40,
+        borderBottomRightRadius: 40,
+    },
+    card: {
+        borderTopRightRadius: 60,
+        borderBottomRightRadius: 60,
     }
 })
