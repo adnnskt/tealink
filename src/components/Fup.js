@@ -2,15 +2,18 @@ import React from "react";
 //import { NativeBaseProvider, Text, Box, Center } from "native-base";
 import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground} from 'react-native'
 import Card from './Card'
-import { LinearGradient } from 'expo-linear-gradient';
-
-const LinearGradient = require('expo-linear-gradient').LinearGradient;
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
 
     return (  
     <>
         <View style= {style.container}>
+        <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(158, 166, 234, 0.966)', 'transparent']}
+        style={style.background}
+        />
             <View style= {style.overTitle}>
                 <View style= {style.title}>
                     <Text style= {style.textTitle}>
@@ -41,9 +44,16 @@ const style = StyleSheet.create({
    
     container: {
         height: '100%',
-        backgroundColor: 'white',
+        backgroundColor: '#e4e9fb',
         justifyContent: 'space-between',
     },
+    background: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        height: '80%',
+    }, 
     overTitle: {
         height: '15%',
         paddingTop: '5%',
@@ -51,7 +61,7 @@ const style = StyleSheet.create({
     title: {
         height: '100%',
         width: '55%',
-        backgroundColor: '#01b6b6',
+        backgroundColor: '#777add',
         borderTopRightRadius: 60,
         borderBottomRightRadius: 60,
         elevation: 5,
