@@ -54,6 +54,13 @@ const style = StyleSheet.create({
         top: 0,
         height: '80%',
     }, 
+    backgroundTitle: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        height: '80%',
+    },
     overTitle: {
         height: '15%',
         paddingTop: '5%',
@@ -75,7 +82,7 @@ const style = StyleSheet.create({
     overCard: {
         height: '70%',
         width: '80%',
-        backgroundColor: '#d4d6d6',
+        backgroundColor: '#b1a7ff',
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
     },
@@ -86,9 +93,9 @@ const style = StyleSheet.create({
         paddingTop: '5%',
         paddingLeft: '5%',
         fontSize: 20,
-        color: 'grey',
+        color: '#3c04d3',
         borderBottomWidth: 1,
-        borderColor: 'black',
+        borderColor: '#3c04d3',
     },
     overAdd:{
         height: '8%',
