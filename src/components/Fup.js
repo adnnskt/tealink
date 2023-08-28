@@ -95,7 +95,7 @@ const style = StyleSheet.create({
         fontSize: 20,
         color: '#3c04d3',
         borderBottomWidth: 1,
-        borderColor: '#3c04d3',
+        borderColor: 'white',
     },
     overAdd:{
         height: '8%',
@@ -114,3 +114,39 @@ const style = StyleSheet.create({
         color: 'grey',
     }
 })
+
+/*
+
+    <>
+        <View style= {style.container}>
+        <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(158, 166, 234, 0.966)', 'transparent']}
+        style={style.background}
+        />
+            <View style= {style.overTitle}>
+                <View style= {style.title}>
+                    <Text style= {style.textTitle}>
+                        Crise
+                    </Text>
+                </View>
+            </View>
+            <View style= {style.overCard}>
+                <View style= {style.card}>
+                    <Text style= {style.textMid}>
+                        O que é?
+                    </Text>
+                </View>
+            </View>
+            <View style= {style.overAdd}>
+                <View style= {style.add}>
+                    <Text style= {style.textAdd}>
+                        Adicionar frequência
+                    </Text>
+                </View>
+            </View>
+        </View>
+    </> 
+
+    
+*/ 
