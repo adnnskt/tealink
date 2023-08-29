@@ -14,13 +14,6 @@ export default props => {
         colors={['rgba(158, 166, 234, 0.966)', 'transparent']}
         style={style.background}
         />
-            <View style= {style.overTitle}>
-                <View style= {style.title}>
-                    <Text style= {style.textTitle}>
-                        Crise
-                    </Text>
-                </View>
-            </View>
             <View style= {style.overCard}>
                 <View style= {style.card}>
                     <Text style= {style.textMid}>
@@ -28,12 +21,9 @@ export default props => {
                     </Text>
                 </View>
             </View>
-            <View style= {style.overAdd}>
-                <View style= {style.add}>
-                    <Text style= {style.textAdd}>
-                        Adicionar frequência
-                    </Text>
-                </View>
+            <View style={style.overFreq}>
+                <View style= {style.freq}>
+                </View>   
             </View>
         </View>
     </>  
@@ -45,7 +35,6 @@ const style = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: '#e4e9fb',
-        justifyContent: 'space-between',
     },
     background: {
         position: 'absolute',
@@ -61,27 +50,9 @@ const style = StyleSheet.create({
         top: 0,
         height: '80%',
     },
-    overTitle: {
-        height: '15%',
-        paddingTop: '5%',
-    },
-    title: {
-        height: '100%',
-        width: '55%',
-        backgroundColor: '#777add',
-        borderTopRightRadius: 60,
-        borderBottomRightRadius: 60,
-        elevation: 5,
-        justifyContent: 'center',
-    },
-    textTitle: {
-        color: 'white',
-        paddingLeft: '5%',
-        fontSize: 25,
-    },
-    overCard: {
-        height: '70%',
-        width: '80%',
+     overCard: {
+        height: '30%',
+        width: '90%',
         backgroundColor: '#b1a7ff',
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
@@ -93,9 +64,21 @@ const style = StyleSheet.create({
         paddingTop: '5%',
         paddingLeft: '5%',
         fontSize: 20,
-        color: '#3c04d3',
+        color: 'grey',
         borderBottomWidth: 1,
         borderColor: 'white',
+    },
+    overFreq:{
+        height: '20%',
+        width: '90%',
+        paddingLeft: '10%',
+        backgroundColor: 'grey',
+    },
+    freq: {
+        height: '100%',
+        width: '70%',
+        paddingLeft: '20%',
+        backgroundColor: 'blue',
     },
     overAdd:{
         height: '8%',
