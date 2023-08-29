@@ -23,6 +23,8 @@ export default props => {
             </View>
             <View style={style.overFreq}>
                 <View style= {style.freq}>
+                    <View style= {style.freqElement}>
+                    </View>
                 </View>   
             </View>
         </View>
@@ -53,7 +55,7 @@ const style = StyleSheet.create({
      overCard: {
         height: '30%',
         width: '90%',
-        backgroundColor: '#b1a7ff',
+        backgroundColor: '#9090d0',
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
     },
@@ -72,13 +74,22 @@ const style = StyleSheet.create({
         height: '20%',
         width: '90%',
         paddingLeft: '5%',
-        backgroundColor: 'grey',
+        //backgroundColor: 'grey',
     },
     freq: {
         height: '100%',
         width: '100%',
         borderColor: 'black',
         borderLeftWidth: 1,
+        paddingLeft: '3%',
+        justifyContent: 'center',
+    },
+    freqElement: {
+        height: '50%',
+        width: '100%',
+        backgroundColor: '#9090d0',
+        borderRadius: 40,
+
     },
     overAdd:{
         height: '8%',
