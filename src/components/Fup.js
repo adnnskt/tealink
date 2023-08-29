@@ -71,14 +71,14 @@ const style = StyleSheet.create({
     overFreq:{
         height: '20%',
         width: '90%',
-        paddingLeft: '10%',
+        paddingLeft: '5%',
         backgroundColor: 'grey',
     },
     freq: {
         height: '100%',
-        width: '70%',
-        paddingLeft: '20%',
-        backgroundColor: 'blue',
+        width: '100%',
+        borderColor: 'black',
+        borderLeftWidth: 1,
     },
     overAdd:{
         height: '8%',
