@@ -29,6 +29,14 @@ export default props => {
                     </View>
                 </View>   
             </View>
+            <View style={style.overFreq}>
+                <View style= {style.freq}>
+                    <View style= {style.circleFreq}>
+                    </View>
+                    <View style= {style.freqElement}>
+                    </View>
+                </View>   
+            </View>
         </View>
     </>  
     )
@@ -92,7 +100,7 @@ const style = StyleSheet.create({
         height: '15%',
         width: '5%',
         borderRadius: 50,
-        backgroundColor: 'black',
+        backgroundColor: '#3a3e75',
     },
     freqElement: {
         height: '50%',
