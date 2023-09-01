@@ -23,6 +23,8 @@ export default props => {
             </View>
             <View style={style.overFreq}>
                 <View style= {style.freq}>
+                    <View style= {style.circleFreq}>
+                    </View>
                     <View style= {style.freqElement}>
                     </View>
                 </View>   
@@ -66,7 +68,7 @@ const style = StyleSheet.create({
         paddingTop: '5%',
         paddingLeft: '5%',
         fontSize: 20,
-        color: 'grey',
+        color: '#e4e9fb',
         borderBottomWidth: 1,
         borderColor: 'white',
     },
@@ -81,15 +83,22 @@ const style = StyleSheet.create({
         width: '100%',
         borderColor: 'black',
         borderLeftWidth: 1,
-        paddingLeft: '3%',
-        justifyContent: 'center',
+        //paddingLeft: '3%',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+    circleFreq: {
+        height: '15%',
+        width: '5%',
+        borderRadius: 50,
+        backgroundColor: 'black',
     },
     freqElement: {
         height: '50%',
-        width: '100%',
+        width: '90%',
         backgroundColor: '#9090d0',
         borderRadius: 40,
-
     },
     overAdd:{
         height: '8%',
