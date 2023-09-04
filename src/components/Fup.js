@@ -19,16 +19,24 @@ export default props => {
                     <Text style= {style.textMid}>
                         O que é?
                     </Text>
-                    <Text style= {style.txtWhat}>
-                    Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
-                    ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
-                    ou cognitivas que são mais pronunciadas em pessoas com autismo. Durante uma crise, 
-                    a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
-                    É importante entender que essas crises não são birras, mas sim respostas a desafios 
-                    enfrentados na percepção e processamento de informações do ambiente. 
-                    Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
-                    pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
-                    </Text>
+                    <ScrollView>
+                        <Text style= {style.longTxt}>
+                        Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
+                        ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
+                        ou cognitivas que são mais pronunciadas em pessoas com autismo.
+                        
+                        </Text> 
+                        <Text style= {style.longTxt}>
+                        Durante uma crise, a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
+                        É importante entender que essas crises não são birras, mas sim respostas a desafios 
+                        enfrentados na percepção e processamento de informações do ambiente. 
+                        
+                        </Text>
+                        <Text style= {style.longTxt}>
+                        Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
+                        pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
+                        </Text>
+                    </ScrollView>
                 </View>
             </View>
             <View style={style.overFreq}>
@@ -73,7 +81,7 @@ const style = StyleSheet.create({
         height: '80%',
     },
      overCard: {
-        height: '30%',
+        height: '35%',
         width: '90%',
         backgroundColor: '#9090d0',
         borderTopRightRadius: 40,
@@ -90,7 +98,8 @@ const style = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: 'white',
     },
-    txtWhat: {
+    longTxt: {
+        fontSize: 10,
 
     },
     overFreq:{
