@@ -1,6 +1,6 @@
 import React from "react";
 //import { NativeBaseProvider, Text, Box, Center } from "native-base";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground} from 'react-native'
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 
@@ -18,6 +18,16 @@ export default props => {
                 <View style= {style.card}>
                     <Text style= {style.textMid}>
                         O que é?
+                    </Text>
+                    <Text style= {style.txtWhat}>
+                    Uma crise em pessoas dentro do espectro do autismo é uma reação intensa a estímulos 
+                    ou situações desafiadoras. Pode ocorrer devido a dificuldades sensoriais, emocionais 
+                    ou cognitivas que são mais pronunciadas em pessoas com autismo. Durante uma crise, 
+                    a pessoa pode apresentar comportamentos como agitação, agressividade ou choro. 
+                    É importante entender que essas crises não são birras, mas sim respostas a desafios 
+                    enfrentados na percepção e processamento de informações do ambiente. 
+                    Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
+                    pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
                     </Text>
                 </View>
             </View>
@@ -79,6 +89,9 @@ const style = StyleSheet.create({
         color: '#e4e9fb',
         borderBottomWidth: 1,
         borderColor: 'white',
+    },
+    txtWhat: {
+
     },
     overFreq:{
         height: '20%',
