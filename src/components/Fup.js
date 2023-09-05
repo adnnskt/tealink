@@ -44,6 +44,7 @@ export default props => {
                     <View style= {style.circleFreq}>
                     </View>
                     <View style= {style.freqElement}>
+                        <Text style= {style.txtElement}>Frequencia</Text>
                     </View>
                 </View>   
             </View>
@@ -86,6 +87,7 @@ const style = StyleSheet.create({
         backgroundColor: '#9090d0',
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
+        elevation: 5,
     },
     card: {
 
@@ -129,12 +131,18 @@ const style = StyleSheet.create({
         width: '90%',
         backgroundColor: '#9090d0',
         borderRadius: 40,
+        elevation: 5,
+    },
+    txtElement: {
+        paddingLeft: '10%',
+        color: '#e4e9fb',
     },
     freqElementBig: {
         height: '90%',
         width: '90%',
         backgroundColor: '#9090d0',
         borderRadius: 20,
+        elevation: 5,
     },
     overAdd:{
         height: '8%',
