@@ -51,7 +51,7 @@ export default props => {
                 <View style= {style.freq}>
                     <View style= {style.circleFreq}>
                     </View>
-                    <View style= {style.freqElement}>
+                    <View style= {style.freqElementBig}>
                     </View>
                 </View>   
             </View>
@@ -129,6 +129,12 @@ const style = StyleSheet.create({
         width: '90%',
         backgroundColor: '#9090d0',
         borderRadius: 40,
+    },
+    freqElementBig: {
+        height: '90%',
+        width: '90%',
+        backgroundColor: '#9090d0',
+        borderRadius: 20,
     },
     overAdd:{
         height: '8%',
