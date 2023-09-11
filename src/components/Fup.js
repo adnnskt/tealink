@@ -45,6 +45,7 @@ export default props => {
                     </View>
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequencia</Text>
+                        <View style= {style.freqElementOptionsContainer}></View>
                     </View>
                 </View>   
             </View>
@@ -136,6 +137,9 @@ const style = StyleSheet.create({
     txtElement: {
         paddingLeft: '10%',
         color: '#e4e9fb',
+    },
+    freqElementOptionsContainer:{
+        
     },
     freqElementBig: {
         height: '90%',
