@@ -47,7 +47,13 @@ export default props => {
                         <Text style= {style.txtElement}>Frequencia</Text>
                         <View style= {style.freqElementOptionsContainer}>
                             <View style= {style.freqElementOptions}>
-
+                                <Text style= {style.txtElement}>Baixo</Text>
+                            </View>
+                            <View style= {style.freqElementOptions}>
+                                <Text style= {style.txtElement}>Médio</Text>
+                            </View>
+                            <View style= {style.freqElementOptions}>
+                                <Text style= {style.txtElement}>Alto</Text>
                             </View>
                         </View>
                     </View>
@@ -143,15 +149,25 @@ const style = StyleSheet.create({
         color: '#e4e9fb',
     },
     freqElementOptionsContainer:{
-        width: '100%',
-        height: '50%',
-        backgroundColor: 'blue',
+        width: '95%',
+        height: '60%',
+        //backgroundColor: 'blue',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        paddingLeft: '20%',
     },
     freqElementOptions: {
-        width: '20%',
-        height: '90%',
+        width: '30%',
+        height: '80%',
         borderRadius: 40,
-        backgroundColor: 'red',
+        backgroundColor: '#4a5989',
+        elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    txtOptions: {
+        color: '#e4e9fb',
     },
     freqElementBig: {
         height: '90%',
