@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 //import { NativeBaseProvider, Text, Box, Center } from "native-base";
 import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
 
     return (  
     <>
@@ -44,7 +48,7 @@ export default props => {
                     <View style= {style.circleFreq}>
                     </View>
                     <View style= {style.freqElement}>
-                        <Text style= {style.txtElement}>Frequencia</Text>
+                        <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
                             <View style= {style.freqElementOptions}>
                                 <Text style= {style.txtElement}>Baixo</Text>
