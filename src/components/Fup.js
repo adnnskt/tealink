@@ -1,14 +1,14 @@
 import React, {useState} from "react";
-//import { NativeBaseProvider, Text, Box, Center } from "native-base";
 import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [press, setPress] = useState(style.freqElementOptions)
+    //const [password, setPassword] = useState('')
 
+    const onPress= () => setPress(style.freqElementOptionsPress)
 
     return (  
     <>
@@ -50,15 +50,22 @@ export default props => {
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
-                            <View style= {style.freqElementOptions}>
-                                <Text style= {style.txtElement}>Baixo</Text>
-                            </View>
-                            <View style= {style.freqElementOptions}>
-                                <Text style= {style.txtElement}>Médio</Text>
-                            </View>
-                            <View style= {style.freqElementOptions}>
-                                <Text style= {style.txtElement}>Alto</Text>
-                            </View>
+                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                                <View style= {press}>
+                                    <Text style= {style.txtElement}>Baixo</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                                <View style= {press}>
+                                    <Text style= {style.txtElement}>Médio</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                                <View style= {press}>
+                                    <Text style= {style.txtElement}>Alto</Text>
+                                </View>
+                            </TouchableHighlight>
+                            
                         </View>
                     </View>
                 </View>   
@@ -161,14 +168,32 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         paddingLeft: '20%',
     },
-    freqElementOptions: {
+    touchPress: {
         width: '30%',
         height: '80%',
+        borderRadius: 40,
+        //backgroundColor: '#4a5989',
+        //elevation: 5,
+        //alignItems: 'center',
+        //justifyContent: 'center',
+    },
+    freqElementOptions: {
+        width: '100%',
+        height: '100%',
         borderRadius: 40,
         backgroundColor: '#4a5989',
         elevation: 5,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    freqElementOptionsPress: {
+        width: '30%',
+        height: '80%',
+        borderRadius: 40,
+        backgroundColor: 'red',
+        elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     txtOptions: {
         color: '#e4e9fb',
