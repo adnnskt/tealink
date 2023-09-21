@@ -8,7 +8,9 @@ export default props => {
     const [press, setPress] = useState(style.freqElementOptions)
     //const [password, setPassword] = useState('')
 
-    const onPress= () => setPress(style.freqElementOptionsPress)
+    const onPressBaixo= () => setPress(style.freqElementOptionsPress)
+    const onPressMedio= () => setPress(style.freqElementOptionsPress)
+    const onPressAlto= () => setPress(style.freqElementOptionsPress)
 
     return (  
     <>
@@ -50,17 +52,17 @@ export default props => {
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
-                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                            <TouchableHighlight onPress={onPressBaixo} style= {style.touchPress}>
                                 <View style= {press}>
                                     <Text style= {style.txtElement}>Baixo</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                            <TouchableHighlight onPress={onPressMedio} style= {style.touchPress}>
                                 <View style= {press}>
                                     <Text style= {style.txtElement}>Médio</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={onPress} style= {style.touchPress}>
+                            <TouchableHighlight onPress={onPressAlto} style= {style.touchPress}>
                                 <View style= {press}>
                                     <Text style= {style.txtElement}>Alto</Text>
                                 </View>
@@ -187,8 +189,8 @@ const style = StyleSheet.create({
         justifyContent: 'center',
     },
     freqElementOptionsPress: {
-        width: '30%',
-        height: '80%',
+        width: '100%',
+        height: '100%',
         borderRadius: 40,
         backgroundColor: 'red',
         elevation: 5,
