@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
 
-    const [pressBaixo, setPreBaixo] = useState(style.freqElementOptions)
+    const [pressBaixo, setPressBaixo] = useState(style.freqElementOptions)
     const [pressMedio, setPressMedio] = useState(style.freqElementOptions)
     const [pressAlto, setPressAlto] = useState(style.freqElementOptions)
    
@@ -14,6 +14,28 @@ export default props => {
     const onPressBaixo= () => setPress(style.freqElementOptionsPress)
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
     const onPressAlto= () => setPress(style.freqElementOptionsPress)
+
+    function onPress (type) {
+        if (type === 'baixo' )  {
+            setPressBaixo(style.freqElementOptionsPress)
+            setPressMedio(style.freqElementOptions)
+            setPressAlto(style.freqElementOptions)
+
+        }else if (type === 'medio') {
+            setPressMedio(style.freqElementOptionsPress)
+            setPressBaixo(style.freqElementOptions)
+            setPressAlto(style.freqElementOptions)
+
+        }else {
+            setPressAlto(style.freqElementOptionsPress)
+            setPressBaixo(style.freqElementOptions)
+            setPressMedio(style.freqElementOptions)
+
+        }
+
+
+    }
+
 
     return (  
     <>
@@ -55,17 +77,17 @@ export default props => {
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
-                            <TouchableHighlight onPress={onPressBaixo} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => onPress('baixo')} style= {style.touchPress}>
                                 <View style= {pressBaixo}>
                                     <Text style= {style.txtElement}>Baixo</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={onPressMedio} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => onPress('medio')} style= {style.touchPress}>
                                 <View style= {pressMedio}>
                                     <Text style= {style.txtElement}>Médio</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={onPressAlto} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => onPress('alto')} style= {style.touchPress}>
                                 <View style= {pressAlto}>
                                     <Text style= {style.txtElement}>Alto</Text>
                                 </View>
@@ -195,7 +217,7 @@ const style = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 40,
-        backgroundColor: 'red',
+        backgroundColor: '#282640',
         elevation: 5,
         alignItems: 'center',
         justifyContent: 'center'
