@@ -5,9 +5,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
 
-    const [pressBaixo, setPress] = useState(style.freqElementOptions)
-    const [pressMedio, setPress] = useState(style.freqElementOptions)
-    const [pressAlto, setPress] = useState(style.freqElementOptions)
+    const [pressBaixo, setPreBaixo] = useState(style.freqElementOptions)
+    const [pressMedio, setPressMedio] = useState(style.freqElementOptions)
+    const [pressAlto, setPressAlto] = useState(style.freqElementOptions)
    
     //const [password, setPassword] = useState('')
 
@@ -56,17 +56,17 @@ export default props => {
                         <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
                             <TouchableHighlight onPress={onPressBaixo} style= {style.touchPress}>
-                                <View style= {press}>
+                                <View style= {pressBaixo}>
                                     <Text style= {style.txtElement}>Baixo</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={onPressMedio} style= {style.touchPress}>
-                                <View style= {press}>
+                                <View style= {pressMedio}>
                                     <Text style= {style.txtElement}>Médio</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={onPressAlto} style= {style.touchPress}>
-                                <View style= {press}>
+                                <View style= {pressAlto}>
                                     <Text style= {style.txtElement}>Alto</Text>
                                 </View>
                             </TouchableHighlight>
