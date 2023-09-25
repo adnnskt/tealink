@@ -5,7 +5,10 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default props => {
 
-    const [press, setPress] = useState(style.freqElementOptions)
+    const [pressBaixo, setPress] = useState(style.freqElementOptions)
+    const [pressMedio, setPress] = useState(style.freqElementOptions)
+    const [pressAlto, setPress] = useState(style.freqElementOptions)
+   
     //const [password, setPassword] = useState('')
 
     const onPressBaixo= () => setPress(style.freqElementOptionsPress)
