@@ -102,8 +102,8 @@ export default props => {
                     <View style= {style.circleFreq}>
                     </View>
                     <View style= {style.freqElementBig}>
-                    <View style= {style.freqElement}>
-                        <Text style= {style.txtElement}>Frequência</Text>
+                    <View style= {style.freqElementTrigger}>
+                        <Text style= {style.txtElement}>Gatilhos</Text>
                         <View style= {style.freqElementOptionsContainer}>
                             <TouchableHighlight onPress={() => onPress('baixo')} style= {style.touchPress}>
                                 <View style= {pressBaixo}>
@@ -252,6 +252,13 @@ const style = StyleSheet.create({
         backgroundColor: '#9090d0',
         borderRadius: 20,
         elevation: 5,
+    },
+    freqElementTrigger: {
+        height: '100%',
+        width: '100%',
+        backgroundColor: '#9090d0',
+        borderRadius: 20,
+        //elevation: 5,
     },
     overAdd:{
         height: '8%',
