@@ -105,18 +105,18 @@ export default props => {
                     <View style= {style.freqElementTrigger}>
                         <Text style= {style.txtElement}>Gatilhos</Text>
                         <View style= {style.freqElementOptionsContainer}>
-                            <TouchableHighlight onPress={() => onPress('baixo')} style= {style.touchPress}>
-                                <View style= {pressBaixo}>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
                                     <Text style= {style.txtElement}>Baixo</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => onPress('medio')} style= {style.touchPress}>
-                                <View style= {pressMedio}>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
                                     <Text style= {style.txtElement}>Médio</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => onPress('alto')} style= {style.touchPress}>
-                                <View style= {pressAlto}>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
                                     <Text style= {style.txtElement}>Alto</Text>
                                 </View>
                             </TouchableHighlight>
@@ -259,6 +259,15 @@ const style = StyleSheet.create({
         backgroundColor: '#9090d0',
         borderRadius: 20,
         //elevation: 5,
+    },
+    triggerOption: {
+        width: '100%',
+        height: '50%',
+        borderRadius: 40,
+        backgroundColor: '#4a5989',
+        elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     overAdd:{
         height: '8%',
