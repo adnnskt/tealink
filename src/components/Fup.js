@@ -104,7 +104,25 @@ export default props => {
                     <View style= {style.freqElementBig}>
                     <View style= {style.freqElementTrigger}>
                         <Text style= {style.txtElement}>Gatilhos</Text>
-                        <View style= {style.freqElementOptionsContainer}>
+                        <View style= {style.freqElementTriggerContainer}>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
+                                    <Text style= {style.txtElement}>Baixo</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
+                                    <Text style= {style.txtElement}>Médio</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                                <View style= {style.triggerOption}>
+                                    <Text style= {style.txtElement}>Alto</Text>
+                                </View>
+                            </TouchableHighlight>
+                            
+                        </View>
+                        <View style= {style.freqElementTriggerContainer}>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
                                     <Text style= {style.txtElement}>Baixo</Text>
@@ -259,6 +277,15 @@ const style = StyleSheet.create({
         backgroundColor: '#9090d0',
         borderRadius: 20,
         //elevation: 5,
+    },
+    freqElementTriggerContainer:{
+        width: '95%',
+        height: '50%',
+        //backgroundColor: 'blue',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        paddingLeft: '20%',
     },
     triggerOption: {
         width: '100%',
