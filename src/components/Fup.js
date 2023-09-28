@@ -107,17 +107,17 @@ export default props => {
                         <View style= {style.freqElementTriggerContainer}>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Baixo</Text>
+                                    <Text style= {style.txtTrigger}>Sensorial</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Médio</Text>
+                                    <Text style= {style.txtTrigger}>Luz</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Alto</Text>
+                                    <Text style= {style.txtTrigger}>Som</Text>
                                 </View>
                             </TouchableHighlight>
                             
@@ -125,17 +125,17 @@ export default props => {
                         <View style= {style.freqElementTriggerContainer}>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Baixo</Text>
+                                    <Text style= {style.txtTrigger}>Social</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Médio</Text>
+                                    <Text style= {style.txtTrigger}>Comunicação</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={''} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
-                                    <Text style= {style.txtElement}>Alto</Text>
+                                    <Text style= {style.txtTrigger}>Alto</Text>
                                 </View>
                             </TouchableHighlight>
                             
@@ -285,7 +285,7 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        paddingLeft: '20%',
+        paddingLeft: '5%',
     },
     triggerOption: {
         width: '100%',
@@ -295,6 +295,11 @@ const style = StyleSheet.create({
         elevation: 5,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    txtTrigger:{
+        //paddingLeft: '10%',
+        color: '#e4e9fb',
+        fontSize: 12,
     },
     overAdd:{
         height: '8%',
