@@ -8,7 +8,13 @@ export default props => {
     const [pressBaixo, setPressBaixo] = useState(style.freqElementOptions)
     const [pressMedio, setPressMedio] = useState(style.freqElementOptions)
     const [pressAlto, setPressAlto] = useState(style.freqElementOptions)
-    const [newStyle, setNewStyle] = useState(true)
+    
+    const [option1, setOption1] = useState(style.touchPress)
+    const [option2, setOption2] = useState(style.touchPress)
+    const [option3, setOption3] = useState(style.touchPress)
+    const [option4, setOption4] = useState(style.touchPress)
+    const [option5, setOption5] = useState(style.touchPress)
+    const [option6, setOption6] = useState(style.touchPress)
     
 
     //const [password, setPassword] = useState('')
@@ -17,9 +23,9 @@ export default props => {
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
     const onPressAlto= () => setPress(style.freqElementOptionsPress)
 
-    let changeStyle = true 
-
-
+    function changeStyle(option){
+        
+    }
 
     function onPress (type) {
         if (type === 'baixo' )  {
@@ -111,7 +117,7 @@ export default props => {
                     <View style= {style.freqElementTrigger}>
                         <Text style= {style.txtElement}>Gatilhos</Text>
                         <View style= {style.freqElementTriggerContainer}>
-                            <TouchableHighlight onPress={''} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => changeStyle()} style= {style.touchPress}>
                                 <View style= {style.triggerOption}>
                                     <Text style= {style.txtTrigger}>Sensorial</Text>
                                 </View>
