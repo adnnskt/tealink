@@ -8,12 +8,18 @@ export default props => {
     const [pressBaixo, setPressBaixo] = useState(style.freqElementOptions)
     const [pressMedio, setPressMedio] = useState(style.freqElementOptions)
     const [pressAlto, setPressAlto] = useState(style.freqElementOptions)
-   
+    const [newStyle, setNewStyle] = useState(true)
+    
+
     //const [password, setPassword] = useState('')
 
     const onPressBaixo= () => setPress(style.freqElementOptionsPress)
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
     const onPressAlto= () => setPress(style.freqElementOptionsPress)
+
+    let changeStyle = true 
+
+
 
     function onPress (type) {
         if (type === 'baixo' )  {
