@@ -9,12 +9,12 @@ export default props => {
     const [pressMedio, setPressMedio] = useState(style.freqElementOptions)
     const [pressAlto, setPressAlto] = useState(style.freqElementOptions)
     
-    const [option1, setOption1] = useState(style.touchPress)
-    const [option2, setOption2] = useState(style.touchPress)
-    const [option3, setOption3] = useState(style.touchPress)
-    const [option4, setOption4] = useState(style.touchPress)
-    const [option5, setOption5] = useState(style.touchPress)
-    const [option6, setOption6] = useState(style.touchPress)
+    const [option1, setOption1] = useState(style.triggerOption)
+    const [option2, setOption2] = useState(style.triggerOption)
+    const [option3, setOption3] = useState(style.triggerOption)
+    const [option4, setOption4] = useState(style.triggerOption)
+    const [option5, setOption5] = useState(style.triggerOption)
+    const [option6, setOption6] = useState(style.triggerOption)
     
 
     //const [password, setPassword] = useState('')
@@ -117,8 +117,8 @@ export default props => {
                     <View style= {style.freqElementTrigger}>
                         <Text style= {style.txtElement}>Gatilhos</Text>
                         <View style= {style.freqElementTriggerContainer}>
-                            <TouchableHighlight onPress={() => changeStyle()} style= {style.touchPress}>
-                                <View style= {style.triggerOption}>
+                            <TouchableHighlight onPress={() => option1 = style.triggerOption ? setOption1(style.triggerOptionPress) : setOption1(style.triggerOption)  } style= {style.touchPress}>
+                                <View style= {option1}>
                                     <Text style= {style.txtTrigger}>Sensorial</Text>
                                 </View>
                             </TouchableHighlight>
@@ -308,6 +308,17 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+
+    triggerOptionPress: {
+        width: '100%',
+        height: '50%',
+        borderRadius: 40,
+        backgroundColor: '#282640',
+        elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
     txtTrigger:{
         //paddingLeft: '10%',
         color: '#e4e9fb',
