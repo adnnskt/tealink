@@ -289,16 +289,18 @@ const style = StyleSheet.create({
     },
     freqElementTriggerContainer:{
         width: '95%',
-        height: '50%',
+        height: '40%',
         //backgroundColor: 'blue',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
         paddingLeft: '5%',
+        //borderWidth: 2,
+        //borderColor: 'red',
     },
     triggerOption: {
         width: '100%',
-        height: '50%',
+        height: '100%',
         borderRadius: 40,
         backgroundColor: '#4a5989',
         elevation: 5,
@@ -308,7 +310,7 @@ const style = StyleSheet.create({
 
     triggerOptionPress: {
         width: '100%',
-        height: '50%',
+        height: '100%',
         borderRadius: 40,
         backgroundColor: '#282640',
         elevation: 5,
