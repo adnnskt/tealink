@@ -23,13 +23,6 @@ export default props => {
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
     const onPressAlto= () => setPress(style.freqElementOptionsPress)
 
-    function changeStyle(option){
-        if (option === style.triggerOption) {
-            setOption1(style.triggerOptionPress)
-        } else {
-            setOption1(style.triggerOption)
-        }
-    }
 
     function onPress (type) {
         if (type === 'baixo' )  {
@@ -121,17 +114,17 @@ export default props => {
                     <View style= {style.freqElementTrigger}>
                         <Text style= {style.txtElement}>Gatilhos</Text>
                         <View style= {style.freqElementTriggerContainer}>
-                            <TouchableHighlight onPress={() => changeStyle(option1)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option1 === style.triggerOption ? setOption1(style.triggerOptionPress) : setOption1(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option1}>
                                     <Text style= {style.txtTrigger}>Sensorial</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => changeStyle(option2)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option2 === style.triggerOption ? setOption2(style.triggerOptionPress) : setOption2(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option2}>
                                     <Text style= {style.txtTrigger}>Luz</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => changeStyle(option3)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option3 === style.triggerOption ? setOption3(style.triggerOptionPress) : setOption3(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option3}>
                                     <Text style= {style.txtTrigger}>Som</Text>
                                 </View>
@@ -139,17 +132,17 @@ export default props => {
                             
                         </View>
                         <View style= {style.freqElementTriggerContainer}>
-                            <TouchableHighlight onPress={() => changeStyle(option4)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option4 === style.triggerOption ? setOption4(style.triggerOptionPress) : setOption4(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option4}>
                                     <Text style= {style.txtTrigger}>Social</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => changeStyle(option5)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option5 === style.triggerOption ? setOption5(style.triggerOptionPress) : setOption5(style.triggerOption) } style= {style.touchPress}>
                                 <View style= {option5}>
                                     <Text style= {style.txtTrigger}>Comunicação</Text>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight onPress={() => changeStyle(option6)} style= {style.touchPress}>
+                            <TouchableHighlight onPress={() => option6 === style.triggerOption ? setOption6(style.triggerOptionPress) : setOption6(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option6}>
                                     <Text style= {style.txtTrigger}>Alto</Text>
                                 </View>
