@@ -121,12 +121,12 @@ export default props => {
                             </TouchableHighlight>
                             <TouchableHighlight onPress={() => option2 === style.triggerOption ? setOption2(style.triggerOptionPress) : setOption2(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option2}>
-                                    <Text style= {style.txtTrigger}>Luz</Text>
+                                    <Text style= {style.txtTrigger}>Rotina</Text>
                                 </View>
                             </TouchableHighlight>
                             <TouchableHighlight onPress={() => option3 === style.triggerOption ? setOption3(style.triggerOptionPress) : setOption3(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option3}>
-                                    <Text style= {style.txtTrigger}>Som</Text>
+                                    <Text style= {style.txtTrigger}>Fobia</Text>
                                 </View>
                             </TouchableHighlight>
                             
@@ -144,7 +144,7 @@ export default props => {
                             </TouchableHighlight>
                             <TouchableHighlight onPress={() => option6 === style.triggerOption ? setOption6(style.triggerOptionPress) : setOption6(style.triggerOption)} style= {style.touchPress}>
                                 <View style= {option6}>
-                                    <Text style= {style.txtTrigger}>Alto</Text>
+                                    <Text style= {style.txtTrigger}>Emocional</Text>
                                 </View>
                             </TouchableHighlight>
                             
