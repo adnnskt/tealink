@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
-import { Slider, RangeSlider } from '@react-native-assets/slider';
+import { Slider, RangeSlider } from "@sharcoux/slider";
 
 
 export default props => {
@@ -88,17 +88,22 @@ export default props => {
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequência</Text>
                         <View style= {style.freqElementOptionsContainer}>
-                            <Slider
-                                style={style.slider}
-                                minimumValue={0}
-                                maximumValue={100}
-                                value={value}
-                                CustomThumb={CustomThumb}
-                                step={10}
-                                onValueChange={setValue}
-                                minimumTrackTintColor="green"
-                                maximumTrackTintColor="red"
-                            />                    
+                            <TouchableHighlight onPress={() => onPress('baixo')} style= {style.touchPress}>
+                                <View style= {pressBaixo}>
+                                    <Text style= {style.txtElement}>Baixo</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={() => onPress('medio')} style= {style.touchPress}>
+                                <View style= {pressMedio}>
+                                    <Text style= {style.txtElement}>Médio</Text>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={() => onPress('alto')} style= {style.touchPress}>
+                                <View style= {pressAlto}>
+                                    <Text style= {style.txtElement}>Alto</Text>
+                                </View>
+                            </TouchableHighlight>
+                            
                         </View>
                     </View>
                 </View>   
@@ -240,14 +245,6 @@ const style = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         paddingLeft: '20%',
-    },
-    slider: {
-        width: 200,
-        height: 40,
-        flexGrow: 0,
-        borderWidth: 1,
-        borderColor: "black",
-        borderStyle: "solid"
     },
     touchPress: {
         width: '30%',
