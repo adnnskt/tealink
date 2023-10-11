@@ -199,6 +199,7 @@ const style = StyleSheet.create({
     },
     longTxt: {
         fontSize: 10,
+        paddingLeft: '2%',
 
     },
     overFreq:{
