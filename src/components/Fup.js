@@ -27,10 +27,6 @@ export default props => {
       }, []);
     //const [password, setPassword] = useState('')
 
-    const CustomThumb = ({ value }) => {
-        return <Text>{value}</Text>;
-      }
-
     const onPressBaixo= () => setPress(style.freqElementOptionsPress)
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
     const onPressAlto= () => setPress(style.freqElementOptionsPress)
@@ -103,7 +99,6 @@ export default props => {
                                 minimumValue={0}
                                 maximumValue={100}
                                 value={value}
-                                CustomThumb={CustomThumb}
                                 step={10}
                                 onValueChange={setValue}
                                 minimumTrackTintColor="green"
@@ -249,15 +244,15 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        paddingLeft: '20%',
+        paddingLeft: '10%',
     },
     slider: {
-        width: 200,
-        height: 40,
+        width: '100%',
+        height: '90%',
         flexGrow: 0,
-        borderWidth: 1,
-        borderColor: "black",
-        borderStyle: "solid"
+        //borderWidth: 1,
+        //borderColor: "black",
+        //borderStyle: "solid"
     },
     touchPress: {
         width: '30%',
