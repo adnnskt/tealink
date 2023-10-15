@@ -18,8 +18,18 @@ export default props => {
     const [option5, setOption5] = useState(style.triggerOption)
     const [option6, setOption6] = useState(style.triggerOption)
     
+    const [value, setValue] = React.useState(0);
+    const [range, setRange] = React.useState([0, 0]);
+    const [max, setMax] = React.useState(1);
 
+    React.useEffect(() => {
+        setInterval(() => setMax((max) => max + 1), 2000);
+      }, []);
     //const [password, setPassword] = useState('')
+
+    const CustomThumb = ({ value }) => {
+        return <Text>{value}</Text>;
+      }
 
     const onPressBaixo= () => setPress(style.freqElementOptionsPress)
     const onPressMedio= () => setPress(style.freqElementOptionsPress)
