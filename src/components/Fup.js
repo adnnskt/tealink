@@ -92,8 +92,10 @@ export default props => {
                     <View style= {style.circleFreq}>
                     </View>
                     <View style= {style.freqElement}>
-                        <Text style= {style.txtElement}>Frequência</Text>
-                        <Text style= {style.txtElement}>{value}</Text>
+                        <View>
+                            <Text style= {style.txtElement}>Frequência</Text>
+                            <Text style= {style.txtElement}>{value}</Text>
+                        </View>
                         <View style= {style.freqElementOptionsContainer}>
                             <Slider
                                 style={style.slider}
