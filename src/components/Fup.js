@@ -93,6 +93,7 @@ export default props => {
                     </View>
                     <View style= {style.freqElement}>
                         <Text style= {style.txtElement}>Frequência</Text>
+                        <Text style= {style.txtElement}>{value}</Text>
                         <View style= {style.freqElementOptionsContainer}>
                             <Slider
                                 style={style.slider}
