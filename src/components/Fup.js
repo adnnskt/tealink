@@ -237,8 +237,8 @@ const style = StyleSheet.create({
         elevation: 5,
     },
     answerFreq: {
-        borderWidth: 2,
-        borderColor: 'red',
+        //borderWidth: 2,
+        //borderColor: 'red',
         paddingLeft: '2%',
         flexDirection: 'row',
         justifyContent: 'space-between',
