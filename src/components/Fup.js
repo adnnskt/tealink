@@ -22,13 +22,17 @@ export default props => {
     const [range, setRange] = React.useState([0, 0]);
     const [max, setMax] = React.useState(1);
 
-    React.useEffect(() => {
-        setInterval(() => setMax((max) => max + 1), 2000);
-      }, []);
-    //const [password, setPassword] = useState('')
+    const [txtValue, setTxtValue] = React.useState('Baixo')
 
-    
-
+    function txtValueChange() {
+        if (value < 30 ) {
+            setTxtValue('Baixo')
+        } else if (value > 30 && value < 70){
+            setTxtValue('Médio')
+        } else {
+            setTxtValue('Alto')
+        }
+    }
 
     return (  
     <>
@@ -70,7 +74,7 @@ export default props => {
                     <View style= {style.freqElement}>
                         <View style= {style.answerFreq}>
                             <Text style= {style.txtElement}>Frequência:</Text>
-                            <Text style= {style.txtElement}>{value}</Text>
+                            <Text style= {style.txtElement}>{txtValue}</Text>
                         </View>
                         <View style= {style.freqElementOptionsContainer}>
                             <Slider
