@@ -92,8 +92,8 @@ export default props => {
                     <View style= {style.circleFreq}>
                     </View>
                     <View style= {style.freqElement}>
-                        <View>
-                            <Text style= {style.txtElement}>Frequência</Text>
+                        <View style= {style.answerFreq}>
+                            <Text style= {style.txtElement}>Frequência:</Text>
                             <Text style= {style.txtElement}>{value}</Text>
                         </View>
                         <View style= {style.freqElementOptionsContainer}>
@@ -104,8 +104,8 @@ export default props => {
                                 value={value}
                                 step={10}
                                 onValueChange={setValue}
-                                minimumTrackTintColor="green"
-                                maximumTrackTintColor="red"
+                                minimumTrackTintColor="#282640"
+                                maximumTrackTintColor="#4a5989"
                             />                    
                         </View>
                     </View>
@@ -235,6 +235,15 @@ const style = StyleSheet.create({
         backgroundColor: '#9090d0',
         borderRadius: 40,
         elevation: 5,
+    },
+    answerFreq: {
+        borderWidth: 2,
+        borderColor: 'red',
+        paddingLeft: '2%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '50%',
+
     },
     txtElement: {
         paddingLeft: '10%',
