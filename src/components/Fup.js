@@ -27,31 +27,7 @@ export default props => {
       }, []);
     //const [password, setPassword] = useState('')
 
-    const onPressBaixo= () => setPress(style.freqElementOptionsPress)
-    const onPressMedio= () => setPress(style.freqElementOptionsPress)
-    const onPressAlto= () => setPress(style.freqElementOptionsPress)
-
-
-    function onPress (type) {
-        if (type === 'baixo' )  {
-            setPressBaixo(style.freqElementOptionsPress)
-            setPressMedio(style.freqElementOptions)
-            setPressAlto(style.freqElementOptions)
-
-        }else if (type === 'medio') {
-            setPressMedio(style.freqElementOptionsPress)
-            setPressBaixo(style.freqElementOptions)
-            setPressAlto(style.freqElementOptions)
-
-        }else {
-            setPressAlto(style.freqElementOptionsPress)
-            setPressBaixo(style.freqElementOptions)
-            setPressMedio(style.freqElementOptions)
-
-        }
-
-
-    }
+    
 
 
     return (  
