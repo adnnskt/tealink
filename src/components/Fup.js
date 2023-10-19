@@ -24,15 +24,19 @@ export default props => {
 
     const [txtValue, setTxtValue] = React.useState('Baixo')
 
-    function txtValueChange() {
-        if (value < 30 ) {
+    function txtValueChange(value) {
+
+        setValue(value)
+
+        if (value <= 30 ) {
             setTxtValue('Baixo')
-        } else if (value > 30 && value < 70){
+        } else if (value > 30 && value < 80){
             setTxtValue('Médio')
         } else {
             setTxtValue('Alto')
         }
-    }
+
+       }
 
     return (  
     <>
@@ -83,7 +87,7 @@ export default props => {
                                 maximumValue={100}
                                 value={value}
                                 step={10}
-                                onValueChange={setValue}
+                                onValueChange={txtValueChange}
                                 minimumTrackTintColor="#282640"
                                 maximumTrackTintColor="#4a5989"
                             />                    
