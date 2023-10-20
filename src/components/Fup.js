@@ -143,7 +143,9 @@ export default props => {
                 </View>   
             </View>
             <View style={style.addItems}>
+                <View style={style.addItemsButton}>
 
+                </View>
             </View>
         </View>
     </>  
@@ -350,11 +352,20 @@ const style = StyleSheet.create({
         color: 'grey',
     },
     addItems:{
-        height: '5%',
+        height: '25%',
         width: '100%',
-        borderWidth: 2,
-        borderColor: 'red',
-
+        //borderWidth: 2,
+        //borderColor: 'red',
+        paddingTop: '10%',
+        alignItems: 'center',
+    },
+    addItemsButton:{  
+        height: '40%',          
+        width: '98%',
+        //borderWidth: 2,
+        //borderColor: 'blue',
+        borderRadius: 60,
+        backgroundColor: '#9090d0'
     },
 })
 
