@@ -36,7 +36,7 @@ export default props => {
             setTxtValue('Alto')
         }
 
-       }
+    }
 
     return (  
     <>
@@ -141,6 +141,9 @@ export default props => {
                     </View>
                     </View>
                 </View>   
+            </View>
+            <View style={style.addItems}>
+
             </View>
         </View>
     </>  
@@ -345,7 +348,14 @@ const style = StyleSheet.create({
         paddingLeft: '5%',
         fontSize: 20,
         color: 'grey',
-    }
+    },
+    addItems:{
+        height: '5%',
+        width: '100%',
+        borderWidth: 2,
+        borderColor: 'red',
+
+    },
 })
 
 /*
