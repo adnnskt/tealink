@@ -352,15 +352,15 @@ const style = StyleSheet.create({
         color: 'grey',
     },
     addItems:{
-        height: '25%',
+        height: '30%',
         width: '100%',
         //borderWidth: 2,
         //borderColor: 'red',
-        paddingTop: '10%',
+        paddingTop: '15%',
         alignItems: 'center',
     },
     addItemsButton:{  
-        height: '40%',          
+        height: '45%',          
         width: '98%',
         //borderWidth: 2,
         //borderColor: 'blue',
