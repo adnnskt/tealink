@@ -365,7 +365,8 @@ const style = StyleSheet.create({
         //borderWidth: 2,
         //borderColor: 'blue',
         borderRadius: 60,
-        backgroundColor: '#9090d0'
+        backgroundColor: '#9090d0',
+        elevation: 5,
     },
 })
 
