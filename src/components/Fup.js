@@ -144,7 +144,7 @@ export default props => {
             </View>
             <View style={style.addItems}>
                 <View style={style.addItemsButton}>
-
+                    <Text style={style.txtButton}>Consultar</Text>
                 </View>
             </View>
         </View>
@@ -346,11 +346,6 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         height: '100%',
     },
-    textAdd:{
-        paddingLeft: '5%',
-        fontSize: 20,
-        color: 'grey',
-    },
     addItems:{
         height: '30%',
         width: '100%',
@@ -367,6 +362,12 @@ const style = StyleSheet.create({
         borderRadius: 60,
         backgroundColor: '#9090d0',
         elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    txtButton:{
+        color: '#e4e9fb',
+        fontSize: 12,
     },
 })
 
