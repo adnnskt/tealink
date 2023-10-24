@@ -367,7 +367,7 @@ const style = StyleSheet.create({
     },
     txtButton:{
         color: '#e4e9fb',
-        fontSize: 12,
+        fontSize: 20,
     },
 })
 
