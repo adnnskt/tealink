@@ -142,11 +142,13 @@ export default props => {
                     </View>
                 </View>   
             </View>
-            <View style={style.addItems}>
-                <View style={style.addItemsButton}>
-                    <Text style={style.txtButton}>Consultar</Text>
+            <TouchableHighlight onPress={() => console.warn('teste');}>
+                <View style={style.addItems}>
+                        <View style={style.addItemsButton}>
+                            <Text style={style.txtButton}>Consultar</Text>
+                        </View>
                 </View>
-            </View>
+            </TouchableHighlight>
         </View>
     </>  
     )
