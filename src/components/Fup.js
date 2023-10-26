@@ -142,13 +142,13 @@ export default props => {
                     </View>
                 </View>   
             </View>
-            <TouchableHighlight onPress={() => console.warn('teste');}>
-                <View style={style.addItems}>
-                        <View style={style.addItemsButton}>
-                            <Text style={style.txtButton}>Consultar</Text>
-                        </View>
-                </View>
-            </TouchableHighlight>
+            <View style={style.addItems}>
+                <TouchableHighlight onPress={() => console.warn('teste')} style={style.addItemsButtonTouch}>
+                    <View style={style.addItemsButton}>
+                        <Text style={style.txtButton}>Consultar</Text>
+                    </View>
+                </TouchableHighlight>
+            </View>
         </View>
     </>  
     )
@@ -355,10 +355,11 @@ const style = StyleSheet.create({
         //borderColor: 'red',
         paddingTop: '15%',
         alignItems: 'center',
+        alignItems: 'center',
     },
     addItemsButton:{  
-        height: '45%',          
-        width: '98%',
+        height: '100%',          
+        width: '100%',
         //borderWidth: 2,
         //borderColor: 'blue',
         borderRadius: 60,
@@ -371,6 +372,11 @@ const style = StyleSheet.create({
         color: '#e4e9fb',
         fontSize: 20,
     },
+    addItemsButtonTouch: {
+        height: '40%',          
+        width: '98%',
+        borderRadius: 60,
+    }
 })
 
 /*
