@@ -39,7 +39,12 @@ export default props => {
     }
 
     let options = {
-        sensorial: option1 === style.triggerOption ? false : true
+        sensorial: option1 === style.triggerOption ? false : true,
+        rotina: option2 === style.triggerOption ? false : true,
+        fobia: option3 === style.triggerOption ? false : true,
+        social: option4 === style.triggerOption ? false : true,
+        comunicação: option5 === style.triggerOption ? false : true,
+        emocional: option6 === style.triggerOption ? false : true,        
     }
 
 
