@@ -38,6 +38,11 @@ export default props => {
 
     }
 
+    let options = {
+        sensorial: option1 === style.triggerOption ? false : true
+    }
+
+
     return (  
     <>
         <View style= {style.container}>
@@ -143,7 +148,7 @@ export default props => {
                 </View>   
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => console.warn('teste')} style={style.addItemsButtonTouch}>
+                <TouchableHighlight onPress={() => console.warn(options.sensorial)} style={style.addItemsButtonTouch}>
                     <View style={style.addItemsButton}>
                         <Text style={style.txtButton}>Consultar</Text>
                     </View>
