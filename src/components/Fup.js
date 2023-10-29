@@ -47,6 +47,7 @@ export default props => {
         emocional: option6 === style.triggerOption ? false : true,        
     }
 
+    
 
     return (  
     <>
@@ -151,6 +152,9 @@ export default props => {
                     </View>
                     </View>
                 </View>   
+            </View>
+            <View style= {style.btnNoChoice}>
+                <Text></Text>
             </View>
             <View style={style.addItems}>
                 <TouchableHighlight onPress={() => console.warn(options.sensorial)} style={style.addItemsButtonTouch}>
@@ -347,8 +351,15 @@ const style = StyleSheet.create({
         color: '#e4e9fb',
         fontSize: 12,
     },
+    
+    btnNoChoice:{
+        height: '5%',
+        width: '40%',
+        borderWidth: 2,
+        borderColor: 'red',
+    },
     overAdd:{
-        height: '8%',
+        height: '30%',
         width: '80%',
         backgroundColor: '#d4d6d6',
         borderTopRightRadius: 40,
@@ -356,15 +367,14 @@ const style = StyleSheet.create({
     },
     add:{
         justifyContent: 'center',
-        height: '100%',
+        height: '50%',
     },
     addItems:{
         height: '30%',
         width: '100%',
         //borderWidth: 2,
         //borderColor: 'red',
-        paddingTop: '15%',
-        alignItems: 'center',
+        paddingTop: '5%',
         alignItems: 'center',
     },
     addItemsButton:{  
