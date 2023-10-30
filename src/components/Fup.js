@@ -154,9 +154,11 @@ export default props => {
                 </View>   
             </View>
             <View style={style.btnNoChoiceOver}>
+                <TouchableHighlight onPress={()=>console.warn('teste')} style={style.btnNoChoiceTouch}>
                 <View style= {style.btnNoChoice}>
                     <Text style={style.txtNoChoice}>Não identifico gatilhos</Text>
                 </View>
+                </TouchableHighlight>
             </View>
             <View style={style.addItems}>
                 <TouchableHighlight onPress={() => console.warn(options.sensorial)} style={style.addItemsButtonTouch}>
@@ -360,6 +362,11 @@ const style = StyleSheet.create({
         //borderColor: 'red',
         paddingLeft: '5%',
     },
+    btnNoChoiceTouch:{
+        height: '100%',
+        width: '100%',
+        borderRadius: 40,
+    },
     btnNoChoice:{
         height: '100%',
         width: '100%',
@@ -367,6 +374,7 @@ const style = StyleSheet.create({
         backgroundColor:'#4a5989',
         justifyContent: 'center',
         alignItems: 'center',
+        elevation: 5,
         //borderWidth: 2,
         //borderColor: 'red',
     },
@@ -383,14 +391,14 @@ const style = StyleSheet.create({
     },
     add:{
         justifyContent: 'center',
-        height: '50%',
+        height: '40%',
     },
     addItems:{
-        height: '30%',
+        height: '25%',
         width: '100%',
         //borderWidth: 2,
         //borderColor: 'red',
-        paddingTop: '5%',
+        paddingTop: '10%',
         alignItems: 'center',
     },
     addItemsButton:{  
