@@ -155,7 +155,7 @@ export default props => {
             </View>
             <View style={style.btnNoChoiceOver}>
                 <View style= {style.btnNoChoice}>
-                    <Text></Text>
+                    <Text style={style.txtNoChoice}>Não identifico gatilhos</Text>
                 </View>
             </View>
             <View style={style.addItems}>
@@ -356,16 +356,23 @@ const style = StyleSheet.create({
     btnNoChoiceOver:{
         height: '5%',
         width: '40%',
-        borderWidth: 2,
-        borderColor: 'red',
+        //borderWidth: 2,
+        //borderColor: 'red',
         paddingLeft: '5%',
     },
     btnNoChoice:{
         height: '100%',
         width: '100%',
         borderRadius: 40,
+        backgroundColor:'#4a5989',
+        justifyContent: 'center',
+        alignItems: 'center',
         //borderWidth: 2,
         //borderColor: 'red',
+    },
+    txtNoChoice:{
+        color: '#e4e9fb',
+        fontSize: 12,
     },
     overAdd:{
         height: '30%',
