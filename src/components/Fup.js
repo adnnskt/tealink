@@ -153,8 +153,10 @@ export default props => {
                     </View>
                 </View>   
             </View>
-            <View style= {style.btnNoChoice}>
-                <Text></Text>
+            <View style={style.btnNoChoiceOver}>
+                <View style= {style.btnNoChoice}>
+                    <Text></Text>
+                </View>
             </View>
             <View style={style.addItems}>
                 <TouchableHighlight onPress={() => console.warn(options.sensorial)} style={style.addItemsButtonTouch}>
@@ -351,12 +353,19 @@ const style = StyleSheet.create({
         color: '#e4e9fb',
         fontSize: 12,
     },
-    
-    btnNoChoice:{
+    btnNoChoiceOver:{
         height: '5%',
         width: '40%',
         borderWidth: 2,
         borderColor: 'red',
+        paddingLeft: '5%',
+    },
+    btnNoChoice:{
+        height: '100%',
+        width: '100%',
+        borderRadius: 40,
+        //borderWidth: 2,
+        //borderColor: 'red',
     },
     overAdd:{
         height: '30%',
