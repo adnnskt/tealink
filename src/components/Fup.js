@@ -17,7 +17,8 @@ export default props => {
     const [option4, setOption4] = useState(style.triggerOption)
     const [option5, setOption5] = useState(style.triggerOption)
     const [option6, setOption6] = useState(style.triggerOption)
-    
+    const [noChoice, setNoChoice] = useState(style.btnNoChoice)
+
     const [value, setValue] = React.useState(0);
     const [range, setRange] = React.useState([0, 0]);
     const [max, setMax] = React.useState(1);
@@ -154,8 +155,8 @@ export default props => {
                 </View>   
             </View>
             <View style={style.btnNoChoiceOver}>
-                <TouchableHighlight onPress={()=>console.warn('teste')} style={style.btnNoChoiceTouch}>
-                <View style= {style.btnNoChoice}>
+                <TouchableHighlight onPress={()=> noChoice === style.btnNoChoice ? setNoChoice(style.btnNoChoicePress) : setNoChoice(style.btnNoChoice) } style={style.btnNoChoiceTouch}>
+                <View style= {noChoice}>
                     <Text style={style.txtNoChoice}>Não identifico gatilhos</Text>
                 </View>
                 </TouchableHighlight>
@@ -356,11 +357,12 @@ const style = StyleSheet.create({
         fontSize: 12,
     },
     btnNoChoiceOver:{
-        height: '5%',
+        height: '7%',
         width: '40%',
         //borderWidth: 2,
         //borderColor: 'red',
         paddingLeft: '5%',
+        paddingTop: '3%',
     },
     btnNoChoiceTouch:{
         height: '100%',
@@ -377,6 +379,15 @@ const style = StyleSheet.create({
         elevation: 5,
         //borderWidth: 2,
         //borderColor: 'red',
+    },
+    btnNoChoicePress:{
+        height: '100%',
+        width: '100%',
+        borderRadius: 40,
+        backgroundColor:'#282640',
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 5,
     },
     txtNoChoice:{
         color: '#e4e9fb',
