@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal} from 'react-native'
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal, Pressable} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
@@ -165,12 +165,32 @@ export default props => {
                 </TouchableHighlight>
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => console.warn(options.sensorial)} style={style.addItemsButtonTouch}>
+                <TouchableHighlight onPress={() => setModalVisible(true)} style={style.addItemsButtonTouch}>
                     <View style={style.addItemsButton}>
                         <Text style={style.txtButton}>Consultar</Text>
                     </View>
                 </TouchableHighlight>
             </View>
+
+            <Modal
+                animationType="fade"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                Alert.alert('Modal has been closed.');
+                setModalVisible(!modalVisible);
+                }}>
+                <View style={style.centeredView}>
+                    <View style={style.modalView}>
+                        <Text style={style.modalText}>Hello World!</Text>
+                        <Pressable
+                            style={[style.button, style.buttonClose]}
+                            onPress={() => setModalVisible(!modalVisible)}>
+                            <Text style={style.textStyle}>Hide Modal</Text>
+                        </Pressable>
+                    </View>
+                </View> 
+            </Modal>
         </View>
     </>  
     )
@@ -434,7 +454,48 @@ const style = StyleSheet.create({
         height: '40%',          
         width: '98%',
         borderRadius: 60,
-    }
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 22,
+      },
+      modalView: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 35,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+      },
+      button: {
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2,
+      },
+      buttonOpen: {
+        backgroundColor: '#F194FF',
+      },
+      buttonClose: {
+        backgroundColor: '#2196F3',
+      },
+      textStyle: {
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: 'center',
+      },
 })
 
 /*
