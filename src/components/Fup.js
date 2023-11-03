@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView} from 'react-native'
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
@@ -24,6 +24,9 @@ export default props => {
     const [max, setMax] = React.useState(1);
 
     const [txtValue, setTxtValue] = React.useState('Baixo')
+
+    const [modalVisible, setModalVisible] = useState(false);
+
 
     function txtValueChange(value) {
 
