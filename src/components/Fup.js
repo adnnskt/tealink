@@ -27,7 +27,7 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
-
+/**/
     function txtValueChange(value) {
 
         setValue(value)
