@@ -182,15 +182,20 @@ export default props => {
                 Alert.alert('Modal has been closed.');
                 setModalVisible(!modalVisible);
                 }}>
+
                 <View style={style.centeredView}>
-                    <View style={style.modalView}>
-                        <Text style={style.modalText}>Hello World!</Text>
-                        <Pressable
-                            style={[style.button, style.buttonClose]}
-                            onPress={() => setModalVisible(!modalVisible)}>
-                            <Text style={style.textStyle}>Hide Modal</Text>
-                        </Pressable>
-                    </View>
+                    <ImageBackground
+                        style= {style.img}
+                        source= {bgsensorial}
+                        resizeMode='contain'
+                    >
+                    </ImageBackground>
+                    
+                    <Pressable
+                        style={[style.button, style.buttonClose]}
+                        onPress={() => setModalVisible(!modalVisible)}>
+                        <Text style={style.textStyle}>Hide Modal</Text>
+                    </Pressable>
                 </View> 
             </Modal>
         </View>
@@ -459,8 +464,8 @@ const style = StyleSheet.create({
     },
     centeredView: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+       // justifyContent: 'center',
+        //alignItems: 'center',
         //borderColor: 'red',
         //borderWidth: 2,
         //marginTop: 22,
@@ -471,15 +476,17 @@ const style = StyleSheet.create({
         borderRadius: 20,
         height: '80%',
         width: '90%',
+        borderColor: 'red',
+        borderWidth: 2,        
         //padding: 35,
         alignItems: 'center',
         shadowColor: '#000',
-        shadowOffset: {
+        /*shadowOffset: {
           width: 0,
           height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
+        },*/
+        //shadowOpacity: 0.25,
+        //shadowRadius: 4,
         elevation: 5,
       },
       button: {
@@ -502,6 +509,13 @@ const style = StyleSheet.create({
         marginBottom: 15,
         textAlign: 'center',
       },
+      overImg:{
+        flex: 1,
+      },
+      img: {
+        flex: 1,
+        //justifyContent: 'center'
+      }
 })
 
 /*
