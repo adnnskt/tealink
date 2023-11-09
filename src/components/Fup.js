@@ -3,6 +3,8 @@ import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, Scro
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
+const bgsensorial = require("../../src/img/sensorial.png") 
+
 
 
 export default props => {
