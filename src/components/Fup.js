@@ -184,12 +184,12 @@ export default props => {
                 }}>
 
                 <View style={style.centeredView}>
-                    <ImageBackground
+                    <Image
                         style= {style.img}
                         source= {bgsensorial}
                         resizeMode='contain'
                     >
-                    </ImageBackground>
+                    </Image>
                     
                     <Pressable
                         style={[style.button, style.buttonClose]}
@@ -464,10 +464,10 @@ const style = StyleSheet.create({
     },
     centeredView: {
         flex: 1,
-       // justifyContent: 'center',
-        //alignItems: 'center',
-        //borderColor: 'red',
-        //borderWidth: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderColor: 'red',
+        borderWidth: 2,
         //marginTop: 22,
       },
       modalView: {
@@ -513,7 +513,7 @@ const style = StyleSheet.create({
         flex: 1,
       },
       img: {
-        flex: 1,
+        width: '95%',
         //justifyContent: 'center'
       }
 })
