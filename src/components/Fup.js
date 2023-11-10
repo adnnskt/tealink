@@ -463,12 +463,15 @@ const style = StyleSheet.create({
         borderRadius: 60,
     },
     centeredView: {
-        flex: 1,
+        //flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: 'red',
-        borderWidth: 2,
-        //marginTop: 22,
+        //borderColor: 'red',
+        //borderWidth: 2,
+        height: '82%',
+        marginTop: '15%',
+        backgroundColor: 'white',
+        borderRadius: 20,
       },
       modalView: {
         //margin: 10,
@@ -505,15 +508,12 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
       },
-      modalText: {
-        marginBottom: 15,
-        textAlign: 'center',
-      },
       overImg:{
         flex: 1,
       },
       img: {
         width: '95%',
+        height: '80%',
         //justifyContent: 'center'
       }
 })
