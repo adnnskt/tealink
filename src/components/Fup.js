@@ -463,14 +463,14 @@ const style = StyleSheet.create({
         borderRadius: 60,
     },
     centeredView: {
-        //flex: 1,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         //borderColor: 'red',
         //borderWidth: 2,
-        height: '82%',
+        height: '68%',
         marginTop: '15%',
-        backgroundColor: 'white',
+        backgroundColor: 'rgba(144, 144, 208, 0.965)',
         borderRadius: 20,
       },
       modalView: {
