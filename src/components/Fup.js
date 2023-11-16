@@ -470,8 +470,8 @@ const style = StyleSheet.create({
         //borderWidth: 2,
         height: '68%',
         marginTop: '15%',
-        backgroundColor: 'rgba(144, 144, 208, 0.965)',
-        borderRadius: 20,
+        backgroundColor: 'rgba(158, 166, 234, 0.966)',
+        //borderRadius: 20,
       },
       modalView: {
         //margin: 10,
@@ -513,7 +513,7 @@ const style = StyleSheet.create({
       },
       img: {
         width: '95%',
-        height: '80%',
+        height: '80%',  
         //justifyContent: 'center'
       }
 })
