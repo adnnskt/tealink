@@ -192,6 +192,7 @@ export default props => {
                     </Image>
                     
                     <View >
+                        <View style={style.triangle}/>
                         <Pressable
                             style={[style.button, style.buttonClose]}
                             onPress={() => setModalVisible(!modalVisible)}>
@@ -517,6 +518,19 @@ const style = StyleSheet.create({
         width: '95%',
         height: '80%',  
         //justifyContent: 'center'
+      },
+      triangle: {
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderLeftWidth: 30,
+        borderRightWidth: 30,
+        borderBottomWidth: 60,
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderBottomColor: 'blue',
+
       }
 })
 
