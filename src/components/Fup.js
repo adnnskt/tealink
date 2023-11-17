@@ -191,7 +191,7 @@ export default props => {
                     >
                     </Image>
                     
-                    <View >
+                    <View style={style.groupButtonsModal}>
                         <View style={style.triangle}/>
                         <Pressable
                             style={[style.button, style.buttonClose]}
@@ -519,17 +519,23 @@ const style = StyleSheet.create({
         height: '80%',  
         //justifyContent: 'center'
       },
+      groupButtonsModal: {
+        flexDirection: 'row',
+        width: '90%',
+        justifyContent: 'space-between',
+      },
       triangle: {
         width: 0,
         height: 0,
         backgroundColor: 'transparent',
         borderStyle: 'solid',
-        borderLeftWidth: 30,
-        borderRightWidth: 30,
-        borderBottomWidth: 60,
+        borderLeftWidth: 20,
+        borderRightWidth: 20,
+        borderBottomWidth: 40,
         borderLeftColor: 'transparent',
         borderRightColor: 'transparent',
         borderBottomColor: 'blue',
+        transform: [{rotate: '-90deg'}]
 
       }
 })
