@@ -191,11 +191,13 @@ export default props => {
                     >
                     </Image>
                     
-                    <Pressable
-                        style={[style.button, style.buttonClose]}
-                        onPress={() => setModalVisible(!modalVisible)}>
-                        <Text style={style.textStyle}>Hide Modal</Text>
-                    </Pressable>
+                    <View >
+                        <Pressable
+                            style={[style.button, style.buttonClose]}
+                            onPress={() => setModalVisible(!modalVisible)}>
+                            <Text style={style.textStyle}>Hide Modal</Text>
+                        </Pressable>
+                    </View>
                 </View> 
             </Modal>
         </View>
