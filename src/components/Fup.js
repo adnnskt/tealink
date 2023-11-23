@@ -196,7 +196,7 @@ export default props => {
                         <Pressable
                             style={[style.button, style.buttonClose]}
                             onPress={() => setModalVisible(!modalVisible)}>
-                            <Text style={style.textStyle}>Hide Modal</Text>
+                            <Text style={style.textStyle}>  Fechar  </Text>
                         </Pressable>
                         <View style={style.Rtriangle}/>
                     </View>
@@ -522,7 +522,7 @@ const style = StyleSheet.create({
       },
       groupButtonsModal: {
         flexDirection: 'row',
-        width: '90%',
+        width: '80%',
         justifyContent: 'space-between',
       },
       triangle: {
