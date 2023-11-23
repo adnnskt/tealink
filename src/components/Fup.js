@@ -535,10 +535,21 @@ const style = StyleSheet.create({
         borderBottomWidth: 40,
         borderLeftColor: 'transparent',
         borderRightColor: 'transparent',
-        borderBottomColor: 'blue',
+        borderBottomColor: '#282640',
         transform: [{rotate: '-90deg'}],
-        
-
+      },
+      Rtriangle: {
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderLeftWidth: 20,
+        borderRightWidth: 20,
+        borderBottomWidth: 40,
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderBottomColor: '#282640',
+        transform: [{rotate: '90deg'}],
       }
 })
 
