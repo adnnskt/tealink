@@ -198,6 +198,7 @@ export default props => {
                             onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={style.textStyle}>Hide Modal</Text>
                         </Pressable>
+                        <View style={style.Rtriangle}/>
                     </View>
                 </View> 
             </Modal>
@@ -535,7 +536,8 @@ const style = StyleSheet.create({
         borderLeftColor: 'transparent',
         borderRightColor: 'transparent',
         borderBottomColor: 'blue',
-        transform: [{rotate: '-90deg'}]
+        transform: [{rotate: '-90deg'}],
+        
 
       }
 })
