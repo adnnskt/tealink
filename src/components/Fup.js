@@ -29,7 +29,20 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
-/**/
+
+    let jsonList =  [
+        {
+            id: '1',
+            image: bgsensorial,
+        },
+        {
+            id: '2',
+            image: bgsensorial,
+        }
+    ]
+
+
+
     function txtValueChange(value) {
 
         setValue(value)
