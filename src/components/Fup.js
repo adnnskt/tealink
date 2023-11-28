@@ -42,6 +42,24 @@ export default props => {
     ]
 
 
+    const Item = ({title}) => (
+        <Image
+            style= {style.img}
+            source= {bgsensorial}
+            resizeMode='contain'
+        >
+        </Image>
+        
+        <View style={style.groupButtonsModal}>
+            <View style={style.triangle}/>
+            <Pressable
+                style={[style.button, style.buttonClose]}
+                onPress={() => setModalVisible(!modalVisible)}>
+                <Text style={style.textStyle}>  Fechar  </Text>
+            </Pressable>
+            <View style={style.Rtriangle}/>
+        </View>
+      )
 
     function txtValueChange(value) {
 
