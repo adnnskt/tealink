@@ -43,14 +43,13 @@ export default props => {
 
 
     const Item = ({title}) => (
-        <>
+        <>    
             <Image
                 style= {style.img}
-                source= {bgsensorial}
+                source= {title}
                 resizeMode='contain'
             >
             </Image>
-            
             <View style={style.groupButtonsModal}>
                 <View style={style.triangle}/>
                 <Pressable
@@ -215,25 +214,17 @@ export default props => {
                 Alert.alert('Modal has been closed.');
                 setModalVisible(!modalVisible);
                 }}>
-
                 <View style={style.centeredView}>
-                    <Image
-                        style= {style.img}
-                        source= {bgsensorial}
-                        resizeMode='contain'
-                    >
-                    </Image>
-                    
-                    <View style={style.groupButtonsModal}>
-                        <View style={style.triangle}/>
-                        <Pressable
-                            style={[style.button, style.buttonClose]}
-                            onPress={() => setModalVisible(!modalVisible)}>
-                            <Text style={style.textStyle}>  Fechar  </Text>
-                        </Pressable>
-                        <View style={style.Rtriangle}/>
-                    </View>
-                </View> 
+                    <FlatList
+                        data={jsonList}
+                        renderItem={({item}) => <Item title={item.image} />}
+                        keyExtractor={item => item.id}
+                        horizontal
+                        //showsHorizontalScrollIndicator
+                        //pagingEnabled
+                    />
+                     
+                </View>
             </Modal>
         </View>
     </>  
