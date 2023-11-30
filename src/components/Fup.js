@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal, Pressable} from 'react-native'
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal, Pressable, FlatList} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
@@ -43,22 +43,24 @@ export default props => {
 
 
     const Item = ({title}) => (
-        <Image
-            style= {style.img}
-            source= {bgsensorial}
-            resizeMode='contain'
-        >
-        </Image>
-        
-        <View style={style.groupButtonsModal}>
-            <View style={style.triangle}/>
-            <Pressable
-                style={[style.button, style.buttonClose]}
-                onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={style.textStyle}>  Fechar  </Text>
-            </Pressable>
-            <View style={style.Rtriangle}/>
-        </View>
+        <>
+            <Image
+                style= {style.img}
+                source= {bgsensorial}
+                resizeMode='contain'
+            >
+            </Image>
+            
+            <View style={style.groupButtonsModal}>
+                <View style={style.triangle}/>
+                <Pressable
+                    style={[style.button, style.buttonClose]}
+                    onPress={() => setModalVisible(!modalVisible)}>
+                    <Text style={style.textStyle}>  Fechar  </Text>
+                </Pressable>
+                <View style={style.Rtriangle}/>
+            </View>
+        </>
       )
 
     function txtValueChange(value) {
