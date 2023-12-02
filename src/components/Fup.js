@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, ScrollView, Modal, Pressable, FlatList} from 'react-native'
+import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
 import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
@@ -42,24 +42,40 @@ export default props => {
             txt: 'Rotina'
         }
     ]
+    /*
+    Imagem com sizeMode contain
+    <Image
+    style= {style.img}
+    source= {bgsensorial}
+    resizeMode='contain'
+    >
+    </Image>
+    */
 
-
+    const {width} = useWindowDimensions()
+    
     const Item = ({title}) => (
-        <>    
         
-            <Text>
-                {title}
-            </Text>
-            <View style={style.groupButtonsModal}>
-                
-                <Pressable
-                    style={[style.button, style.buttonClose]}
-                    onPress={() => setModalVisible(!modalVisible)}>
-                    <Text style={style.textStyle}>  Fechar  </Text>
-                </Pressable>
-                
+        <>    
+            <View style={style.item, {width}}>
+                <Image
+                    style= {style.img}
+                    source= {bgsensorial}
+                    resizeMode='contain'
+                    >
+                </Image>
+                <View style={style.groupButtonsModal}>
+                    
+                    <Pressable
+                        style={[style.button, style.buttonClose]}
+                        onPress={() => setModalVisible(!modalVisible)}>
+                        <Text style={style.textStyle}>  Fechar  </Text>
+                    </Pressable>
+                    
+                </View>
             </View>
         </>
+        
       )
 
     function txtValueChange(value) {
@@ -491,6 +507,7 @@ const style = StyleSheet.create({
     },
     centeredView: {
         flex: 1,
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         //borderColor: 'red',
@@ -539,7 +556,7 @@ const style = StyleSheet.create({
         flex: 1,
       },
       img: {
-        width: '95%',
+        width: '100%',
         height: '80%',  
         //justifyContent: 'center'
       },
@@ -548,32 +565,15 @@ const style = StyleSheet.create({
         width: '80%',
         justifyContent: 'space-between',
       },
-      triangle: {
-        width: 0,
-        height: 0,
-        backgroundColor: 'transparent',
-        borderStyle: 'solid',
-        borderLeftWidth: 20,
-        borderRightWidth: 20,
-        borderBottomWidth: 40,
-        borderLeftColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderBottomColor: '#282640',
-        transform: [{rotate: '-90deg'}],
+      item:{
+        backgroundColor: '#f9c2ff',
+        padding: 55,
+        //width:'100%',
+        marginVertical: 10,
+        marginHorizontal: 50,
       },
-      Rtriangle: {
-        width: 0,
-        height: 0,
-        backgroundColor: 'transparent',
-        borderStyle: 'solid',
-        borderLeftWidth: 20,
-        borderRightWidth: 20,
-        borderBottomWidth: 40,
-        borderLeftColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderBottomColor: '#282640',
-        transform: [{rotate: '90deg'}],
-      }
+      
+      
 })
 
 /*
