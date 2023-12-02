@@ -34,22 +34,21 @@ export default props => {
         {
             id: '1',
             image: bgsensorial,
+            txt: 'Sensorial'
         },
         {
             id: '2',
             image: bgsensorial,
+            txt: 'Rotina'
         }
     ]
 
 
     const Item = ({title}) => (
         <>    
-            <Image
-                style= {style.img}
-                source= {title}
-                resizeMode='contain'
-            >
-            </Image>
+            <Text>
+                {title}
+            </Text>
             <View style={style.groupButtonsModal}>
                 <View style={style.triangle}/>
                 <Pressable
@@ -217,7 +216,7 @@ export default props => {
                 <View style={style.centeredView}>
                     <FlatList
                         data={jsonList}
-                        renderItem={({item}) => <Item title={item.image} />}
+                        renderItem={({item}) => <Item title={item.txt} />}
                         keyExtractor={item => item.id}
                         horizontal
                         //showsHorizontalScrollIndicator
