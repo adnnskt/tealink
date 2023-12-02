@@ -46,17 +46,18 @@ export default props => {
 
     const Item = ({title}) => (
         <>    
+        
             <Text>
                 {title}
             </Text>
             <View style={style.groupButtonsModal}>
-                <View style={style.triangle}/>
+                
                 <Pressable
                     style={[style.button, style.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}>
                     <Text style={style.textStyle}>  Fechar  </Text>
                 </Pressable>
-                <View style={style.Rtriangle}/>
+                
             </View>
         </>
       )
@@ -222,7 +223,6 @@ export default props => {
                         //showsHorizontalScrollIndicator
                         //pagingEnabled
                     />
-                     
                 </View>
             </Modal>
         </View>
@@ -495,8 +495,8 @@ const style = StyleSheet.create({
         alignItems: 'center',
         //borderColor: 'red',
         //borderWidth: 2,
-        height: '68%',
-        marginTop: '15%',
+        //height: '68%',
+        //marginTop: '15%',
         backgroundColor: 'rgba(158, 166, 234, 0.966)',
         //borderRadius: 20,
       },
