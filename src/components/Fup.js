@@ -53,7 +53,7 @@ export default props => {
     */
 
     const {width} = useWindowDimensions()
-    
+
     const Item = ({title}) => (
         
         <>    
@@ -236,8 +236,8 @@ export default props => {
                         renderItem={({item}) => <Item title={item.txt} />}
                         keyExtractor={item => item.id}
                         horizontal
-                        //showsHorizontalScrollIndicator
-                        //pagingEnabled
+                        showsHorizontalScrollIndicator
+                        pagingEnabled
                     />
                 </View>
             </Modal>
