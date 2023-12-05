@@ -65,13 +65,17 @@ export default props => {
                     >
                 </Image>
                 <View style={style.groupButtonsModal}>
-                    
-                    <Pressable
-                        style={[style.button, style.buttonClose]}
-                        onPress={() => setModalVisible(!modalVisible)}>
-                        <Text style={style.textStyle}>  Fechar  </Text>
-                    </Pressable>
-                    
+                    <View style>
+                        <Pressable
+                            style={[style.button, style.buttonClose]}
+                            onPress={() => setModalVisible(!modalVisible)}>
+                            <Text style={style.textStyle}>  Fechar  </Text>
+                        </Pressable>
+                        <View style={style.pointer}/>
+                        <View />
+                        <View />
+                        <View />
+                    </View>
                 </View>
             </View>
         </>
@@ -100,8 +104,6 @@ export default props => {
         comunicação: option5 === style.triggerOption ? false : true,
         emocional: option6 === style.triggerOption ? false : true,        
     }
-
-    
 
     return (  
     <>
@@ -562,7 +564,7 @@ const style = StyleSheet.create({
         //justifyContent: 'center'
       },
       groupButtonsModal: {
-        flexDirection: 'row',
+        //flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
         justifyContent: 'center',
@@ -575,6 +577,12 @@ const style = StyleSheet.create({
         marginHorizontal: 50,
         alignItems: 'center',
         justifyContent: 'center',
+      },
+      pointer:{
+        backgroundColor: 'blue',
+        radius: 60,
+        width: '5%',
+        height: '5%',
       },
       
       
