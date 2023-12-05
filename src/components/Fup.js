@@ -563,8 +563,9 @@ const style = StyleSheet.create({
       },
       groupButtonsModal: {
         flexDirection: 'row',
-        width: '80%',
+        width: '100%',
         justifyContent: 'space-between',
+        justifyContent: 'center',
       },
       item:{
         backgroundColor: '#f9c2ff',
@@ -572,6 +573,8 @@ const style = StyleSheet.create({
         //width:'100%',
         marginVertical: 10,
         marginHorizontal: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
       },
       
       
