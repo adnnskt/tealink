@@ -238,6 +238,7 @@ export default props => {
                         horizontal
                         showsHorizontalScrollIndicator
                         pagingEnabled
+                        bounces={false}
                     />
                 </View>
             </Modal>
