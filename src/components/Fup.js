@@ -586,9 +586,9 @@ const style = StyleSheet.create({
       },
       pointer:{
         backgroundColor: 'blue',
-        //radius: 60,
-        width: '10%',
-        height: '105%',
+        borderRadius: 20,
+        width: '5%',
+        height: '13%',
       },
       subGroupsBtn:{
         width: '100%',
@@ -598,10 +598,12 @@ const style = StyleSheet.create({
       },
       groupPoint:{
         width: '40%',
-        height: '10%',
+        height: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        //borderColor: 'green',
+        //borderWidth: 2,
         //paddingTop: '2%',
       }
       
