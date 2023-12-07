@@ -65,16 +65,18 @@ export default props => {
                     >
                 </Image>
                 <View style={style.groupButtonsModal}>
-                    <View style>
+                    <View style={style.subGroupsBtn}>
                         <Pressable
                             style={[style.button, style.buttonClose]}
                             onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={style.textStyle}>  Fechar  </Text>
                         </Pressable>
-                        <View style={style.pointer}/>
-                        <View />
-                        <View />
-                        <View />
+                        <View style={style.groupPoint}>
+                            <View style={style.pointer}/>
+                            <View />
+                            <View />
+                            <View />
+                        </View>
                     </View>
                 </View>
             </View>
@@ -549,6 +551,7 @@ const style = StyleSheet.create({
       },
       buttonClose: {
         backgroundColor: '#2196F3',
+        width: '95%',
       },
       textStyle: {
         color: 'white',
@@ -581,9 +584,22 @@ const style = StyleSheet.create({
       pointer:{
         backgroundColor: 'blue',
         radius: 60,
-        width: '5%',
-        height: '5%',
+        width: '25%',
+        height: '25%',
       },
+      subGroupsBtn:{
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      groupPoint:{
+        width: '100%',
+        height: '10%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        //paddingTop: '2%',
+      }
       
       
 })
