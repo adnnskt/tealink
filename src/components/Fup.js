@@ -73,9 +73,9 @@ export default props => {
                         </Pressable>
                         <View style={style.groupPoint}>
                             <View style={style.pointer}/>
-                            <View />
-                            <View />
-                            <View />
+                            <View style={style.pointer}/>
+                            <View style={style.pointer}/>
+                            <View style={style.pointer}/>
                         </View>
                     </View>
                 </View>
@@ -563,12 +563,15 @@ const style = StyleSheet.create({
       },
       img: {
         width: '100%',
-        height: '80%',  
+        height: '70%',  
         //justifyContent: 'center'
       },
       groupButtonsModal: {
         //flexDirection: 'row',
         width: '100%',
+        height: '30%',
+        borderColor: 'red',
+        borderWidth: 2,
         justifyContent: 'space-between',
         justifyContent: 'center',
       },
@@ -583,20 +586,21 @@ const style = StyleSheet.create({
       },
       pointer:{
         backgroundColor: 'blue',
-        radius: 60,
-        width: '25%',
-        height: '25%',
+        //radius: 60,
+        width: '10%',
+        height: '105%',
       },
       subGroupsBtn:{
         width: '100%',
         alignItems: 'center',
-        justifyContent: 'center',
+        height: '30%',
+        justifyContent: 'space-between',
       },
       groupPoint:{
-        width: '100%',
+        width: '40%',
         height: '10%',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         //paddingTop: '2%',
       }
