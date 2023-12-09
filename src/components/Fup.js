@@ -60,7 +60,7 @@ export default props => {
             <View style={style.item, {width}}>
                 <Image
                     style= {style.img}
-                    source= {bgsensorial}
+                    source= {title.image}
                     resizeMode='contain'
                     >
                 </Image>
@@ -72,10 +72,10 @@ export default props => {
                             <Text style={style.textStyle}>  Fechar  </Text>
                         </Pressable>
                         <View style={style.groupPoint}>
-                            <View style={style.pointer}/>
-                            <View style={style.pointer}/>
-                            <View style={style.pointer}/>
-                            <View style={style.pointer}/>
+                            <View style={title.id === '1' ? style.pointerMain : style.pointer}/>
+                            <View style={title.id === '2' ? style.pointerMain : style.pointer}/>
+                            <View style={title.id === '3' ? style.pointerMain : style.pointer}/>
+                            <View style={title.id === '4' ? style.pointerMain : style.pointer}/>
                         </View>
                     </View>
                 </View>
@@ -237,7 +237,7 @@ export default props => {
                 <View style={style.centeredView}>
                     <FlatList
                         data={jsonList}
-                        renderItem={({item}) => <Item title={item.txt} />}
+                        renderItem={({item}) => <Item title={item} />}
                         keyExtractor={item => item.id}
                         horizontal
                         showsHorizontalScrollIndicator
@@ -585,11 +585,21 @@ const style = StyleSheet.create({
         justifyContent: 'center',
       },
       pointer:{
-        backgroundColor: 'blue',
+        //backgroundColor: '#282640',
+        backgroundColor: '#4a5989',
         borderRadius: 20,
         width: '5%',
         height: '13%',
       },
+
+      pointerMain:{
+        backgroundColor: '#282640',
+        //backgroundColor: '#4a5989',
+        borderRadius: 20,
+        width: '5%',
+        height: '13%',
+      },
+      
       subGroupsBtn:{
         width: '100%',
         alignItems: 'center',
