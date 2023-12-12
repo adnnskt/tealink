@@ -81,7 +81,7 @@ export default props => {
                 </View>
             </View>
         </>
-        
+        //
       )
 
     function txtValueChange(value) {
