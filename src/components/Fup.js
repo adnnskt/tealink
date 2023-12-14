@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 const bgsensorial = require("../../src/img/sensorial.png") 
 
-
+import jsonList from '../../src/views/criseContentJson.js'
 
 export default props => {
 
