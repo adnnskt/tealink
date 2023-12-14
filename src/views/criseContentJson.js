@@ -1,3 +1,8 @@
+
+const bgsensorial = require("../../src/img/sensorial.png") 
+
+
+
 const jsonList =  [
     {
         id: '1',
