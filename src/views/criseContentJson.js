@@ -49,4 +49,4 @@ let jsonList =  [
 
 
 
-export {jsonList};
+export default jsonList;

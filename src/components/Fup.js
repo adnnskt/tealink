@@ -29,31 +29,6 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
-
-    /*
-    let jsonList =  [
-        {
-            id: '1',
-            image: bgsensorial,
-            txt: 'Sensorial'
-        },
-        {
-            id: '2',
-            image: bgsensorial,
-            txt: 'Rotina'
-        }
-    ]
-    */
-    /*
-    Imagem com sizeMode contain
-    <Image
-    style= {style.img}
-    source= {bgsensorial}
-    resizeMode='contain'
-    >
-    </Image>
-    */
-
     const {width} = useWindowDimensions()
 
     const Item = ({title}) => (
