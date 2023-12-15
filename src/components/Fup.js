@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 const bgsensorial = require("../../src/img/sensorial.png") 
 
-import jsonList from '../../src/views/criseContentJson.js'
+import jsonList from "../views/criseContentJson"
 
 export default props => {
 
@@ -30,6 +30,7 @@ export default props => {
     const [modalVisible, setModalVisible] = useState(false);
 
 
+    /*
     let jsonList =  [
         {
             id: '1',
@@ -42,6 +43,7 @@ export default props => {
             txt: 'Rotina'
         }
     ]
+    */
     /*
     Imagem com sizeMode contain
     <Image

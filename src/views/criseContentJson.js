@@ -1,15 +1,15 @@
 
-const bgsensorial = require("../../src/img/sensorial.png") 
-const bgcomunicacao = require("../../src/img/comunicacao.png") 
-const bgemocional = require("../../src/img/emocional.png") 
-const bgfobia = require("../../src/img/fobia.png") 
-const bgidentGatilho = require("../../src/img/identGatilho.png") 
-const bgrotina = require("../../src/img/rotina.png") 
-const bgsocial = require("../../src/img/social.png") 
+const bgsensorial = require("../img/sensorial.png") 
+const bgcomunicacao = require("../img/comunicacao.png") 
+const bgemocional = require("../img/emocional.png") 
+const bgfobia = require("../img/fobia.png") 
+const bgidentGatilho = require("../img/identGatilho.png") 
+const bgrotina = require("../img/rotina.png") 
+const bgsocial = require("../img/social.png") 
 
 
 
-const jsonList =  [
+let jsonList =  [
     {
         id: '1',
         image: bgsensorial,
@@ -44,9 +44,9 @@ const jsonList =  [
         id: '7',
         image: bgidentGatilho,
         txt: 'Sem Gatilho'
-    }
+    },
 ]
 
 
 
-export jsonList
+export {jsonList};
