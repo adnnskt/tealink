@@ -200,7 +200,10 @@ export default props => {
                 </TouchableHighlight>
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => setModalVisible(true) } style={style.addItemsButtonTouch}>
+                <TouchableHighlight onPress={() => {setModalVisible(true); 
+                                                   optionsValue();
+                                                }         
+                                                    } style={style.addItemsButtonTouch}>
                     <View style={style.addItemsButton}>
                         <Text style={style.txtButton}>Consultar</Text>
                     </View>
