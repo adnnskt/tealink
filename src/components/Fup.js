@@ -75,15 +75,19 @@ export default props => {
 
     }
 
-    let options = {
-        sensorial: option1 === style.triggerOption ? false : true,
-        rotina: option2 === style.triggerOption ? false : true,
-        fobia: option3 === style.triggerOption ? false : true,
-        social: option4 === style.triggerOption ? false : true,
-        comunicação: option5 === style.triggerOption ? false : true,
-        emocional: option6 === style.triggerOption ? false : true,        
-    }
+    function optionsValue(){
 
+        let options = {
+            sensorial: option1 === style.triggerOption ? false : true,
+            rotina: option2 === style.triggerOption ? false : true,
+            fobia: option3 === style.triggerOption ? false : true,
+            social: option4 === style.triggerOption ? false : true,
+            comunicação: option5 === style.triggerOption ? false : true,
+            emocional: option6 === style.triggerOption ? false : true,        
+        }
+        console.warn(options.sensorial);
+        return options
+    }
     return (  
     <>
         <View style= {style.container}>
@@ -196,7 +200,7 @@ export default props => {
                 </TouchableHighlight>
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => setModalVisible(true)} style={style.addItemsButtonTouch}>
+                <TouchableHighlight onPress={() => setModalVisible(true) } style={style.addItemsButtonTouch}>
                     <View style={style.addItemsButton}>
                         <Text style={style.txtButton}>Consultar</Text>
                     </View>
