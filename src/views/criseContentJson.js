@@ -17,28 +17,28 @@ let jsonList =  [
     },
     {
         id: '2',
-        image: bgcomunicacao,
-        txt: 'Comunicação'
-    },
-    {
-        id: '3',
-        image: bgemocional,
-        txt: 'Emocional'
-    },
-    {
-        id: '4',
-        image: bgfobia,
-        txt: 'Fobia'
-    },
-    {
-        id: '5',
         image: bgrotina,
         txt: 'Rotina'
     },
     {
-        id: '6',
+        id: '3',
+        image: bgfobia,
+        txt: 'Fobia'
+    },
+    {
+        id: '4',
         image: bgsocial,
         txt: 'Social'
+    },
+    {
+        id: '5',
+        image: bgcomunicacao,
+        txt: 'Comunicação'
+    },
+    {
+        id: '6',
+        image: bgemocional,
+        txt: 'Emocional'
     },
     {
         id: '7',
