@@ -77,16 +77,18 @@ export default props => {
 
     function optionsValue(){
 
-        let options = {
-            sensorial: option1 === style.triggerOption ? false : true,
-            rotina: option2 === style.triggerOption ? false : true,
-            fobia: option3 === style.triggerOption ? false : true,
-            social: option4 === style.triggerOption ? false : true,
-            comunicação: option5 === style.triggerOption ? false : true,
-            emocional: option6 === style.triggerOption ? false : true,        
-        }
-        console.warn(options.sensorial);
-        return options
+        let options = [
+            option1 === style.triggerOption ? false : 'Sensorial',
+            option2 === style.triggerOption ? false : 'Rotina',
+            option3 === style.triggerOption ? false : 'Fobia',
+            option4 === style.triggerOption ? false : 'Social',
+            option5 === style.triggerOption ? false : 'Comunicação',
+            option6 === style.triggerOption ? false : 'Emocional',        
+        ]
+        
+        const listaFiltrada = jsonList.filter(item => options.includes(item.txt));
+        console.warn(listaFiltrada);
+        return listaFiltrada
     }
     return (  
     <>
