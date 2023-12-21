@@ -83,7 +83,8 @@ export default props => {
             option3 === style.triggerOption ? null : 'Fobia',
             option4 === style.triggerOption ? null : 'Social',
             option5 === style.triggerOption ? null : 'Comunicação',
-            option6 === style.triggerOption ? null : 'Emocional',        
+            option6 === style.triggerOption ? null : 'Emocional',  
+            noChoice === style.triggerOption ? null : 'Sem Gatilho',     
         ]
         
         const listaFiltrada = jsonList.filter(item => options.includes(item.txt));
