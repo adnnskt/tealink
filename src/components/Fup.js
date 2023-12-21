@@ -75,6 +75,8 @@ export default props => {
 
     }
 
+    let jsonListFiltrada = {}
+
     function optionsValue(){
 
         let options = [
@@ -89,6 +91,9 @@ export default props => {
         
         const listaFiltrada = jsonList.filter(item => options.includes(item.txt));
         console.warn(listaFiltrada);
+        
+        jsonListFiltrada = listaFiltrada
+
         return listaFiltrada
     }
     return (  
@@ -223,7 +228,7 @@ export default props => {
                 }}>
                 <View style={style.centeredView}>
                     <FlatList
-                        data={jsonList}
+                        data={jsonListFiltrada}
                         renderItem={({item}) => <Item title={item} />}
                         keyExtractor={item => item.id}
                         horizontal
