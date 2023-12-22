@@ -29,6 +29,8 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    const [lista, setLista] = useState(jsonList)
+
     const {width} = useWindowDimensions()
 
     const Item = ({title}) => (
@@ -75,8 +77,6 @@ export default props => {
 
     }
 
-    let jsonListFiltrada = {}
-
     function optionsValue(){
 
         let options = [
@@ -86,13 +86,13 @@ export default props => {
             option4 === style.triggerOption ? null : 'Social',
             option5 === style.triggerOption ? null : 'Comunicação',
             option6 === style.triggerOption ? null : 'Emocional',  
-            noChoice === style.triggerOption ? null : 'Sem Gatilho',     
+            noChoice === style.btnNoChoice ? null : 'Sem Gatilho',     
         ]
         
         const listaFiltrada = jsonList.filter(item => options.includes(item.txt));
         console.warn(listaFiltrada);
         
-        jsonListFiltrada = listaFiltrada
+        setLista(listaFiltrada)
 
         return listaFiltrada
     }
@@ -228,7 +228,7 @@ export default props => {
                 }}>
                 <View style={style.centeredView}>
                     <FlatList
-                        data={jsonListFiltrada}
+                        data={lista}
                         renderItem={({item}) => <Item title={item} />}
                         keyExtractor={item => item.id}
                         horizontal
