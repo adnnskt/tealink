@@ -60,7 +60,6 @@ export default props => {
                 </View>
             </View>
         </>
-        //
       )
 
     function txtValueChange(value) {
@@ -90,9 +89,15 @@ export default props => {
         ]
         
         const listaFiltrada = jsonList.filter(item => options.includes(item.txt));
-        console.warn(listaFiltrada);
         
-        setLista(listaFiltrada)
+        const listaSeq = listaFiltrada.map((item, index) => ({
+            ...item,
+            sequencialId: index + 1,
+          }));
+
+        console.warn(listaSeq);
+
+        setLista(listaSeq)
 
         return listaFiltrada
     }
@@ -229,7 +234,7 @@ export default props => {
                 <View style={style.centeredView}>
                     <FlatList
                         data={lista}
-                        renderItem={({item}) => <Item title={item} />}
+                        renderItem={({item}) => <Item title={item}/>}
                         keyExtractor={item => item.id}
                         horizontal
                         showsHorizontalScrollIndicator
