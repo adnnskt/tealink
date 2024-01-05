@@ -95,7 +95,7 @@ export default props => {
             sequencialId: index + 1,
           }));
 
-        console.warn(listaSeq);
+        //console.warn(listaSeq);
 
         setLista(listaSeq)
 
