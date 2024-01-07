@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
+import {TouchableHighlight, Text, Alert, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 const bgsensorial = require("../../src/img/sensorial.png") 
@@ -108,7 +108,7 @@ export default props => {
 
         setLista(listaSeq)
 
-        return listaFiltrada
+        return listaFiltrada.length > 0 ? true : false
     }
     return (  
     <>
@@ -222,8 +222,8 @@ export default props => {
                 </TouchableHighlight>
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => {listaSeq[0] === null ? createTwoButtonAlert() : setModalVisible(true); 
-                                                   optionsValue();
+                <TouchableHighlight onPress={() => {optionsValue();
+                                                    optionsValue() === false ? createTwoButtonAlert() : setModalVisible(true);                                                    
                                                 }         
                                                     } style={style.addItemsButtonTouch}>
                     <View style={style.addItemsButton}>
