@@ -116,7 +116,7 @@ function App() {
       )
 
       }
-        <Stack.Screen name="Content" component={ContentView} />
+        <Stack.Screen name="Crise" component={ContentView} />
     </Stack.Navigator>
     </NavigationContainer>
   </>

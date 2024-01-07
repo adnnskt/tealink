@@ -61,6 +61,16 @@ export default props => {
         </>
       )
 
+    const createTwoButtonAlert = () =>
+    Alert.alert('Alert Title', 'My Alert Msg', [
+      {
+        text: 'Cancel',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ])
+  
     function txtValueChange(value) {
 
         setValue(value)
@@ -212,7 +222,7 @@ export default props => {
                 </TouchableHighlight>
             </View>
             <View style={style.addItems}>
-                <TouchableHighlight onPress={() => {setModalVisible(true); 
+                <TouchableHighlight onPress={() => {listaSeq[0] === null ? createTwoButtonAlert() : setModalVisible(true); 
                                                    optionsValue();
                                                 }         
                                                     } style={style.addItemsButtonTouch}>
