@@ -62,7 +62,7 @@ export default props => {
       )
 
     const createTwoButtonAlert = () =>
-    Alert.alert('Alert Title', 'My Alert Msg', [
+    Alert.alert('Alerta', 'Necessário seleciona, ao menos, uma opção', [
       {
         text: 'Cancel',
         onPress: () => console.log('Cancel Pressed'),
