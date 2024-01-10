@@ -121,7 +121,6 @@ export default props => {
             <View style= {style.overCard}>
                 <View style= {style.card}>
                     <Text style= {style.textMid}>
-                        O que é?
                     </Text>
                     <ScrollView>
                         <Text style= {style.longTxt}>
@@ -293,9 +292,9 @@ const style = StyleSheet.create({
 
     },
     textMid: {
-        paddingTop: '5%',
+        paddingTop: '4%',
         paddingLeft: '5%',
-        fontSize: 20,
+        fontSize: 10,
         color: '#e4e9fb',
         borderBottomWidth: 1,
         borderColor: 'white',
