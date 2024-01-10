@@ -140,6 +140,10 @@ export default props => {
                         Oferecer um ambiente calmo, apoio emocional e compreensão das necessidades individuais 
                         pode ajudar a pessoa a lidar com a crise de forma mais tranquila.
                         </Text>
+                        <Text style= {style.longTxt}>
+                        Abaixo temos algumas opções de ajuda, de acordo com o tipo de gatilho e nível de 
+                        recorrência.
+                        </Text>
                     </ScrollView>
                 </View>
             </View>
