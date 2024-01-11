@@ -11,7 +11,9 @@ export default props => {
     return (
     <>
         <View style= {style.container}>
-
+            <Text>
+                Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
+            </Text>
 
         </View>
     </>
