@@ -4,14 +4,14 @@ import Card from './Card'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 
+const {UIManager} = NativeModules;
 
-export default props => {
-
-    const {UIManager} = NativeModules;
-
-    UIManager.setLayoutAnimationEnabledExperimental &&
+UIManager.setLayoutAnimationEnabledExperimental &&
         UIManager.setLayoutAnimationEnabledExperimental(true);
     
+
+export default class App extends React.Component {
+
       state = {
         w: 100,
         h: 100,
@@ -21,7 +21,7 @@ export default props => {
         // Animate the update
         LayoutAnimation.spring();
         this.setState({w: this.state.w + 15, h: this.state.h + 15});
-      }
+      };
     
     render() {
         return (
@@ -33,11 +33,11 @@ export default props => {
                 <View style= {style.containerOptions}>
                     <View>
                     <View
-                        style={[styles.box, {width: this.state.w, height: this.state.h}]}
+                        style={[style.box, {width: this.state.w, height: this.state.h}]}
                         />
                         <TouchableOpacity onPress={this._onPress}>
-                        <View style={styles.button}>
-                            <Text style={styles.buttonText}>Press me!</Text>
+                        <View style={style.button}>
+                            <Text style={style.buttonText}>Press me!</Text>
                         </View>
                         </TouchableOpacity>
                     </View>
@@ -45,7 +45,7 @@ export default props => {
             {/* ver https://reactnative.dev/docs/animations#layoutanimation-api*/}
             </View>
         </>
-        )
+        );
     }
 }
 
@@ -67,6 +67,23 @@ const style = StyleSheet.create({
         height: '30%',
         borderColor: 'red',
         borderWidth: 2,
-    }
+    },
+
+    //Text animation 
+    box: {
+        width: 200,
+        height: 200,
+        backgroundColor: 'red',
+      },
+      button: {
+        backgroundColor: 'black',
+        paddingHorizontal: 20,
+        paddingVertical: 15,
+        marginTop: 15,
+      },
+      buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+      },
 
 })
