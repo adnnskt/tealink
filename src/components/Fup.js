@@ -13,14 +13,14 @@ UIManager.setLayoutAnimationEnabledExperimental &&
 export default class App extends React.Component {
 
       state = {
-        w: 100,
-        h: 100,
+        w: '20%',
+        h: '40%',
       };
     
       _onPress = () => {
         // Animate the update
         LayoutAnimation.spring();
-        this.setState({w: this.state.w + 15, h: this.state.h + 15});
+        this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0*/});
       };
     
     render() {
@@ -70,6 +70,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: '100%',
+        height: '100%',
         paddingLeft: '2%',
     },
 
@@ -78,15 +79,16 @@ const style = StyleSheet.create({
     box: {
         backgroundColor: 'red',
         paddingRight: '2%',
+        borderRadius: 50,
       },
       touchButton: {
-
+        width: '35%',
+        //height: '85%',
+        paddingLeft: '2%',
       },
       button: {
         backgroundColor: 'black',
-        width: '55%',
-        height: '55%',
-        paddingLeft: '12%',
+        //width: '100%',
         //paddingHorizontal: 20,
         //paddingVertical: 15,
         //marginTop: 15,
