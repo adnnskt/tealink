@@ -31,16 +31,13 @@ export default class App extends React.Component {
                     Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
                 </Text>
                 <View style= {style.containerOptions}>
-                    <View>
-                    <View
-                        style={[style.box, {width: this.state.w, height: this.state.h}]}
-                        />
-                        <TouchableOpacity onPress={this._onPress}>
+                    <View style={[style.box, {width: this.state.w, height: this.state.h}]}>
+                    </View>    
+                    <TouchableOpacity onPress={this._onPress}>
                         <View style={style.button}>
                             <Text style={style.buttonText}>Press me!</Text>
                         </View>
-                        </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             {/* ver https://reactnative.dev/docs/animations#layoutanimation-api*/}
             </View>
