@@ -31,15 +31,15 @@ export default class App extends React.Component {
                     Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
                 </Text>
                 <View style= {style.containerOptions}>
-                    <View style={[style.box, {width: this.state.w, height: this.state.h}]}>
-                    </View>    
-                    <TouchableOpacity onPress={this._onPress}>
-                        <View style={style.button}>
-                            <Text style={style.buttonText}>Press me!</Text>
-                        </View>
-                    </TouchableOpacity>
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]} />   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>Press me!</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-            {/* ver https://reactnative.dev/docs/animations#layoutanimation-api*/}
             </View>
         </>
         );
@@ -65,18 +65,32 @@ const style = StyleSheet.create({
         borderColor: 'red',
         borderWidth: 2,
     },
+    boxOptions: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        width: '100%',
+        paddingLeft: '2%',
+    },
+
 
     //Text animation 
     box: {
-        width: 200,
-        height: 200,
         backgroundColor: 'red',
+        paddingRight: '2%',
+      },
+      touchButton: {
+
       },
       button: {
         backgroundColor: 'black',
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        marginTop: 15,
+        width: '55%',
+        height: '55%',
+        paddingLeft: '12%',
+        //paddingHorizontal: 20,
+        //paddingVertical: 15,
+        //marginTop: 15,
+
       },
       buttonText: {
         color: '#fff',
