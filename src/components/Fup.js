@@ -41,7 +41,7 @@ export default class App extends React.Component {
                         <View style={[style.box, {width: this.state.w, height: this.state.h}]} />   
                         <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
                             <View style={style.button}>
-                                <Text style={style.buttonText}>Press me!</Text>
+                                <Text style={style.buttonText}>⬌</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
@@ -88,12 +88,16 @@ const style = StyleSheet.create({
         borderRadius: 50,
       },
       touchButton: {
-        width: '35%',
+        width: '15%',
         //height: '85%',
         paddingLeft: '2%',
       },
       button: {
         backgroundColor: 'black',
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: '15%',
         //width: '100%',
         //paddingHorizontal: 20,
         //paddingVertical: 15,
@@ -101,8 +105,10 @@ const style = StyleSheet.create({
 
       },
       buttonText: {
+        
         color: '#fff',
         fontWeight: 'bold',
+        fontSize: 20,
       },
 
 })
