@@ -19,9 +19,15 @@ export default class App extends React.Component {
     
       _onPress = () => {
         // Animate the update
-        LayoutAnimation.spring();
-        this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0*/});
-      };
+
+            if(this.state.w === '20%'){
+            LayoutAnimation.spring();
+            this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0*/});
+        } else {
+            LayoutAnimation.spring();
+            this.setState({w: this.state.w = '20%'/*, h: this.state.h + 0*/});
+        }
+    };
     
     render() {
         return (
