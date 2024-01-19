@@ -28,6 +28,15 @@ export default class App extends React.Component {
             this.setState({w: this.state.w = '20%'/*, h: this.state.h + 0*/});
         }
     };
+
+    sendText = () => {
+        return  (
+            <Text style= {style.txtInBox}>
+                Variedade de Interesses: As áreas de hiperfoco podem variar amplamente entre indivíduos. 
+                Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
+            </Text>
+        )
+    } 
     
     render() {
         return (
@@ -39,10 +48,7 @@ export default class App extends React.Component {
                 <View style= {style.containerOptions}>
                     <View style= {style.boxOptions}>
                         <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            <Text>
-                            Variedade de Interesses: As áreas de hiperfoco podem variar amplamente entre indivíduos. 
-                            Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
-                            </Text>
+                            {this.state.w === '20%' ? null : this.sendText()}
                         </View>   
                         <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
                             <View style={style.button}>
@@ -92,6 +98,9 @@ const style = StyleSheet.create({
         paddingRight: '2%',
         borderRadius: 50,
         elevation: 5,
+      },
+      txtInBox: {
+        hidden: true,
       },
       touchButton: {
         width: '15%',
