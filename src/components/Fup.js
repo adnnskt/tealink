@@ -83,9 +83,10 @@ const style = StyleSheet.create({
 
     //Text animation 
     box: {
-        backgroundColor: 'red',
+        backgroundColor: '#133a9c',
         paddingRight: '2%',
         borderRadius: 50,
+        elevation: 5,
       },
       touchButton: {
         width: '15%',
@@ -93,11 +94,12 @@ const style = StyleSheet.create({
         paddingLeft: '2%',
       },
       button: {
-        backgroundColor: 'black',
+        backgroundColor: '#0b205b',
         borderRadius: 30,
         alignItems: 'center',
         justifyContent: 'center',
         paddingBottom: '15%',
+        elevation: 5,
         //width: '100%',
         //paddingHorizontal: 20,
         //paddingVertical: 15,
