@@ -38,7 +38,12 @@ export default class App extends React.Component {
                 </Text>
                 <View style= {style.containerOptions}>
                     <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]} />   
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            <Text>
+                            Variedade de Interesses: As áreas de hiperfoco podem variar amplamente entre indivíduos. 
+                            Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
+                            </Text>
+                        </View>   
                         <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
                             <View style={style.button}>
                                 <Text style={style.buttonText}>⬌</Text>
@@ -90,7 +95,6 @@ const style = StyleSheet.create({
       },
       touchButton: {
         width: '15%',
-        //height: '85%',
         paddingLeft: '2%',
       },
       button: {
@@ -100,10 +104,6 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         paddingBottom: '15%',
         elevation: 5,
-        //width: '100%',
-        //paddingHorizontal: 20,
-        //paddingVertical: 15,
-        //marginTop: 15,
 
       },
       buttonText: {
