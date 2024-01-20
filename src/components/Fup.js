@@ -32,7 +32,7 @@ export default class App extends React.Component {
     sendText = () => {
         return  (
             <Text style= {style.txtInBox}>
-                Variedade de Interesses: As áreas de hiperfoco podem variar amplamente entre indivíduos. 
+                <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
                 Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
             </Text>
         )
@@ -99,9 +99,22 @@ const style = StyleSheet.create({
         borderRadius: 50,
         elevation: 5,
       },
+
       txtInBox: {
-        hidden: true,
+        color: '#fff',
+        fontSize: 10,
+        paddingLeft: '5%',
+        paddingTop: '2%',
       },
+
+      txtBold:{
+        color: '#fff',
+        fontSize: 10,
+        paddingLeft: '5%',
+        paddingTop: '2%',
+        fontWeight: 'bold',
+      },
+
       touchButton: {
         width: '15%',
         paddingLeft: '2%',
@@ -116,7 +129,6 @@ const style = StyleSheet.create({
 
       },
       buttonText: {
-        
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 20,
