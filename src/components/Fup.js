@@ -14,7 +14,7 @@ export default class App extends React.Component {
 
       state = {
         w: '20%',
-        h: '40%',
+        h: '70%',
       };
     
       _onPress = () => {
@@ -31,13 +31,38 @@ export default class App extends React.Component {
 
     sendText = () => {
 
-        let str = <Text style= {style.txtInBox}>
+        let firstText = <Text style= {style.txtInBox}>
             <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
             Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
             </Text>
 
+        let secText = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Fonte de Conforto:</Text> O hiperfoco muitas vezes funciona como uma fonte de conforto e estabilidade emocional para a pessoa. 
+            É um modo pelo qual eles se conectam profundamente com o mundo ao seu redor.        
+            </Text>
+
+        let terText = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Dificuldade na Interrupção:</Text> Durante o hiperfoco, pode ser desafiador para a pessoa mudar de foco e se envolver em outras atividades. 
+                Interrupções abruptas podem causar desconforto.        
+            </Text>
+
+        let forText = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Expressão de Identidade:</Text> Os interesses hiperfocados frequentemente desempenham um papel importante na formação da identidade da pessoa. 
+                Eles podem ser uma fonte significativa de autoexpressão.        
+            </Text>
+
+        let fivText = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Impacto na Rotina:</Text> O hiperfoco pode influenciar a rotina diária da pessoa. 
+                É importante encontrar um equilíbrio entre permitir o hiperfoco e garantir que outras responsabilidades e atividades sejam cumpridas.        
+            </Text>
+
+        let sixText = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Potencial para Desenvolvimento:</Text> O hiperfoco também pode ser encorajado e canalizado positivamente. 
+                Identificar maneiras de incorporar os interesses hiperfocados em atividades construtivas pode ser benéfico.
+            </Text>
+
         return  (
-            str    
+            sixText    
         )
     } 
     
@@ -59,6 +84,51 @@ export default class App extends React.Component {
                             </View>
                         </TouchableOpacity>
                     </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
             </View>
         </>
@@ -81,7 +151,7 @@ const style = StyleSheet.create({
     },
     containerOptions: {
         width: '100%', 
-        height: '30%',
+        height: '80%',
         borderColor: 'red',
         borderWidth: 2,
     },
@@ -90,7 +160,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: '100%',
-        height: '100%',
+        height: '20%',
         paddingLeft: '2%',
     },
 
