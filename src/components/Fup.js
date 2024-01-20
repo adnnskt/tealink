@@ -30,11 +30,14 @@ export default class App extends React.Component {
     };
 
     sendText = () => {
-        return  (
-            <Text style= {style.txtInBox}>
-                <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
-                Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
+
+        let str = <Text style= {style.txtInBox}>
+            <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
+            Pode ser desde tópicos acadêmicos específicos até hobbies, atividades motoras ou objetos específicos.
             </Text>
+
+        return  (
+            str    
         )
     } 
     
