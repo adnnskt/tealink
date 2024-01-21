@@ -12,22 +12,47 @@ UIManager.setLayoutAnimationEnabledExperimental &&
 
 export default class App extends React.Component {
 
+    /*
       state = {
         w: '20%',
         h: '70%',
       };
     
       _onPress = () => {
+
         // Animate the update
 
             if(this.state.w === '20%'){
             LayoutAnimation.spring();
-            this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0*/});
+            this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0});
         } else {
             LayoutAnimation.spring();
-            this.setState({w: this.state.w = '20%'/*, h: this.state.h + 0*/});
+            this.setState({w: this.state.w = '20%'/*, h: this.state.h + 0});
         }
     };
+    */
+
+    state = {
+        views: Array(5).fill({ w: '20%', h: '70%' }),
+      };
+
+      _onPress = (index) => {
+        this.setState((prevState) => {
+          const updatedViews = [...prevState.views];
+          const view = updatedViews[index];
+    
+          if (view.w === '20%') {
+            LayoutAnimation.spring();
+            view.w = '80%';
+          } else {
+            LayoutAnimation.spring();
+            view.w = '20%';
+          }
+    
+          return { views: updatedViews };
+        });
+      };
+      
 
     sendText = () => {
 
@@ -69,66 +94,26 @@ export default class App extends React.Component {
     render() {
         return (
         <>
-            <View style= {style.container}>
-                <Text style = {style.txtG}>
-                    Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
+            <View style={style.container}>
+                <Text style={style.txtG}>
+                Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
                 </Text>
-                <View style= {style.containerOptions}>
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
+                <View style={style.containerOptions}>
+                {this.state.views.map((view, index) => (
+                    <View key={index} style={style.boxOptions}>
+                    <View style={[style.box, { width: view.w, height: view.h }]}>
+                        {view.w === '20%' ? null : this.sendText()}
                     </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => this._onPress(index)}
+                        style={style.touchButton}
+                    >
+                        <View style={style.button}>
+                        <Text style={style.buttonText}>⬌</Text>
+                        </View>
+                    </TouchableOpacity>
                     </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
+                ))}
                 </View>
             </View>
         </>
@@ -208,3 +193,74 @@ const style = StyleSheet.create({
       },
 
 })
+
+
+
+/*
+
+<View style= {style.container}>
+                <Text style = {style.txtG}>
+                    Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
+                </Text>
+                <View style= {style.containerOptions}>
+                    
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style= {style.boxOptions}>
+                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
+                            {this.state.w === '20%' ? null : this.sendText()}
+                        </View>   
+                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
+                            <View style={style.button}>
+                                <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
+            </View>
+
+
+*/
