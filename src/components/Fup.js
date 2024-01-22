@@ -40,15 +40,16 @@ export default class App extends React.Component {
         this.setState((prevState) => {
           const updatedViews = [...prevState.views];
           const view = updatedViews[index];
-    
-          if (view.w === '20%') {
+            
+          if (updatedViews[index].w === '20%') {
             LayoutAnimation.spring();
-            view.w = '80%';
+            updatedViews[index].w = '80%';
           } else {
             LayoutAnimation.spring();
-            view.w = '20%';
+            updatedViews[index].w = '20%';
           }
-    
+          console.warn(updatedViews)
+          //console.warn(updatedViews[0])
           return { views: updatedViews };
         });
       };
