@@ -37,13 +37,28 @@ export default class App extends React.Component {
       };
 
       _onPress = (index) => {
-        this.setState((prevState) => {
-          const updatedViews = [...prevState.views];
-          const updatedSecViews = [...prevState.views];
-          const view = updatedViews[index];
 
-          //console.warn(updatedViews[index])
+        const viewsCopy = this.state.views;
+        const view = viewsCopy[index]
+        
+        if (view.w === '20%') {
+            LayoutAnimation.spring();
+            view.w = '80%';
+          } else {
+            LayoutAnimation.spring();
+            view.w = '20%';
+          }
+        
+        console.warn(viewsCopy)
+        
+        
+        //this.setState((prevState) => {
+          //const updatedViews = [...prevState.views];
+          //const updatedSecViews = [...prevState.views];
+          //const view = updatedViews[index];
 
+          //console.warn(prevState)
+          /*
           if (view.w === '20%') {
             LayoutAnimation.spring();
             view.w = '80%';
@@ -51,12 +66,14 @@ export default class App extends React.Component {
             LayoutAnimation.spring();
             view.w = '20%';
           }
-          updatedSecViews[index] = view
-          console.warn(updatedSecViews[index])
+          */
+          //updatedSecViews[index] = view
+          //console.warn(updatedSecViews[index])
 
-          //console.warn(updatedViews[0])
-          return {views: updatedViews };
-        });
+          //console.warn(prevState)
+         // return {/*views: updatedViews*/ };
+        //});
+        
       };
       
 
