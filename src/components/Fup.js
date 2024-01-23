@@ -39,18 +39,23 @@ export default class App extends React.Component {
       _onPress = (index) => {
         this.setState((prevState) => {
           const updatedViews = [...prevState.views];
+          const updatedSecViews = [...prevState.views];
           const view = updatedViews[index];
-            
-          if (updatedViews[index].w === '20%') {
+
+          //console.warn(updatedViews[index])
+
+          if (view.w === '20%') {
             LayoutAnimation.spring();
-            updatedViews[index].w = '80%';
+            view.w = '80%';
           } else {
             LayoutAnimation.spring();
-            updatedViews[index].w = '20%';
+            view.w = '20%';
           }
-          console.warn(updatedViews)
+          updatedSecViews[index] = view
+          console.warn(updatedSecViews[index])
+
           //console.warn(updatedViews[0])
-          return { views: updatedViews };
+          return {views: updatedViews };
         });
       };
       
