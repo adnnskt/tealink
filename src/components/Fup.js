@@ -12,26 +12,6 @@ UIManager.setLayoutAnimationEnabledExperimental &&
 
 export default class App extends React.Component {
 
-    /*
-      state = {
-        w: '20%',
-        h: '70%',
-      };
-    
-      _onPress_teste = () => {
-
-        // Animate the update
-
-            if(this.state.w === '20%'){
-            LayoutAnimation.spring();
-            this.setState({w: this.state.w = '80%'/*, h: this.state.h + 0});
-        } else {
-            LayoutAnimation.spring();
-            this.setState({w: this.state.w = '20%'/*, h: this.state.h + 0});
-        }
-    };
-    */
-
     state = {
         views: Array(5).fill({ w: '20%', h: '70%' }),
       };
@@ -59,7 +39,9 @@ export default class App extends React.Component {
       };
       
 
-    sendText = () => {
+    sendText = (index) => {
+
+        const txtFinal = null
 
         let firstText = <Text style= {style.txtInBox}>
             <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
@@ -91,8 +73,14 @@ export default class App extends React.Component {
                 Identificar maneiras de incorporar os interesses hiperfocados em atividades construtivas pode ser benéfico.
             </Text>
 
+        if (index === 0) {
+            txtFinal = firstText
+        } else{
+            txtFinal = secText
+        }
+
         return  (
-            sixText    
+            txtFinal    
         )
     } 
     
@@ -107,7 +95,7 @@ export default class App extends React.Component {
                 {this.state.views.map((view, index) => (
                     <View key={index} style={style.boxOptions}>
                     <View style={[style.box, { width: view.w, height: view.h }]}>
-                        {view.w === '20%' ? null : this.sendText()}
+                        {view.w === '20%' ? null : this.sendText(index)}
                     </View>
                     <TouchableOpacity
                         onPress={() => this._onPress(index)}
@@ -142,8 +130,8 @@ const style = StyleSheet.create({
     containerOptions: {
         width: '100%', 
         height: '80%',
-        borderColor: 'red',
-        borderWidth: 2,
+        //borderColor: 'red',
+        //borderWidth: 2,
     },
     boxOptions: {
         flexDirection: 'row',
@@ -199,73 +187,3 @@ const style = StyleSheet.create({
 
 })
 
-
-
-/*
-
-<View style= {style.container}>
-                <Text style = {style.txtG}>
-                    Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
-                </Text>
-                <View style= {style.containerOptions}>
-                    
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style= {style.boxOptions}>
-                        <View style={[style.box, {width: this.state.w, height: this.state.h}]}> 
-                            {this.state.w === '20%' ? null : this.sendText()}
-                        </View>   
-                        <TouchableOpacity onPress={this._onPress} style= {style.touchButton}>
-                            <View style={style.button}>
-                                <Text style={style.buttonText}>⬌</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-
-                </View>
-            </View>
-
-
-*/
