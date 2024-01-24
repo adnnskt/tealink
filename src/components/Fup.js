@@ -18,7 +18,7 @@ export default class App extends React.Component {
         h: '70%',
       };
     
-      _onPress = () => {
+      _onPress_teste = () => {
 
         // Animate the update
 
@@ -37,42 +37,24 @@ export default class App extends React.Component {
       };
 
       _onPress = (index) => {
-
-        const viewsCopy = this.state.views;
-        const view = viewsCopy[index]
-        
-        if (view.w === '20%') {
-            LayoutAnimation.spring();
-            view.w = '80%';
-          } else {
-            LayoutAnimation.spring();
-            view.w = '20%';
-          }
-        
-        console.warn(viewsCopy)
         
         
-        //this.setState((prevState) => {
-          //const updatedViews = [...prevState.views];
-          //const updatedSecViews = [...prevState.views];
-          //const view = updatedViews[index];
-
-          //console.warn(prevState)
-          /*
-          if (view.w === '20%') {
-            LayoutAnimation.spring();
-            view.w = '80%';
-          } else {
-            LayoutAnimation.spring();
-            view.w = '20%';
-          }
-          */
-          //updatedSecViews[index] = view
-          //console.warn(updatedSecViews[index])
-
-          //console.warn(prevState)
-         // return {/*views: updatedViews*/ };
-        //});
+        this.setState((prevState) => {
+            const updatedViews = [...prevState.views];
+            const view = { ...updatedViews[index] }; // Cria uma cópia do objeto view
+        
+            if (view.w === '20%') {
+              LayoutAnimation.spring();
+              view.w = '80%';
+            } else {
+              LayoutAnimation.spring();
+              view.w = '20%';
+            }
+        
+            updatedViews[index] = view; // Atualiza a cópia no array
+        
+            return { views: updatedViews };
+          });
         
       };
       
