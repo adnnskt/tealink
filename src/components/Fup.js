@@ -41,7 +41,7 @@ export default class App extends React.Component {
 
     sendText = (index) => {
 
-        const txtFinal = null
+        let txtFinal = ''
 
         let firstText = <Text style= {style.txtInBox}>
             <Text style= {style.txtBold}>Variedade de Interesses:</Text> As áreas de hiperfoco podem variar amplamente entre indivíduos. 
@@ -75,8 +75,10 @@ export default class App extends React.Component {
 
         if (index === 0) {
             txtFinal = firstText
-        } else{
+        } else if (index === 2) {
             txtFinal = secText
+        } else if (index === 3) {
+            txtFinal = terText
         }
 
         return  (
