@@ -79,6 +79,10 @@ export default class App extends React.Component {
             txtFinal = secText
         } else if (index === 3) {
             txtFinal = terText
+        } else if (index === 4){
+            txtFinal = forText
+        } else {
+            txtFinal = fivText
         }
 
         return  (
