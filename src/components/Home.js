@@ -25,7 +25,7 @@ export default props => {
                     <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Crise', {user: data})}>
                         <Card image={crise} text='Crise'/>
                     </TouchableHighlight>
-                    <TouchableHighlight style= {style.card} onPress = {null}>
+                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Hiperfoco', {user: data})}>
                         <Card image={hiperfoco} text='Hiperfoco'/>
                     </TouchableHighlight>
                     <TouchableHighlight style= {style.card} onPress = {null}>
