@@ -11,6 +11,7 @@ import Registration from './src/components/Registration'
 import Login from './src/components/Login'
 import Fup from './src/components/Fup'
 import Content from './src/views/Content'
+import Hyperfocus from './src/views/Hyperfocus'
 
 
 import {decode, encode} from 'base-64'
@@ -33,6 +34,15 @@ function ContentView({route}){
   const data = route.params
   return(
     <Content 
+      user = {data.user}
+    />
+  )
+}
+
+function HyperfocusView({route}){
+  const data = route.params
+  return(
+    <Hyperfocus 
       user = {data.user}
     />
   )
@@ -117,6 +127,7 @@ function App() {
 
       }
         <Stack.Screen name="Crise" component={ContentView} />
+        <Stack.Screen name="Hiperfoco" component={HyperfocusView} />
     </Stack.Navigator>
     </NavigationContainer>
   </>
