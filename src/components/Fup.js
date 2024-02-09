@@ -47,7 +47,7 @@ export default props => {
             <View style={style.item, {width}}>
                 <Image
                     style= {style.img}
-                    source= {title.image}
+                    source= {item.image}
                     resizeMode='contain'
                     >
                 </Image>
@@ -59,16 +59,18 @@ export default props => {
 
     return (
     <>
-        <View style={style.jsonList}>
-            <FlatList
-                data={jsonList}
-                renderItem={({item}) => <Item title={item}/>}
-                keyExtractor={item => item.id}
-                horizontal
-                showsHorizontalScrollIndicator
-                pagingEnabled
-                bounces={false}
-            />
+        <View style={style.centeredView}>
+            <View style = {style.listView}>
+                <FlatList
+                    data={jsonList}
+                    renderItem={({item}) => <Item item={item}/>}
+                    keyExtractor={item => item.id}
+                    horizontal
+                    showsHorizontalScrollIndicator
+                    pagingEnabled
+                    bounces={false}
+                />
+            </View>
         </View>
     </>
     )
@@ -83,6 +85,14 @@ const style = StyleSheet.create({
         backgroundColor: 'rgba(158, 166, 234, 0.966)',
        
       },
+      listView: {
+        height: '50%',
+
+      },
+      img: {
+        width: '100%',
+        height: '100%',  
+      },
       item:{
         backgroundColor: '#f9c2ff',
         padding: 55,
@@ -92,3 +102,19 @@ const style = StyleSheet.create({
         justifyContent: 'center',
       },
 })
+
+
+/*
+<View style={style.jsonList}>
+            <FlatList
+                data={jsonList}
+                renderItem={({item}) => <Item title={item}/>}
+                keyExtractor={item => item.id}
+                horizontal
+                showsHorizontalScrollIndicator
+                pagingEnabled
+                bounces={false}
+            />
+        </View>
+
+*/
