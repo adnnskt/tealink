@@ -3,10 +3,17 @@ import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Te
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 
-const {UIManager} = NativeModules;
+const isolamento = require("../img/sensorial.png") 
+const bgcomunicacao = require("../img/comunicacao.png") 
+const bgemocional = require("../img/emocional.png") 
+const bgfobia = require("../img/fobia.png") 
+const bgidentGatilho = require("../img/identGatilho.png") 
+const bgrotina = require("../img/rotina.png") 
+const bgsocial = require("../img/social.png") 
 
-UIManager.setLayoutAnimationEnabledExperimental &&
-        UIManager.setLayoutAnimationEnabledExperimental(true);
+
+
+
 
 export default props => {
 
@@ -17,7 +24,7 @@ export default props => {
         <Text>text</Text>
 
 
-
+        
 
 
 
