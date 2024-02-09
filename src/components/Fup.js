@@ -3,21 +3,42 @@ import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Te
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 
-const isolamento = require("../img/sensorial.png") 
-const bgcomunicacao = require("../img/comunicacao.png") 
-const bgemocional = require("../img/emocional.png") 
-const bgfobia = require("../img/fobia.png") 
-const bgidentGatilho = require("../img/identGatilho.png") 
-const bgrotina = require("../img/rotina.png") 
-const bgsocial = require("../img/social.png") 
-
-
-
-
+const isolamento = require("../img/isolamento.png") 
+const poucosAmigos = require("../img/poucosAmigos.png") 
+const vergonhaPublico = require("../img/vergonhaPublico.png") 
+const cansadoDeFalar = require("../img/cansadoDeFalar.png") 
+const prefereMensagem = require("../img/prefereMensagem.png") 
 
 export default props => {
 
-
+    let jsonList =  [
+        {
+            id: '1',
+            image: isolamento,
+            txt: 'isolamento'
+        },
+        {
+            id: '2',
+            image: poucosAmigos,
+            txt: 'poucosAmigos'
+        },
+        {
+            id: '3',
+            image: vergonhaPublico,
+            txt: 'vergonhaPublico'
+        },
+        {
+            id: '4',
+            image: cansadoDeFalar,
+            txt: 'cansadoDeFalar'
+        },
+        {
+            id: '5',
+            image: prefereMensagem,
+            txt: 'prefereMensagem'
+        },
+    ]
+    
 
     return (
     <>
