@@ -3,11 +3,11 @@ import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Te
 import { LinearGradient } from 'expo-linear-gradient'
 import { Slider, RangeSlider } from '@react-native-assets/slider';
 
-const isolamento = require("../img/isolamento.png") 
-const poucosAmigos = require("../img/poucosAmigos.png") 
-const vergonhaPublico = require("../img/vergonhaPublico.png") 
-const cansadoDeFalar = require("../img/cansadoDeFalar.png") 
-const prefereMensagem = require("../img/prefereMensagem.png") 
+const isolamento = require("../../src/img/isolamento.jpg") 
+const poucosAmigos = require("../../src/img/poucosAmigos.jpg") 
+const vergonhaPublico = require("../../src/img/vergonhaPublico.jpg") 
+const cansadoDeFalar = require("../../src/img/cansadoDeFalar.jpg") 
+const prefereMensagem = require("../../src/img/prefereMensagem.jpg") 
 
 export default props => {
 
@@ -39,17 +39,56 @@ export default props => {
         },
     ]
     
+    const {width} = useWindowDimensions()
+
+
+    const Item = ({item}) => (
+        <>
+            <View style={style.item, {width}}>
+                <Image
+                    style= {style.img}
+                    source= {title.image}
+                    resizeMode='contain'
+                    >
+                </Image>
+            </View>
+            
+        </>
+    )
+
 
     return (
     <>
-        <Text>text</Text>
-
-
-        
-
-
-
-
+        <View style={style.jsonList}>
+            <FlatList
+                data={jsonList}
+                renderItem={({item}) => <Item title={item}/>}
+                keyExtractor={item => item.id}
+                horizontal
+                showsHorizontalScrollIndicator
+                pagingEnabled
+                bounces={false}
+            />
+        </View>
     </>
     )
 }
+
+const style = StyleSheet.create({
+    centeredView: {
+        flex: 1,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(158, 166, 234, 0.966)',
+       
+      },
+      item:{
+        backgroundColor: '#f9c2ff',
+        padding: 55,
+        marginVertical: 10,
+        marginHorizontal: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+})
