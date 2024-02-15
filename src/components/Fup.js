@@ -51,6 +51,7 @@ export default props => {
                     resizeMode='contain'
                     >
                 </Image>
+                <Text style= {style.titleList}>{item.txt}</Text>
             </View>
             
         </>
@@ -92,6 +93,9 @@ const style = StyleSheet.create({
       img: {
         width: '100%',
         height: '100%',  
+      },
+      titleList: {
+        
       },
       item:{
         backgroundColor: '#f9c2ff',
