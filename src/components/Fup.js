@@ -45,13 +45,14 @@ export default props => {
     const Item = ({item}) => (
         <>
             <View style={style.item, {width}}>
+            <Text style= {style.titleList}>{item.txt}</Text>
                 <Image
                     style= {style.img}
                     source= {item.image}
                     resizeMode='contain'
                     >
                 </Image>
-                <Text style= {style.titleList}>{item.txt}</Text>
+                
             </View>
             
         </>
@@ -95,7 +96,9 @@ const style = StyleSheet.create({
         height: '100%',  
       },
       titleList: {
-        
+        paddingLeft: '2%',
+        fontSize: 35,
+        fontWeight: 100,
       },
       item:{
         backgroundColor: '#f9c2ff',
