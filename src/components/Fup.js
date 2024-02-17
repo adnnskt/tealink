@@ -15,27 +15,27 @@ export default props => {
         {
             id: '1',
             image: isolamento,
-            txt: 'isolamento'
+            txt: 'Isolamento'
         },
         {
             id: '2',
             image: poucosAmigos,
-            txt: 'poucosAmigos'
+            txt: 'Poucos amigos'
         },
         {
             id: '3',
             image: vergonhaPublico,
-            txt: 'vergonhaPublico'
+            txt: 'Vergonha em público'
         },
         {
             id: '4',
             image: cansadoDeFalar,
-            txt: 'cansadoDeFalar'
+            txt: 'Cansaso ao falar'
         },
         {
             id: '5',
             image: prefereMensagem,
-            txt: 'prefereMensagem'
+            txt: 'Prefere mensagem'
         },
     ]
     
