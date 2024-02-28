@@ -10,6 +10,7 @@ const cansadoDeFalar = require("../../src/img/cansadoDeFalar.jpg")
 const prefereMensagem = require("../../src/img/prefereMensagem.jpg") 
 
 //Tentando ajustar bug
+// vers]ao rn "0.71.6"
 
 export default props => {
 
