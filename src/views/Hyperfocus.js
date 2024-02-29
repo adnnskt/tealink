@@ -1,7 +1,5 @@
-import React, {useState} from "react";
+import React  from 'react';
 import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Slider, RangeSlider } from '@react-native-assets/slider';
 
 const {UIManager} = NativeModules;
 
@@ -128,7 +126,7 @@ const style = StyleSheet.create({
     txtG: {
         //fontFamily: 'aria-busy', 
         paddingLeft: '2%',
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: 100,
         fontStyle: 'normal',
     },

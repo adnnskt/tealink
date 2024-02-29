@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Slider, RangeSlider } from '@react-native-assets/slider';
+import { Text, Image, View, StyleSheet,  useWindowDimensions, FlatList} from 'react-native'
+//import { LinearGradient } from 'expo-linear-gradient'
+//import { Slider, RangeSlider } from '@react-native-assets/slider';
 
 const isolamento = require("../../src/img/isolamento.jpg") 
 const poucosAmigos = require("../../src/img/poucosAmigos.jpg") 
