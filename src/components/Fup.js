@@ -44,7 +44,7 @@ export default props => {
     
     const {width} = useWindowDimensions()
 
-
+/*
     const Item = ({item}) => (
         <>
             <View style={style.item, {width}}>
@@ -62,10 +62,8 @@ export default props => {
     )
 
 
-    return (
-    <>
-        <View style={style.centeredView}>
-            <View style = {style.listView}>
+
+    <View style = {style.listView}>
                 <FlatList
                     data={jsonList}
                     renderItem={({item}) => <Item item={item}/>}
@@ -75,7 +73,13 @@ export default props => {
                     pagingEnabled
                     bounces={false}
                 />
-            </View>
+    </View>
+
+*/
+    return (
+    <>
+        <View style={style.centeredView}>
+            
         </View>
     </>
     )
