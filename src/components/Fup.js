@@ -40,13 +40,19 @@ export default props => {
         },
     ]
     
+    /*
+    
+    
+    */
+
+
     const {width} = useWindowDimensions()
 
 
     const Item = ({item}) => (
         <>
             <View style={[style.item, {width}]}>
-            <Text style= {style.titleList}>{item.txt}</Text>
+            <Text>{item.txt}</Text>
                 <Image
                     style= {style.img}
                     source= {item.image}
@@ -62,16 +68,16 @@ export default props => {
     return (
     <>
         <View style={style.centeredView}>
-            <View style = {style.listView}>
-                    <FlatList
-                        data={jsonList}
-                        renderItem={({item}) => <Item item={item}/>}
-                        keyExtractor={item => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator
-                        pagingEnabled
-                        bounces={false}
-                    />
+           <View style = {style.listView}>
+                <FlatList
+                    data={jsonList}
+                    renderItem={({item}) => <Item item={item}/>}
+                    keyExtractor={item => item.id}
+                    horizontal
+                    showsHorizontalScrollIndicator
+                    pagingEnabled
+                    bounces={false}
+                />
             </View>
         </View>
     </>
@@ -88,7 +94,7 @@ const style = StyleSheet.create({
        
       },
       listView: {
-        height: '50%',
+        //height: '50%',
 
       },
       img: {
