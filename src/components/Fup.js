@@ -9,8 +9,6 @@ const vergonhaPublico = require("../../src/img/vergonhaPublico.jpg")
 const cansadoDeFalar = require("../../src/img/cansadoDeFalar.jpg") 
 const prefereMensagem = require("../../src/img/prefereMensagem.jpg") 
 
-//Tentando ajustar bug
-// vers]ao rn "0.71.6"
 
 export default props => {
 
@@ -44,10 +42,10 @@ export default props => {
     
     const {width} = useWindowDimensions()
 
-/*
+
     const Item = ({item}) => (
         <>
-            <View style={style.item, {width}}>
+            <View style={[style.item, {width}]}>
             <Text style= {style.titleList}>{item.txt}</Text>
                 <Image
                     style= {style.img}
@@ -61,25 +59,20 @@ export default props => {
         </>
     )
 
-
-
-    <View style = {style.listView}>
-                <FlatList
-                    data={jsonList}
-                    renderItem={({item}) => <Item item={item}/>}
-                    keyExtractor={item => item.id}
-                    horizontal
-                    showsHorizontalScrollIndicator
-                    pagingEnabled
-                    bounces={false}
-                />
-    </View>
-
-*/
     return (
     <>
         <View style={style.centeredView}>
-            
+            <View style = {style.listView}>
+                    <FlatList
+                        data={jsonList}
+                        renderItem={({item}) => <Item item={item}/>}
+                        keyExtractor={item => item.id}
+                        horizontal
+                        showsHorizontalScrollIndicator
+                        pagingEnabled
+                        bounces={false}
+                    />
+            </View>
         </View>
     </>
     )
@@ -108,12 +101,12 @@ const style = StyleSheet.create({
         fontWeight: 100,
       },
       item:{
-        backgroundColor: '#f9c2ff',
-        padding: 55,
-        marginVertical: 10,
-        marginHorizontal: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
+        //backgroundColor: '#f9c2ff',
+        //padding: 55,
+        //marginVertical: 10,
+        //marginHorizontal: 50,
+        //alignItems: 'center',
+        //justifyContent: 'center',
       },
 })
 
