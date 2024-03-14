@@ -31,7 +31,7 @@ export default props => {
         {
             id: '4',
             image: cansadoDeFalar,
-            txt: 'Cansaso ao falar'
+            txt: 'Cansaço ao falar'
         },
         {
             id: '5',
@@ -52,7 +52,7 @@ export default props => {
     const Item = ({item}) => (
         <>
             <View style={[style.item, {width}]}>
-            <Text>{item.txt}</Text>
+            <Text style={style.txtTitle}>{item.txt}</Text>
                 <Image
                     style= {style.img}
                     source= {item.image}
@@ -97,9 +97,14 @@ const style = StyleSheet.create({
         //height: '50%',
 
       },
+      txtTitle: {
+        fontSize: 40,
+        enum:'100',
+
+      },
       img: {
         width: '100%',
-        height: '100%',  
+        height: '60%',  
       },
       titleList: {
         paddingLeft: '2%',
@@ -108,7 +113,6 @@ const style = StyleSheet.create({
       },
       item:{
         backgroundColor: '#f9c2ff',
-        padding: 0,
         marginVertical: 10,
         //marginHorizontal: 10,
         alignItems: 'center',
