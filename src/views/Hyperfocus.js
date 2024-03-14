@@ -127,7 +127,7 @@ const style = StyleSheet.create({
         //fontFamily: 'aria-busy', 
         paddingLeft: '2%',
         fontSize: 20,
-        fontWeight: 100,
+        //fontWeight: 100,
         fontStyle: 'normal',
     },
     containerOptions: {
