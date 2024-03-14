@@ -107,27 +107,11 @@ const style = StyleSheet.create({
         fontWeight: 100,
       },
       item:{
-        //backgroundColor: '#f9c2ff',
-        //padding: 55,
-        //marginVertical: 10,
-        //marginHorizontal: 50,
-        //alignItems: 'center',
-        //justifyContent: 'center',
+        backgroundColor: '#f9c2ff',
+        padding: 0,
+        marginVertical: 10,
+        //marginHorizontal: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
       },
 })
-
-
-/*
-<View style={style.jsonList}>
-            <FlatList
-                data={jsonList}
-                renderItem={({item}) => <Item title={item}/>}
-                keyExtractor={item => item.id}
-                horizontal
-                showsHorizontalScrollIndicator
-                pagingEnabled
-                bounces={false}
-            />
-        </View>
-
-*/
