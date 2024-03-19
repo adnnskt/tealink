@@ -57,17 +57,17 @@ export default props => {
     const Item = ({item}) => (
         <>
             <View style={[style.item, {width}]}>
-            <Text style={style.txtTitle}>{item.txt}</Text>
-                <Image
-                    style= {style.img}
-                    source= {item.image}
-                    resizeMode='contain'
-                    >
-                </Image>
-            <Text>{item.longTxt}</Text>
-                
-            </View>
-            
+                <Text style={style.txtTitle}>{item.txt}</Text>
+                    <Image
+                        style= {style.img}
+                        source= {item.image}
+                        resizeMode='contain'
+                        >
+                    </Image>
+                <View style={style.txtBox}>
+                    <Text>{item.longTxt}</Text> 
+                </View>    
+            </View> 
         </>
     )
 
@@ -111,6 +111,18 @@ const style = StyleSheet.create({
       img: {
         width: '100%',
         height: '60%',  
+      },
+      txtBox: {
+        width: '95%',
+        backgroundColor: '#f6e3f8',
+        padding: '2%',
+        height: '28%',
+        borderRadius: 20,
+        elevation: 5,
+
+      },
+      longTxt: {
+        paddingLeft: '2%',
       },
       titleList: {
         paddingLeft: '2%',
