@@ -29,19 +29,19 @@ export default props => {
             id: '3',
             image: vergonhaPublico,
             txt: 'Vergonha em público',
-            longTxt: ""
+            longTxt: "Uma dica importante ao cuidar de alguém no espectro autista que enfrenta vergonha em público é construir gradualmente a confiança e a autoestima da pessoa, proporcionando um ambiente de apoio e aceitação incondicional. Isso pode ser feito elogiando e reconhecendo suas realizações, mesmo as pequenas, e enfatizando suas qualidades positivas. Além disso, é útil praticar técnicas de relaxamento e estratégias para lidar com a ansiedade em situações sociais, como a respiração profunda ou a visualização positiva, para ajudar a pessoa a se sentir mais segura e confortável ao enfrentar desafios sociais."
         },
         {
             id: '4',
             image: cansadoDeFalar,
             txt: 'Cansaço ao falar',
-            longTxt: ""
+            longTxt: "Uma dica valiosa para lidar com a característica de cansaço ao falar em alguém no espectro autista é estabelecer um sistema de comunicação alternativo que permita à pessoa se expressar de forma mais eficiente e menos cansativa. Isso pode incluir o uso de dispositivos de comunicação assistiva, como tablets com aplicativos de comunicação, ou até mesmo o uso de cartões de comunicação visual para facilitar a expressão de necessidades, desejos e sentimentos. Além disso, é importante respeitar os limites da pessoa e oferecer oportunidades para descanso e recarga de energia durante as interações sociais, permitindo pausas quando necessário e garantindo que a comunicação seja feita em um ritmo confortável para ela."
         },
         {
             id: '5',
             image: prefereMensagem,
             txt: 'Prefere mensagem',
-            longTxt: ""
+            longTxt: "Uma dica relevante para lidar com a preferência de alguém no espectro autista por se comunicar por mensagem é oferecer múltiplas opções de comunicação, incluindo mensagens de texto, e-mails ou aplicativos de mensagens instantâneas. Isso permite que a pessoa escolha a forma de comunicação que se sinta mais confortável e capaz de expressar seus pensamentos e sentimentos de maneira clara e eficaz. Além disso, é importante respeitar essa preferência e não pressionar a pessoa a se comunicar de outra forma, reconhecendo e valorizando sua maneira única de se relacionar e interagir com os outros."
         },
     ]
     
@@ -109,13 +109,13 @@ const style = StyleSheet.create({
       },
       img: {
         width: '100%',
-        height: '60%',  
+        height: '52%',  
       },
       txtBox: {
         width: '95%',
         backgroundColor: '#f6e3f8',
         padding: '2%',
-        height: '28%',
+        height: '39%',
         borderRadius: 20,
         elevation: 5,
 
