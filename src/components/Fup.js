@@ -105,7 +105,6 @@ const style = StyleSheet.create({
       },
       txtTitle: {
         fontSize: 40,
-        enum:'100',
 
       },
       img: {
