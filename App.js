@@ -49,6 +49,15 @@ function HyperfocusView({route}){
   )
 }
 
+function IntrovertidoView({route}){
+  const data = route.params
+  return(
+    <Introvertido 
+      user = {data.user}
+    />
+  )
+}
+
 function CalendarScreen() {
   return (
     
@@ -129,6 +138,8 @@ function App() {
       }
         <Stack.Screen name="Crise" component={ContentView} />
         <Stack.Screen name="Hiperfoco" component={HyperfocusView} />
+        <Stack.Screen name="Introvertido" component={IntrovertidoView} />
+        
     </Stack.Navigator>
     </NavigationContainer>
   </>
