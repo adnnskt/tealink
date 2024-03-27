@@ -12,6 +12,7 @@ import Login from './src/components/Login'
 import Fup from './src/components/Fup'
 import Content from './src/views/Content'
 import Hyperfocus from './src/views/Hyperfocus'
+import Introvertido from './src/views/Introvertido'
 
 
 import {decode, encode} from 'base-64'
