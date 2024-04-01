@@ -1,18 +1,20 @@
 import React, {useState} from "react";
-import { Text, Image, View, StyleSheet,  useWindowDimensions, FlatList, Modal} from 'react-native'
+import { Text, Image, View, StyleSheet,  useWindowDimensions, FlatList, Modal, TouchableHighlight} from 'react-native'
 //import { LinearGradient } from 'expo-linear-gradient'
 //import { Slider, RangeSlider } from '@react-native-assets/slider';
 
 
 export default props => {
 
-
+    const [modalVisible, setModalVisible] = useState(false);
 
     return(
     <>
        <View style = {style.container}>
             <View style = {style.listItem}>
-                <Text> Terapia Comportamental Aplicada (ABA) </Text>
+                <TouchableHighlight onPress={() => setModalVisible(true)}>
+                    <Text> Terapia Comportamental Aplicada (ABA) </Text>
+                </TouchableHighlight>
             </View>
             <View style = {style.listItem}>
                 <Text> Terapia Ocupacional (TO): </Text>
@@ -41,7 +43,15 @@ export default props => {
             <View style = {style.listItem}>
                 <Text> Musicoterapia </Text>
             </View>
-        
+
+            <Modal>
+                <View style={modalContainer}>
+                    <View style={style.modalStyle}>
+                        <View style={style.buttonClose}>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
 
        </View>         
     
@@ -64,6 +74,21 @@ const style = StyleSheet.create({
         backgroundColor: '#eabefa',
         borderRadius: 50,
         elevation: 5,
+    },
+    modalStyle: {
+        height: '40%',
+        width: '90%',
+        backgroundColor: 'blue',
+    },
+    modalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttonClose: {
+        height: '10%',
+        width: '30%',
+        backgroundColor: 'grey',
     }
 
 })
