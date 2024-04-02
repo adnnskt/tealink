@@ -82,11 +82,13 @@ const style = StyleSheet.create({
         elevation: 5,
     },
     modalStyle: {
-        height: '40%',
+        height: '80%',
         width: '90%',
-        backgroundColor: 'blue',
+        backgroundColor: '#b4a6f7',
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: 30,
+        elevation: 5,
     },
     modalContainer: {
         flex: 1,
@@ -95,10 +97,12 @@ const style = StyleSheet.create({
     },
     buttonClose: {
         height: '10%',
-        width: '30%',
-        backgroundColor: 'grey',
+        width: '40%',
+        backgroundColor: '#8fb2f7',
         alignItems: 'center',
         justifyContent: 'center',
+        elevation: 5,
+        borderRadius: 40,
     }
 
 })
