@@ -85,6 +85,8 @@ const style = StyleSheet.create({
         height: '40%',
         width: '90%',
         backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     modalContainer: {
         flex: 1,
