@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Text, Image, View, StyleSheet,  Pressable, FlatList, Modal, TouchableHighlight} from 'react-native'
 //import { LinearGradient } from 'expo-linear-gradient'
 //import { Slider, RangeSlider } from '@react-native-assets/slider';
+//Baixando imagens para lista
 
 
 export default props => {
@@ -14,9 +15,9 @@ export default props => {
             <Pressable style = {style.listItem} onPress={() => setModalVisible(true)}>
                 <Text> Terapia Comportamental Aplicada (ABA) </Text>
             </Pressable>
-            <View style = {style.listItem}>
+            <Pressable style = {style.listItem}>
                 <Text> Terapia Ocupacional (TO): </Text>
-            </View>
+            </Pressable>
             <View style = {style.listItem}>
                 <Text> Terapia da Fala e Linguagem </Text>
             </View>
