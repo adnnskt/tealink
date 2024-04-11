@@ -1,16 +1,28 @@
 import React, {useState} from "react";
 import { Text, Image, View, StyleSheet,  Pressable, FlatList, Modal, TouchableHighlight} from 'react-native'
-//import { LinearGradient } from 'expo-linear-gradient'
-//import { Slider, RangeSlider } from '@react-native-assets/slider';
-//Baixando imagens para lista
+const aba = require("../../src/img/aba.jpg") 
 
 
 export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
-    const ImterModal = (props) => {
+    const InterModal = (props) => {
         const {text, image} = props
+
+        return(
+        <>
+            <View style= {style.imgCover}>
+                <Image
+                        style= {style.img}
+                        source= {image}
+                        resizeMode='cover'
+                        >
+                </Image>
+            </View>    
+        </>
+        )
+
     }
 
 
@@ -59,6 +71,7 @@ export default props => {
                 }}>
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
+                        <InterModal image = {aba}/>
                         <Pressable onPress={() => setModalVisible(!modalVisible)} style={style.buttonClose}>
                             <Text> Fechar </Text>
                         </Pressable>
@@ -110,6 +123,14 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         elevation: 5,
         borderRadius: 40,
-    }
+    }, 
+    imgCover: {
+        width: '100%',
+        height: '52%', 
+    },  
+    img: {
+        width: '100%',
+        height: '100%',  
+      },
 
 })
