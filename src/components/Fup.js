@@ -9,6 +9,12 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    const ImterModal = (props) => {
+        const {text, image} = props
+    }
+
+
+
     return(
     <>
        <View style = {style.container}>
