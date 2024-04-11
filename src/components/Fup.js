@@ -125,12 +125,14 @@ const style = StyleSheet.create({
         borderRadius: 40,
     }, 
     imgCover: {
-        width: '100%',
+        width: '90%',
         height: '52%', 
+        justifyContent: 'center',
+        paddingTop: '2%',
     },  
     img: {
         width: '100%',
-        height: '100%',  
+        height: '95%', 
       },
 
 })
