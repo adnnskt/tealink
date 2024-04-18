@@ -19,7 +19,7 @@ export default props => {
                         resizeMode='cover'
                         >
                 </Image>
-                <View>
+                <View style={style.overTxt}>
                     <Text> Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.</Text>
                 </View>
             </View>    
@@ -75,9 +75,11 @@ export default props => {
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
                         <InterModal image = {aba}/>
-                        <Pressable onPress={() => setModalVisible(!modalVisible)} style={style.buttonClose}>
-                            <Text> Fechar </Text>
-                        </Pressable>
+                        <View style={style.buttonClose}>
+                            <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                                <Text> Fechar </Text>
+                            </Pressable>
+                        </View>
                     </View>
                 </View>
             </Modal>
@@ -108,7 +110,7 @@ const style = StyleSheet.create({
         height: '80%',
         width: '90%',
         backgroundColor: '#b4a6f7',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,
         elevation: 5,
@@ -117,6 +119,10 @@ const style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    overTxt: {
+        height: '30%',
+        
     },
     buttonClose: {
         height: '10%',
