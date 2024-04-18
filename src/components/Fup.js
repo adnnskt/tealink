@@ -75,10 +75,12 @@ export default props => {
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
                         <InterModal image = {aba}/>
-                        <View style={style.buttonClose}>
-                            <Pressable onPress={() => setModalVisible(!modalVisible)} >
-                                <Text> Fechar </Text>
-                            </Pressable>
+                        <View style={style.overBtnClose}>
+                            <View style={style.buttonClose}>
+                                <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                                    <Text> Fechar </Text>
+                                </Pressable>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -110,7 +112,7 @@ const style = StyleSheet.create({
         height: '87%',
         width: '95%',
         backgroundColor: '#b4a6f7',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         borderRadius: 30,
         elevation: 5,
@@ -120,15 +122,23 @@ const style = StyleSheet.create({
         paddingTop: '2%',
         justifyContent: 'center',
         alignItems: 'center',
+  
     },
     overTxt: {
         height: '70%',
-        width: '95%',
-        paddingTop: '3%',
+        width: '100%',
+        paddingTop: '5%',
+        backgroundColor: '#f5f8fc',
+        borderRadius: 20,
     },
-    buttonClose: {
+    overBtnClose:{
+        paddingBottom: '3%',
         height: '10%',
         width: '40%',
+    },
+    buttonClose: {
+        height: '100%',
+        width: '100%',
         backgroundColor: '#8fb2f7',
         alignItems: 'center',
         justifyContent: 'center',
@@ -138,12 +148,14 @@ const style = StyleSheet.create({
     imgCover: {
         width: '90%',
         height: '52%', 
-        justifyContent: 'center',
-        paddingTop: '2%',
+        //justifyContent: 'space-between',
+        paddingTop: '5%',
+        //borderColor: 'red',
+        //borderWidth: 4
     },  
     img: {
         width: '100%',
-        height: '90%', 
+        height: '100%', 
       },
 
 })
