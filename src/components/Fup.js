@@ -107,8 +107,8 @@ const style = StyleSheet.create({
         elevation: 5,
     },
     modalStyle: {
-        height: '80%',
-        width: '90%',
+        height: '87%',
+        width: '95%',
         backgroundColor: '#b4a6f7',
         justifyContent: 'center',
         alignItems: 'center',
@@ -117,12 +117,14 @@ const style = StyleSheet.create({
     },
     modalContainer: {
         flex: 1,
+        paddingTop: '2%',
         justifyContent: 'center',
         alignItems: 'center',
     },
     overTxt: {
-        height: '30%',
-        
+        height: '70%',
+        width: '95%',
+        paddingTop: '3%',
     },
     buttonClose: {
         height: '10%',
@@ -141,7 +143,7 @@ const style = StyleSheet.create({
     },  
     img: {
         width: '100%',
-        height: '95%', 
+        height: '90%', 
       },
 
 })
