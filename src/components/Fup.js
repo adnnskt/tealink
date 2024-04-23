@@ -7,6 +7,25 @@ export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    const jsonList = [
+        {
+            id: '1',
+            name: 'aba',
+            txt:'Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.',
+            img: aba,
+        },
+        {
+            id: '2',
+            name: 'to',
+            txt:'Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.',
+            img: aba,
+        },
+        
+    ]
+
+
+
+
     const InterModal = (props) => {
         const {text, image} = props
 
@@ -136,8 +155,11 @@ const style = StyleSheet.create({
         height: '100%',
         width: '100%',
         padding: '3%',
-        backgroundColor: '#f5f8fc',
+        backgroundColor: '#c8c6f7',
         borderRadius: 20,
+        elevation: 5,
+        borderWidth: 0.5,
+        borderColor: 'white',
     },
     overBtnClose:{
         paddingBottom: '3%',
