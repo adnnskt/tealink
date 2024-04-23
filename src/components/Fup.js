@@ -19,8 +19,10 @@ export default props => {
                         resizeMode='cover'
                         >
                 </Image>
-                <View style={style.overTxt}>
-                    <Text> Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.</Text>
+                <View style= {style.txtContainer}>
+                    <View style={style.overTxt}>
+                        <Text> Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.</Text>
+                    </View>
                 </View>
             </View>    
         </>
@@ -124,10 +126,16 @@ const style = StyleSheet.create({
         alignItems: 'center',
   
     },
-    overTxt: {
-        height: '70%',
+    txtContainer: {
+        height: '80%',
         width: '100%',
-        paddingTop: '5%',
+        paddingTop: '3%',
+        elevation: 4,
+    },
+    overTxt: {
+        height: '100%',
+        width: '100%',
+        padding: '3%',
         backgroundColor: '#f5f8fc',
         borderRadius: 20,
     },
@@ -148,7 +156,7 @@ const style = StyleSheet.create({
     imgCover: {
         width: '90%',
         height: '52%', 
-        //justifyContent: 'space-between',
+        justifyContent: 'space-between',
         paddingTop: '5%',
         //borderColor: 'red',
         //borderWidth: 4
