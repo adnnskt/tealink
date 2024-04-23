@@ -10,14 +10,62 @@ export default props => {
     const jsonList = [
         {
             id: '1',
-            name: 'aba',
+            name: 'Terapia Comportamental Aplicada (ABA)',
             txt:'Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.',
             img: aba,
         },
         {
             id: '2',
-            name: 'to',
-            txt:'Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.',
+            name: 'Terapia Ocupacional (TO)',
+            txt:'A Terapia Ocupacional para o Transtorno do Espectro Autista (TEA) é uma intervenção que visa melhorar a independência e a qualidade de vida das pessoas com autismo. Utilizando atividades significativas e adaptadas, essa terapia foca no desenvolvimento de habilidades motoras, sensoriais, sociais e de autocuidado. Ela ajuda os indivíduos autistas a melhorarem sua capacidade de participar em atividades diárias, como se vestir, comer e interagir socialmente, facilitando sua integração na escola, em casa e na comunidade.',
+            img: aba,
+        },
+        {
+            id: '3',
+            name: 'Terapia da Fala e Linguagem',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '4',
+            name: 'Intervenção Precoce',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '5',
+            name: 'Terapia Sensorial',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '6',
+            name: 'Terapia Social Pragmática',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '7',
+            name: 'Intervenção Comportamental Early Start Denver (ESDM)',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '8',
+            name: 'Terapia de Desenvolvimento Relacional (RDI)',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '9',
+            name: 'Terapia de Integração Sensorial',
+            txt:'',
+            img: aba,
+        },
+        {
+            id: '10',
+            name: 'Musicoterapia',
+            txt:'',
             img: aba,
         },
         
@@ -58,7 +106,7 @@ export default props => {
                 <Text> Terapia Comportamental Aplicada (ABA) </Text>
             </Pressable>
             <Pressable style = {style.listItem}>
-                <Text> Terapia Ocupacional (TO): </Text>
+                <Text> Terapia Ocupacional (TO) </Text>
             </Pressable>
             <View style = {style.listItem}>
                 <Text> Terapia da Fala e Linguagem </Text>
@@ -189,3 +237,39 @@ const style = StyleSheet.create({
       },
 
 })
+
+
+/*
+
+<Pressable style = {style.listItem} onPress={() => setModalVisible(true)}>
+                <Text> Terapia Comportamental Aplicada (ABA) </Text>
+            </Pressable>
+            <Pressable style = {style.listItem}>
+                <Text> Terapia Ocupacional (TO): </Text>
+            </Pressable>
+            <View style = {style.listItem}>
+                <Text> Terapia da Fala e Linguagem </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Intervenção Precoce </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Terapia Sensorial </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Terapia Social Pragmática </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Intervenção Comportamental Early Start Denver (ESDM) </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Terapia de Desenvolvimento Relacional (RDI) </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Terapia de Integração Sensorial </Text>
+            </View>
+            <View style = {style.listItem}>
+                <Text> Musicoterapia </Text>
+            </View>
+
+*/
