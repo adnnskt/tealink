@@ -23,13 +23,13 @@ export default props => {
         {
             id: '3',
             name: 'Terapia da Fala e Linguagem',
-            txt:'',
+            txt:'A Terapia da Fala e Linguagem para o Transtorno do Espectro Autista (TEA) é uma intervenção que visa melhorar a comunicação verbal e não verbal, bem como as habilidades de linguagem e interação social de indivíduos autistas. Os terapeutas trabalham para desenvolver a compreensão e expressão da linguagem, aprimorar a comunicação não verbal (como gestos e expressões faciais) e promover interações sociais adequadas. Eles também podem ajudar na melhoria da articulação, da fluência e da pragmática da linguagem, adaptando as estratégias de acordo com as necessidades específicas de cada pessoa autista.',
             img: aba,
         },
         {
             id: '4',
             name: 'Intervenção Precoce',
-            txt:'',
+            txt:'A Intervenção Precoce para o Transtorno do Espectro Autista (TEA) é um conjunto de serviços e estratégias destinadas a crianças com autismo desde tenra idade, geralmente até os três anos de idade. Seu objetivo é identificar precocemente sinais de autismo e iniciar intervenções específicas para promover o desenvolvimento cognitivo, comunicativo, social e emocional da criança. Essas intervenções podem incluir terapia comportamental, terapia ocupacional, terapia da fala e linguagem, bem como apoio à família para ajudar na compreensão do TEA e no desenvolvimento de estratégias de manejo e suporte adequadas. A intervenção precoce é fundamental para maximizar o potencial de desenvolvimento da criança e melhorar os resultados a longo prazo.',
             img: aba,
         },
         {
