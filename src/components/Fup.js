@@ -35,37 +35,37 @@ export default props => {
         {
             id: '5',
             name: 'Terapia Sensorial',
-            txt:'',
+            txt:'A Terapia Sensorial para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica que visa ajudar indivíduos autistas a regular suas respostas sensoriais e melhorar sua capacidade de processar e responder aos estímulos do ambiente. Os terapeutas sensoriais trabalham para identificar as necessidades sensoriais específicas de cada pessoa autista e desenvolvem atividades e estratégias para ajudá-las a lidar com sensações sensoriais que podem ser avassaladoras ou desafiadoras. Isso pode envolver a utilização de técnicas de integração sensorial, como atividades táteis, proprioceptivas e vestibulares, para ajudar os indivíduos autistas a se sentirem mais confortáveis em seu ambiente e a participarem de atividades diárias com maior facilidade.',
             img: aba,
         },
         {
             id: '6',
             name: 'Terapia Social Pragmática',
-            txt:'',
+            txt:'A Terapia Social Pragmática para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica que se concentra no desenvolvimento das habilidades sociais e de comunicação pragmática em indivíduos autistas. Ela visa ensinar habilidades sociais, como iniciar e manter conversas, interpretar e responder adequadamente às pistas sociais, compreender o contexto social e regular o comportamento de acordo com diferentes situações sociais. Os terapeutas trabalham para ajudar os indivíduos autistas a melhorar sua compreensão e uso da linguagem social, promovendo interações mais bem-sucedidas e significativas com os outros em uma variedade de contextos sociais.',
             img: aba,
         },
         {
             id: '7',
             name: 'Intervenção Comportamental Early Start Denver (ESDM)',
-            txt:'',
+            txt:'A Intervenção Comportamental Early Start Denver (ESDM) para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica intensiva e baseada em evidências, projetada para crianças pequenas com autismo, geralmente entre 12 e 48 meses de idade. Ela combina elementos de terapia comportamental aplicada (ABA) com técnicas de desenvolvimento infantil e ensino individualizado. O ESDM visa promover o desenvolvimento global da criança, focando na melhoria das habilidades sociais, comunicativas, cognitivas e adaptativas. Os terapeutas utilizam atividades lúdicas e interativas para envolver a criança em aprendizado e interações sociais significativas, adaptando as estratégias de acordo com suas necessidades específicas. O ESDM também enfatiza o envolvimento dos pais no processo terapêutico, fornecendo orientação e apoio para promover o desenvolvimento da criança dentro e fora das sessões de terapia.',
             img: aba,
         },
         {
             id: '8',
             name: 'Terapia de Desenvolvimento Relacional (RDI)',
-            txt:'',
+            txt:'A Terapia de Desenvolvimento Relacional (RDI) para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica que se concentra na reconstrução das habilidades de relacionamento e comunicação em indivíduos autistas. O RDI visa desenvolver a capacidade de estabelecer e manter relacionamentos significativos e satisfatórios, promovendo a flexibilidade cognitiva, a autorregulação emocional e a reciprocidade social. Os terapeutas trabalham em colaboração com os pais e cuidadores para criar experiências compartilhadas que estimulem a comunicação não verbal, a compreensão das emoções dos outros e a cooperação em atividades sociais e de resolução de problemas. O RDI também enfatiza a importância do aprendizado experiencial e da prática guiada para ajudar os indivíduos autistas a desenvolverem habilidades sociais e adaptativas em uma variedade de situações do mundo real.',
             img: aba,
         },
         {
             id: '9',
             name: 'Terapia de Integração Sensorial',
-            txt:'',
+            txt:'A Terapia de Integração Sensorial (TIS) para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica que visa ajudar indivíduos autistas a processar e responder aos estímulos sensoriais do ambiente de forma mais eficaz. A TIS enfoca a criação de experiências sensoriais estruturadas e adaptadas para ajudar na regulação sensorial, promover o desenvolvimento das habilidades motoras e melhorar a participação em atividades cotidianas. Os terapeutas de integração sensorial utilizam uma variedade de técnicas, como movimentos específicos, brincadeiras táteis e exercícios vestibulares, para estimular os sistemas sensoriais da criança e ajudá-la a se sentir mais confortável em diferentes ambientes. O objetivo é facilitar a adaptação às sensações sensoriais e promover o engajamento em atividades sociais, acadêmicas e de autocuidado.',
             img: aba,
         },
         {
             id: '10',
             name: 'Musicoterapia',
-            txt:'',
+            txt:'A Musicoterapia para o Transtorno do Espectro Autista (TEA) é uma abordagem terapêutica que utiliza elementos musicais, como ritmo, melodia e harmonia, para ajudar indivíduos autistas a melhorar suas habilidades sociais, comunicativas, emocionais e motoras. Os musicoterapeutas adaptam atividades musicais de acordo com as necessidades e preferências individuais de cada pessoa autista, utilizando instrumentos musicais, canto, movimento e improvisação para promover o engajamento e a expressão. A Musicoterapia pode ajudar na melhoria da comunicação verbal e não verbal, na regulação emocional, no desenvolvimento das habilidades sociais e na promoção do bem-estar geral da pessoa autista.',
             img: aba,
         },
         
