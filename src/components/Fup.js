@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { Text, Image, View, StyleSheet,  Pressable, FlatList, Modal, TouchableHighlight} from 'react-native'
 const aba = require("../../src/img/aba.jpg") 
+const to = require("../../src/img/TO.jpg") 
+const fala = require("../../src/img/terapiaFala.jpg") 
 
 
 export default props => {
@@ -18,13 +20,13 @@ export default props => {
             id: '2',
             name: 'Terapia Ocupacional (TO)',
             txt:'A Terapia Ocupacional para o Transtorno do Espectro Autista (TEA) é uma intervenção que visa melhorar a independência e a qualidade de vida das pessoas com autismo. Utilizando atividades significativas e adaptadas, essa terapia foca no desenvolvimento de habilidades motoras, sensoriais, sociais e de autocuidado. Ela ajuda os indivíduos autistas a melhorarem sua capacidade de participar em atividades diárias, como se vestir, comer e interagir socialmente, facilitando sua integração na escola, em casa e na comunidade.',
-            img: aba,
+            img: to,
         },
         {
             id: '3',
             name: 'Terapia da Fala e Linguagem',
             txt:'A Terapia da Fala e Linguagem para o Transtorno do Espectro Autista (TEA) é uma intervenção que visa melhorar a comunicação verbal e não verbal, bem como as habilidades de linguagem e interação social de indivíduos autistas. Os terapeutas trabalham para desenvolver a compreensão e expressão da linguagem, aprimorar a comunicação não verbal (como gestos e expressões faciais) e promover interações sociais adequadas. Eles também podem ajudar na melhoria da articulação, da fluência e da pragmática da linguagem, adaptando as estratégias de acordo com as necessidades específicas de cada pessoa autista.',
-            img: aba,
+            img: fala,
         },
         {
             id: '4',
