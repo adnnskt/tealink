@@ -15,6 +15,7 @@ const musicoterapia = require("../../src/img/musicoterapia.jpg")
 export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
 
     const jsonList = [
         {
@@ -111,36 +112,22 @@ export default props => {
     return(
     <>
        <View style = {style.container}>
-            <Pressable style = {style.listItem} onPress={() => setModalVisible(true)}>
-                <Text> Terapia Comportamental Aplicada (ABA) </Text>
-            </Pressable>
-            <Pressable style = {style.listItem}>
-                <Text> Terapia Ocupacional (TO) </Text>
-            </Pressable>
-            <View style = {style.listItem}>
-                <Text> Terapia da Fala e Linguagem </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Intervenção Precoce </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Terapia Sensorial </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Terapia Social Pragmática </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Intervenção Comportamental Early Start Denver (ESDM) </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Terapia de Desenvolvimento Relacional (RDI) </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Terapia de Integração Sensorial </Text>
-            </View>
-            <View style = {style.listItem}>
-                <Text> Musicoterapia </Text>
-            </View>
+            {jsonList.map(item => (
+                <Pressable
+                    key={item.id}
+                    style={style.listItem}
+                    onPress={() => {
+                        setSelectedItem(item);
+                        setModalVisible(true);
+                    }}
+                >
+                    <Text>{item.name}</Text>
+                </Pressable>
+            ))}
+
+            {modalVisible && selectedItem && (
+                <InterModal text={selectedItem.txt} image={selectedItem.img} />
+            )}
 
             <Modal
                 animationType="fade"
@@ -152,7 +139,6 @@ export default props => {
                 }}>
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
-                        <InterModal image = {aba}/>
                         <View style={style.overBtnClose}>
                             <View style={style.buttonClose}>
                                 <Pressable onPress={() => setModalVisible(!modalVisible)} >
@@ -163,7 +149,6 @@ export default props => {
                     </View>
                 </View>
             </Modal>
-
        </View>         
     
     </>
@@ -249,7 +234,7 @@ const style = StyleSheet.create({
 
 
 /*
-
+<InterModal image = {aba}/>
 <Pressable style = {style.listItem} onPress={() => setModalVisible(true)}>
                 <Text> Terapia Comportamental Aplicada (ABA) </Text>
             </Pressable>
