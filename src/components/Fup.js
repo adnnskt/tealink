@@ -17,6 +17,9 @@ export default props => {
     const [modalVisible, setModalVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
 
+    let img = ''    
+    let txt = ''
+
     const jsonList = [
         {
             id: '1',
@@ -106,8 +109,30 @@ export default props => {
 
     const showModal  = (props) => {
 
-        setModalVisible(true);
-        <Modal
+        setModalVisible(true)
+        console.warn(txt)
+    }
+
+
+    return(
+    <>
+       <View style = {style.container}>
+            {jsonList.map(item => (
+                <Pressable
+                    key={item.id}
+                    style={style.listItem}
+                    onPress={() => {
+                        img = item.img
+                        txt = item.txt
+                        setSelectedItem(item);
+                        showModal(item)
+                         }}
+                >
+                    <Text>{item.name}</Text>
+                </Pressable>
+                
+            ))}
+            <Modal
                 animationType="fade"
                 transparent={true}
                 visible={modalVisible}
@@ -127,32 +152,7 @@ export default props => {
                         </View>
                     </View>
                 </View>
-            </Modal>
-
-    }
-
-
-    return(
-    <>
-       <View style = {style.container}>
-            {jsonList.map(item => (
-                <Pressable
-                    key={item.id}
-                    style={style.listItem}
-                    onPress={() => {
-                        setSelectedItem(item);
-                        showModal(item)
-                    }}
-                >
-                    <Text>{item.name}</Text>
-                </Pressable>
-            ))}
-
-            {modalVisible && selectedItem && (
-                <InterModal text={selectedItem.txt} image={selectedItem.img} />
-            )}
-
-            
+            </Modal>            
        </View>         
     
     </>
