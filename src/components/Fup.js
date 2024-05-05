@@ -107,13 +107,6 @@ export default props => {
 
     }
 
-    const showModal  = (props) => {
-
-        setModalVisible(true)
-        console.warn(txt)
-    }
-
-
     return(
     <>
        <View style = {style.container}>
@@ -122,10 +115,9 @@ export default props => {
                     key={item.id}
                     style={style.listItem}
                     onPress={() => {
-                        img = item.img
-                        txt = item.txt
                         setSelectedItem(item);
                         showModal(item)
+                        setModalVisible(true)
                          }}
                 >
                     <Text>{item.name}</Text>
@@ -142,7 +134,7 @@ export default props => {
                 }}>
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
-                        <InterModal image = {aba}/>
+                        <InterModal image = {selectedItem.img}/>
                         <View style={style.overBtnClose}>
                             <View style={style.buttonClose}>
                                 <Pressable onPress={() => setModalVisible(!modalVisible)} >
