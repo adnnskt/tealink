@@ -81,9 +81,6 @@ export default props => {
         
     ]
 
-
-
-
     const InterModal = (props) => {
         const {text, image} = props
 
@@ -107,6 +104,32 @@ export default props => {
 
     }
 
+    const showModal  = (props) => {
+
+        setModalVisible(true);
+        <Modal
+                animationType="fade"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                Alert.alert('Modal has been closed.');
+                setModalVisible(!modalVisible);
+                }}>
+                <View style={style.modalContainer}>
+                    <View style={style.modalStyle}>
+                        <InterModal image = {aba}/>
+                        <View style={style.overBtnClose}>
+                            <View style={style.buttonClose}>
+                                <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                                    <Text> Fechar </Text>
+                                </Pressable>
+                            </View>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
+
+    }
 
 
     return(
@@ -118,7 +141,7 @@ export default props => {
                     style={style.listItem}
                     onPress={() => {
                         setSelectedItem(item);
-                        setModalVisible(true);
+                        showModal(item)
                     }}
                 >
                     <Text>{item.name}</Text>
@@ -129,26 +152,7 @@ export default props => {
                 <InterModal text={selectedItem.txt} image={selectedItem.img} />
             )}
 
-            <Modal
-                animationType="fade"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                Alert.alert('Modal has been closed.');
-                setModalVisible(!modalVisible);
-                }}>
-                <View style={style.modalContainer}>
-                    <View style={style.modalStyle}>
-                        <View style={style.overBtnClose}>
-                            <View style={style.buttonClose}>
-                                <Pressable onPress={() => setModalVisible(!modalVisible)} >
-                                    <Text> Fechar </Text>
-                                </Pressable>
-                            </View>
-                        </View>
-                    </View>
-                </View>
-            </Modal>
+            
        </View>         
     
     </>
@@ -234,7 +238,7 @@ const style = StyleSheet.create({
 
 
 /*
-<InterModal image = {aba}/>
+
 <Pressable style = {style.listItem} onPress={() => setModalVisible(true)}>
                 <Text> Terapia Comportamental Aplicada (ABA) </Text>
             </Pressable>
