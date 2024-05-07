@@ -15,7 +15,7 @@ const musicoterapia = require("../../src/img/musicoterapia.jpg")
 export default props => {
 
     const [modalVisible, setModalVisible] = useState(false);
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState({img: null, txt: null});
 
     const jsonList = [
         {
@@ -180,7 +180,7 @@ const style = StyleSheet.create({
   
     },
     txtContainer: {
-        height: '80%',
+        height: '98%',
         width: '100%',
         paddingTop: '3%',
         elevation: 4,
@@ -196,8 +196,8 @@ const style = StyleSheet.create({
         borderColor: 'white',
     },
     overBtnClose:{
-        paddingBottom: '3%',
-        height: '10%',
+        paddingBottom: '1%',
+        height: '7%',
         width: '40%',
     },
     buttonClose: {
@@ -211,7 +211,7 @@ const style = StyleSheet.create({
     }, 
     imgCover: {
         width: '90%',
-        height: '52%', 
+        height: '48%', 
         justifyContent: 'space-between',
         paddingTop: '5%',
         //borderColor: 'red',
