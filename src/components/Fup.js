@@ -17,9 +17,6 @@ export default props => {
     const [modalVisible, setModalVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
 
-    let img = ''    
-    let txt = ''
-
     const jsonList = [
         {
             id: '1',
@@ -98,7 +95,7 @@ export default props => {
                 </Image>
                 <View style= {style.txtContainer}>
                     <View style={style.overTxt}>
-                        <Text> Terapia ABA (Análise do Comportamento Aplicada) é uma abordagem terapêutica baseada em princípios científicos da psicologia comportamental. Ela busca modificar comportamentos significativos através da aplicação de técnicas de reforço positivo e estratégias de ensino individualizadas. É frequentemente utilizada no tratamento de distúrbios do espectro autista e outros transtornos do desenvolvimento, visando promover habilidades sociais, comunicativas e de autocuidado.</Text>
+                        <Text>{text}</Text>
                     </View>
                 </View>
             </View>    
@@ -116,7 +113,6 @@ export default props => {
                     style={style.listItem}
                     onPress={() => {
                         setSelectedItem(item);
-                        showModal(item)
                         setModalVisible(true)
                          }}
                 >
@@ -134,7 +130,7 @@ export default props => {
                 }}>
                 <View style={style.modalContainer}>
                     <View style={style.modalStyle}>
-                        <InterModal image = {selectedItem.img}/>
+                        <InterModal image = {selectedItem.img} text = {selectedItem.txt}/>
                         <View style={style.overBtnClose}>
                             <View style={style.buttonClose}>
                                 <Pressable onPress={() => setModalVisible(!modalVisible)} >
