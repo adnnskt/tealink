@@ -180,7 +180,7 @@ const style = StyleSheet.create({
   
     },
     txtContainer: {
-        height: '110%',
+        height: '125%',
         width: '100%',
         paddingTop: '3%',
         elevation: 4,
@@ -211,7 +211,7 @@ const style = StyleSheet.create({
     }, 
     imgCover: {
         width: '90%',
-        height: '45%', 
+        height: '42%', 
         justifyContent: 'space-between',
         paddingTop: '5%',
         //borderColor: 'red',
