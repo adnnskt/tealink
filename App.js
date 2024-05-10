@@ -13,7 +13,7 @@ import Fup from './src/components/Fup'
 import Content from './src/views/Content'
 import Hyperfocus from './src/views/Hyperfocus'
 import Introvertido from './src/views/Introvertido'
-
+import Terapia from './src/views/Terapia'
 
 import {decode, encode} from 'base-64'
 if (!global.btoa) {  global.btoa = encode }
@@ -57,6 +57,16 @@ function IntrovertidoView({route}){
     />
   )
 }
+
+function TerapiaView({route}){
+  const data = route.params
+  return(
+    <Terapia 
+      user = {data.user}
+    />
+  )
+}
+
 
 function CalendarScreen() {
   return (
@@ -139,6 +149,7 @@ function App() {
         <Stack.Screen name="Crise" component={ContentView} />
         <Stack.Screen name="Hiperfoco" component={HyperfocusView} />
         <Stack.Screen name="Introvertido" component={IntrovertidoView} />
+        <Stack.Screen name="Terapia" component={TerapiaView} />
         
     </Stack.Navigator>
     </NavigationContainer>

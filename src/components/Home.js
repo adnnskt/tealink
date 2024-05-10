@@ -37,7 +37,7 @@ export default props => {
             
             <View style={style.boxGroup}>
                 <View style={style.flex}>
-                    <TouchableHighlight style= {style.card} onPress = {null}>   
+                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Terapia', {user: data})}>   
                         <Card image={terapia} text='Terapia'/>
                     </TouchableHighlight>
                     <TouchableHighlight style= {style.card} onPress = {null}>
