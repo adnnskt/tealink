@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Text, Image, View, StyleSheet,  Pressable, FlatList, Modal, TouchableHighlight} from 'react-native'
+import { Text, Image, View, StyleSheet,  Pressable, ScrollView, Modal, TouchableHighlight} from 'react-native'
 const aba = require("../../src/img/aba.jpg") 
 const to = require("../../src/img/TO.jpg") 
 const fala = require("../../src/img/terapiaFala.jpg") 
@@ -95,7 +95,9 @@ export default props => {
                 </Image>
                 <View style= {style.txtContainer}>
                     <View style={style.overTxt}>
-                        <Text>{text}</Text>
+                        <ScrollView>
+                            <Text>{text}</Text>
+                        </ScrollView>
                     </View>
                 </View>
             </View>    
@@ -180,7 +182,7 @@ const style = StyleSheet.create({
   
     },
     txtContainer: {
-        height: '125%',
+        height: '110%',
         width: '100%',
         paddingTop: '3%',
         elevation: 4,
@@ -211,7 +213,7 @@ const style = StyleSheet.create({
     }, 
     imgCover: {
         width: '90%',
-        height: '42%', 
+        height: '45%', 
         justifyContent: 'space-between',
         paddingTop: '5%',
         //borderColor: 'red',
