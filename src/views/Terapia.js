@@ -118,7 +118,7 @@ export default props => {
                         setModalVisible(true)
                          }}
                 >
-                    <Text>{item.name}</Text>
+                    <Text style={style.txtItem}>{item.name}</Text>
                 </Pressable>
                 
             ))}
@@ -165,8 +165,11 @@ const style = StyleSheet.create({
         borderRadius: 50,
         elevation: 5,
     },
+    txtItem: {
+        paddingLeft: '3%',
+    },  
     modalStyle: {
-        height: '87%',
+        height: '98%',
         width: '95%',
         backgroundColor: '#b4a6f7',
         justifyContent: 'space-between',
@@ -200,7 +203,7 @@ const style = StyleSheet.create({
     overBtnClose:{
         paddingBottom: '1%',
         height: '7%',
-        width: '40%',
+        width: '90%',
     },
     buttonClose: {
         height: '100%',

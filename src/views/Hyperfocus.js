@@ -157,8 +157,8 @@ const style = StyleSheet.create({
       txtInBox: {
         color: '#fff',
         fontSize: 10,
-        paddingLeft: '5%',
-        paddingTop: '2%',
+        paddingLeft: '7%',
+        paddingTop: '5%',
       },
 
       txtBold:{
