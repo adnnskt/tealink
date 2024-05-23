@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Ionicons } from '@expo/vector-icons/Ionicons';
-import Entypo from '@expo/vector-icons/Entypo';
+import Ionicons from '@expo/vector-icons/Ionicons';
+//import Entypo from '@expo/vector-icons/Entypo';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
 import Registration from './src/components/Registration'
