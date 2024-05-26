@@ -94,7 +94,7 @@ function MyTabs({route}) {
   //alert(data.user)
   return (
     <Tab.Navigator
-        user={data.user}
+        //user={data.user}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
