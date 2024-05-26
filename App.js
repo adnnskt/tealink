@@ -100,11 +100,11 @@ function MyTabs({route}) {
             let iconName;
 
             if (route.name === 'Home') {
-              iconName = 'home';
+              iconName = focused ? 'home' : 'home-outline';
             } else if (route.name === 'Calendário') {
-              iconName = 'calendar';
+              iconName = focused ? 'calendar' : 'calendar-outline';
             } else if (route.name === 'Acompanhamento') {
-              iconName = 'bar-chart';
+              iconName = focused ? 'bar-chart' : 'bar-chart-outline';
             }
             
             // You can return any component that you like here!
