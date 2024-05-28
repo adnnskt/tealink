@@ -5,7 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //import Ionicons from '@expo/vector-icons/Ionicons';
-import Ionicons from '@react-native-vector-icons/ionicons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+//import Ionicons from '@react-native-vector-icons/ionicons';
 //import Entypo from '@expo/vector-icons/Entypo';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
@@ -101,15 +102,15 @@ function MyTabs({route}) {
             let iconName;
 
             if (route.name === 'Home') {
-              iconName = focused ? 'home' : 'home-outline';
+              iconName = focused ? 'home' : 'home';
             } else if (route.name === 'Calendário') {
-              iconName = focused ? 'calendar' : 'calendar-outline';
+              iconName = focused ? 'calendar' : 'calendar';
             } else if (route.name === 'Acompanhamento') {
-              iconName = focused ? 'bar-chart' : 'bar-chart-outline';
+              iconName = focused ? 'bar-chart' : 'bar-chart';
             }
             
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <FontAwesome name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',

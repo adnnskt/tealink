@@ -134,11 +134,11 @@ export default props => {
                     <View style={style.modalStyle}>
                         <InterModal image = {selectedItem.img} text = {selectedItem.txt}/>
                         <View style={style.overBtnClose}>
-                            <View style={style.buttonClose}>
-                                <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                            <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                                <View style={style.buttonClose}>
                                     <Text> Fechar </Text>
-                                </Pressable>
-                            </View>
+                                </View>
+                            </Pressable>
                         </View>
                     </View>
                 </View>
