@@ -281,8 +281,8 @@ const style = StyleSheet.create({
         height: '80%',
     },
      overCard: {
-        height: '35%',
-        width: '90%',
+        height: '30%',
+        width: '100%',
         backgroundColor: '#9090d0',
         borderTopRightRadius: 40,
         borderBottomRightRadius: 40,
