@@ -31,6 +31,9 @@ export default props => {
                     value={isEnabled}
                 />
             </View>
+            <View style={style.overContent}>
+
+            </View>
 
         </View>         
     
@@ -48,10 +51,16 @@ const style = StyleSheet.create({
     },
     overSwitch: {
         width: '100%',
-        height: '30%',
+        height: '15%',
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 2,
         borderColor: 'red',
-    }
+    },
+    overContent: {
+        width: '100%',
+        height: '70%',
+        borderWidth: 2,
+        borderColor: 'red',
+    },  
 })
