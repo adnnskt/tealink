@@ -1,16 +1,6 @@
 import React, {useState} from "react";
 import { Text, Image, View, StyleSheet,  Pressable, ScrollView, Modal, Switch} from 'react-native'
-const aba = require("../../src/img/aba.jpg") 
-const to = require("../../src/img/TO.jpg") 
-const fala = require("../../src/img/terapiaFala.jpg") 
-const interPrecoce = require("../../src/img/intervencaoPrecoce.jpg") 
-const sensorial = require("../../src/img/sensorial.jpg") 
-const social = require("../../src/img/social.jpg") 
-const denver = require("../../src/img/denver.jpg") 
-const rdi = require("../../src/img/rdi.jpg") 
-const iSocial = require("../../src/img/integracaoSensorial.jpg") 
-const musicoterapia = require("../../src/img/musicoterapia.jpg") 
-
+import { FontAwesome } from '@expo/vector-icons';
 
 export default props => {
 
@@ -22,6 +12,9 @@ export default props => {
     <>
         <View style = {style.container}>
             <View style = {style.overSwitch}>
+                <View>
+                    <FontAwesome name="moon-o" size={54} color="grey" />
+                </View>
                 <Switch
                     trackColor={{false: '#767577', true: '#81b0ff'}}
                     thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
@@ -30,6 +23,9 @@ export default props => {
                     onValueChange={toggleSwitch}
                     value={isEnabled}
                 />
+                <View>
+                    <FontAwesome name="sun-o" size={54} color="yellow" />
+                </View>
             </View>
             <View style={style.overContent}>
 
@@ -52,10 +48,12 @@ const style = StyleSheet.create({
     overSwitch: {
         width: '100%',
         height: '15%',
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         alignItems: 'center',
         borderWidth: 2,
         borderColor: 'red',
+
     },
     overContent: {
         width: '100%',
