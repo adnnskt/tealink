@@ -7,10 +7,10 @@ export default props => {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     
-
+    const backgroundColor = isEnabled ?  '#f4f3f4' : '#c3c9c5'
     return(
     <>
-        <View style = {style.container}>
+        <View style = {[style.container, {backgroundColor}]}>
             <View style = {style.overSwitch}>
                 <View>
                     <FontAwesome name="moon-o" size={54} color="grey" />
@@ -42,7 +42,6 @@ const style = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#c3c9c5',
         justifyContent: 'space-around',
     },
     overSwitch: {
