@@ -32,7 +32,14 @@ export default props => {
                 </View>
             </View>
             <View style={style.overContent}>
-
+                <View style={style.imgCover}>
+                    <Image
+                        style= {style.img}
+                        source= {menino}
+                        resizeMode='cover'
+                        >
+                    </Image>
+                </View>
             </View>
 
         </View>         
@@ -63,5 +70,17 @@ const style = StyleSheet.create({
         height: '70%',
         borderWidth: 2,
         borderColor: 'red',
+    },
+    imgCover: {
+        width: '90%',
+        height: '45%', 
+        justifyContent: 'space-between',
+        paddingTop: '5%',
+
     },  
+    img: {
+        width: '100%',
+        height: '100%', 
+    },
+
 })
