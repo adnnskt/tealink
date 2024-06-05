@@ -32,6 +32,9 @@ export default props => {
                 </View>
             </View>
             <View style={style.overContent}>
+                <View style ={style.txtBox}>
+
+                </View>
                 <View style={style.imgCover}>
                     <Image
                         style= {style.img}
@@ -70,6 +73,17 @@ const style = StyleSheet.create({
         height: '70%',
         borderWidth: 2,
         borderColor: 'red',
+    },
+    txtBox:{
+       
+        //display: block;
+        width: '90%',
+        height: '40%',
+        backgroundColor: 'red',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 30,
+        borderBottomRightRadius: 60,
+    
     },
     imgCover: {
         width: '90%',
