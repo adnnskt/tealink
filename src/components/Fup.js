@@ -12,6 +12,14 @@ export default props => {
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     
     const backgroundColor = isEnabled ?  '#f4f3f4' : '#c3c9c5'
+
+    const viewNoite = () => {
+
+        
+
+    }
+
+
     return(
     <>
         <View style = {[style.container, {backgroundColor}]}>
