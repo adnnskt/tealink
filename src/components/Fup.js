@@ -71,18 +71,20 @@ const style = StyleSheet.create({
     overContent: {
         width: '100%',
         height: '70%',
-        borderWidth: 2,
-        borderColor: 'red',
+        //borderWidth: 2,
+        //borderColor: 'red',
     },
     txtBox:{
        
         //display: block;
         width: '90%',
-        height: '40%',
+        height: '50%',
         backgroundColor: 'red',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 30,
         borderBottomRightRadius: 60,
+        elevation: 5,
+        backgroundColor: '#f4f3f4',
     
     },
     imgCover: {
