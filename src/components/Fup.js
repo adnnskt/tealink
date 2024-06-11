@@ -15,9 +15,47 @@ export default props => {
 
     const viewNoite = () => {
 
-        
+        return (
+            <>
+                <View style={style.overContent}>
+                    <View style ={style.txtBox}>
 
+                    </View>
+                    <View style={style.imgCover}>
+                        <Image
+                            style= {style.img}
+                            source= {meninoDormindo}
+                            resizeMode='cover'
+                            >
+                        </Image>
+                    </View>
+                </View>
+            </>
+        )
     }
+
+
+    const viewDia = () => {
+
+        return (
+            <>
+                <View style={style.overContent}>
+                    <View style ={style.txtBox}>
+
+                    </View>
+                    <View style={style.imgCover}>
+                        <Image
+                            style= {style.img}
+                            source= {menino}
+                            resizeMode='cover'
+                            >
+                        </Image>
+                    </View>
+                </View>
+            </>
+        )
+    }
+    
 
 
     return(
@@ -39,20 +77,7 @@ export default props => {
                     <FontAwesome name="sun-o" size={54} color="yellow" />
                 </View>
             </View>
-            <View style={style.overContent}>
-                <View style ={style.txtBox}>
-
-                </View>
-                <View style={style.imgCover}>
-                    <Image
-                        style= {style.img}
-                        source= {menino}
-                        resizeMode='cover'
-                        >
-                    </Image>
-                </View>
-            </View>
-
+            {isEnabled ? viewDia() : viewNoite()}
         </View>         
     
     </>
@@ -72,8 +97,8 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        borderWidth: 2,
-        borderColor: 'red',
+        //borderWidth: 2,
+        //borderColor: 'red',
 
     },
     overContent: {
