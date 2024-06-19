@@ -40,7 +40,7 @@ export default props => {
         return (
             <>
                 <View style={style.overContent}>
-                    <View style ={style.txtBox}>
+                    <View style ={style.txtBoxDia}>
 
                     </View>
                     <View style={style.imgCover}>
@@ -55,6 +55,7 @@ export default props => {
             </>
         )
     }
+
     
 
 
@@ -109,12 +110,23 @@ const style = StyleSheet.create({
         //borderWidth: 2,
         //borderColor: 'red',
     },
+    txtBoxDia:{
+       
+        //display: block;
+        width: '90%',
+        height: '55%',
+        borderTopLeftRadius: 20,
+        //borderTopRightRadius: 30,
+        borderBottomRightRadius: 60,
+        elevation: 5,
+        backgroundColor: '#c3c9c5',
+    
+    },
     txtBox:{
        
         //display: block;
         width: '90%',
         height: '55%',
-        backgroundColor: 'red',
         borderTopLeftRadius: 20,
         //borderTopRightRadius: 30,
         borderBottomRightRadius: 60,
