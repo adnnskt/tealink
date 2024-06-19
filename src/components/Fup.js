@@ -93,7 +93,7 @@ const style = StyleSheet.create({
     },
     overSwitch: {
         width: '100%',
-        height: '15%',
+        height: '10%',
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
@@ -104,6 +104,8 @@ const style = StyleSheet.create({
     overContent: {
         width: '100%',
         height: '70%',
+        //paddingLeft: '2%',
+        alignItems: 'center',
         //borderWidth: 2,
         //borderColor: 'red',
     },
@@ -111,24 +113,24 @@ const style = StyleSheet.create({
        
         //display: block;
         width: '90%',
-        height: '50%',
+        height: '55%',
         backgroundColor: 'red',
         borderTopLeftRadius: 20,
-        borderTopRightRadius: 30,
+        //borderTopRightRadius: 30,
         borderBottomRightRadius: 60,
         elevation: 5,
         backgroundColor: '#f4f3f4',
     
     },
     imgCover: {
-        width: '90%',
-        height: '45%', 
+        width: '100%',
+        height: '50%', 
         justifyContent: 'space-between',
         paddingTop: '5%',
 
     },  
     img: {
-        width: '100%',
+        width: '98%',
         height: '100%', 
     },
 
