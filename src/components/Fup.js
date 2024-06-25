@@ -13,7 +13,11 @@ export default props => {
     
     const backgroundColor = isEnabled ?  '#f4f3f4' : '#c3c9c5'
 
-    const txtDia = 'Desfraldar uma criança no espectro autista pode ser desafiador, mas com paciência e estratégias adaptadas, o processo pode ser facilitado. Primeiramente, é importante avaliar se a criança está pronta para o desfralde, observando sinais como ficar seca por longos períodos, mostrar interesse pelo banheiro e ser capaz de seguir instruções simples. Estabelecer uma rotina estruturada é essencial, determinando horários consistentes para ir ao banheiro, como logo após acordar, antes e após as refeições e antes de dormir. Utilizar reforço positivo também pode ser eficaz, recompensando a criança por usar o banheiro com elogios, adesivos ou pequenas recompensas. O uso de suportes visuais, como sequências de imagens que mostrem os passos para usar o banheiro, pode ajudar a criança a entender e seguir o processo. Escolher um penico ou um adaptador de assento confortável é fundamental para que a criança se sinta segura. Demonstrar o uso do banheiro ou mostrar vídeos educativos pode incentivar a criança a imitar o comportamento desejado. A comunicação clara, usando uma linguagem simples e direta, é crucial. Palavras como "xixi" e "cocô" podem ser mais fáceis de entender e lembrar. É importante manter a calma e ser paciente, pois haverá acidentes e retrocessos. Observar padrões de comportamento, como inquietação ou segurar a área genital, pode ajudar a identificar quando a criança precisa ir ao banheiro. Por fim, trabalhar em conjunto com todos os cuidadores envolvidos na vida da criança, como pais, professores e terapeutas, garante que todos estejam alinhados com o plano de desfralde. Cada criança é única e pode responder de maneiras diferentes às estratégias, por isso é importante ajustar as abordagens conforme necessário para atender às necessidades específicas da criança.'
+    const txtDia1 = 'Desfraldar uma criança no espectro autista pode ser desafiador, mas com paciência e estratégias adaptadas, o processo pode ser facilitado. Primeiramente, é importante avaliar se a criança está pronta para o desfralde, observando sinais como ficar seca por longos períodos, mostrar interesse pelo banheiro e ser capaz de seguir instruções simples.'
+    const txtDia2 = 'Estabelecer uma rotina estruturada é essencial, determinando horários consistentes para ir ao banheiro, como logo após acordar, antes e após as refeições e antes de dormir. Utilizar reforço positivo também pode ser eficaz, recompensando a criança por usar o banheiro com elogios, adesivos ou pequenas recompensas.'
+    const txtDia3 = 'O uso de suportes visuais, como sequências de imagens que mostrem os passos para usar o banheiro, pode ajudar a criança a entender e seguir o processo. Escolher um penico ou um adaptador de assento confortável é fundamental para que a criança se sinta segura. Demonstrar o uso do banheiro ou mostrar vídeos educativos pode incentivar a criança a imitar o comportamento desejado.'
+    const txtDia4 = 'A comunicação clara, usando uma linguagem simples e direta, é crucial. Palavras como "xixi" e "cocô" podem ser mais fáceis de entender e lembrar. É importante manter a calma e ser paciente, pois haverá acidentes e retrocessos. Observar padrões de comportamento, como inquietação ou segurar a área genital, pode ajudar a identificar quando a criança precisa ir ao banheiro.'
+    const txtDia5 = 'Por fim, trabalhar em conjunto com todos os cuidadores envolvidos na vida da criança, como pais, professores e terapeutas, garante que todos estejam alinhados com o plano de desfralde. Cada criança é única e pode responder de maneiras diferentes às estratégias, por isso é importante ajustar as abordagens conforme necessário para atender às necessidades específicas da criança.'
 
     const viewNoite = () => {
 
@@ -44,7 +48,12 @@ export default props => {
                 <View style={style.overContent}>
                     <View style ={style.txtBoxDia}>
                         <ScrollView>
-                            <Text>{txtDia}</Text>
+                            <Text style={style.txtDia}>{txtDia1}</Text>
+                            <Text style={style.txtDia}>{txtDia2}</Text>
+                            <Text style={style.txtDia}>{txtDia3}</Text>
+                            <Text style={style.txtDia}>{txtDia4}</Text>
+                            <Text style={style.txtDia}>{txtDia5}</Text>
+
                         </ScrollView>
                     </View>
                     <View style={style.imgCover}>
@@ -108,7 +117,7 @@ const style = StyleSheet.create({
     },
     overContent: {
         width: '100%',
-        height: '70%',
+        height: '85%',
         //paddingLeft: '2%',
         alignItems: 'center',
         //borderWidth: 2,
@@ -117,19 +126,20 @@ const style = StyleSheet.create({
     txtBoxDia:{
        
         //display: block;
-        width: '90%',
+        width: '95%',
         height: '55%',
         borderTopLeftRadius: 20,
         //borderTopRightRadius: 30,
         borderBottomRightRadius: 60,
         elevation: 5,
         backgroundColor: '#c3c9c5',
+        padding: '4%',
     
     },
     txtBox:{
        
         //display: block;
-        width: '90%',
+        width: '95%',
         height: '55%',
         borderTopLeftRadius: 20,
         //borderTopRightRadius: 30,
@@ -137,6 +147,9 @@ const style = StyleSheet.create({
         elevation: 5,
         backgroundColor: '#f4f3f4',
     
+    },
+    txtDia: {
+        paddingTop: '1%',
     },
     imgCover: {
         width: '100%',
