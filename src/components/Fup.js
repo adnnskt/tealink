@@ -19,13 +19,28 @@ export default props => {
     const txtDia4 = 'A comunicação clara, usando uma linguagem simples e direta, é crucial. Palavras como "xixi" e "cocô" podem ser mais fáceis de entender e lembrar. É importante manter a calma e ser paciente, pois haverá acidentes e retrocessos. Observar padrões de comportamento, como inquietação ou segurar a área genital, pode ajudar a identificar quando a criança precisa ir ao banheiro.'
     const txtDia5 = 'Por fim, trabalhar em conjunto com todos os cuidadores envolvidos na vida da criança, como pais, professores e terapeutas, garante que todos estejam alinhados com o plano de desfralde. Cada criança é única e pode responder de maneiras diferentes às estratégias, por isso é importante ajustar as abordagens conforme necessário para atender às necessidades específicas da criança.'
 
+    const txtNoite1 = 'Desfraldar uma criança no espectro autista durante a noite pode exigir uma abordagem cuidadosa e adaptada às necessidades individuais da criança. Primeiramente, é essencial certificar-se de que a criança está pronta para o desfralde noturno. Sinais de prontidão incluem acordar com a fralda seca pela manhã ou durante cochilos diurnos, além de uma compreensão básica sobre o uso do banheiro.'
+    const txtNoite2 = 'Estabelecer uma rotina noturna consistente pode ser muito útil. Limitar a ingestão de líquidos antes de dormir, sem comprometer a hidratação da criança, pode ajudar a reduzir a necessidade de ir ao banheiro durante a noite. Levar a criança ao banheiro como parte da rotina de preparação para a cama também pode ser benéfico. Incentivar uma última ida ao banheiro imediatamente antes de dormir cria um hábito importante.'
+    const txtNoite3 = 'O uso de reforço positivo durante o processo de desfralde noturno é crucial. Recompensas como elogios ou adesivos podem incentivar a criança a se esforçar para ficar seca durante a noite. É importante utilizar suportes visuais, como quadros de recompensas ou gráficos de progresso, para ajudar a criança a entender e monitorar seu progresso.'
+    const txtNoite4 = 'Proteger a cama da criança pode aliviar o estresse em caso de acidentes. Usar protetores de colchão ou capas impermeáveis pode tornar mais fácil lidar com eventuais escapes. Adotar uma abordagem calma e paciente é fundamental, reconhecendo que acidentes fazem parte do processo e são esperados.'
+    const txtNoite5 = 'A comunicação clara e simples com a criança sobre a importância do desfralde noturno é essencial. Explicar de maneira compreensível e sem pressão ajuda a reduzir a ansiedade. Trabalhar em conjunto com todos os cuidadores, incluindo pais, professores e terapeutas, garante consistência na abordagem e suporte.'
+    const txtNoite6 = 'Cada criança no espectro autista é única e pode ter diferentes necessidades e ritmos no processo de desfralde noturno. Ajustar as estratégias conforme necessário, com paciência e compreensão, é essencial para o sucesso do desfralde noturno.'
+
     const viewNoite = () => {
 
         return (
             <>
                 <View style={style.overContent}>
                     <View style ={style.txtBox}>
+                    <ScrollView>
+                            <Text style={style.txtDia}>{txtNoite1}</Text>
+                            <Text style={style.txtDia}>{txtNoite2}</Text>
+                            <Text style={style.txtDia}>{txtNoite3}</Text>
+                            <Text style={style.txtDia}>{txtNoite4}</Text>
+                            <Text style={style.txtDia}>{txtNoite5}</Text>
+                            <Text style={style.txtDia}>{txtNoite6}</Text>
 
+                        </ScrollView>
                     </View>
                     <View style={style.imgCover}>
                         <Image
@@ -146,7 +161,8 @@ const style = StyleSheet.create({
         borderBottomRightRadius: 60,
         elevation: 5,
         backgroundColor: '#f4f3f4',
-    
+        padding: '4%',
+            
     },
     txtDia: {
         paddingTop: '1%',
