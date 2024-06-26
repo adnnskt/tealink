@@ -13,6 +13,7 @@ export default props => {
     
     const backgroundColor = isEnabled ?  '#f4f3f4' : '#c3c9c5'
 
+    
     const txtDia1 = 'Desfraldar uma criança no espectro autista pode ser desafiador, mas com paciência e estratégias adaptadas, o processo pode ser facilitado. Primeiramente, é importante avaliar se a criança está pronta para o desfralde, observando sinais como ficar seca por longos períodos, mostrar interesse pelo banheiro e ser capaz de seguir instruções simples.'
     const txtDia2 = 'Estabelecer uma rotina estruturada é essencial, determinando horários consistentes para ir ao banheiro, como logo após acordar, antes e após as refeições e antes de dormir. Utilizar reforço positivo também pode ser eficaz, recompensando a criança por usar o banheiro com elogios, adesivos ou pequenas recompensas.'
     const txtDia3 = 'O uso de suportes visuais, como sequências de imagens que mostrem os passos para usar o banheiro, pode ajudar a criança a entender e seguir o processo. Escolher um penico ou um adaptador de assento confortável é fundamental para que a criança se sinta segura. Demonstrar o uso do banheiro ou mostrar vídeos educativos pode incentivar a criança a imitar o comportamento desejado.'
@@ -162,7 +163,7 @@ const style = StyleSheet.create({
         elevation: 5,
         backgroundColor: '#f4f3f4',
         padding: '4%',
-            
+
     },
     txtDia: {
         paddingTop: '1%',
