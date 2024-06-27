@@ -17,6 +17,7 @@ import Content from './src/views/Content'
 import Hyperfocus from './src/views/Hyperfocus'
 import Introvertido from './src/views/Introvertido'
 import Terapia from './src/views/Terapia'
+import Desfralde from './src/views/Desfralde'
 
 import {decode, encode} from 'base-64'
 if (!global.btoa) {  global.btoa = encode }
@@ -69,6 +70,16 @@ function TerapiaView({route}){
     />
   )
 }
+
+function DesfraldeView({route}){
+  const data = route.params
+  return(
+    <Desfralde 
+      user = {data.user}
+    />
+  )
+}
+
 
 
 function CalendarScreen() {
@@ -153,6 +164,8 @@ function App() {
         <Stack.Screen name="Hiperfoco" component={HyperfocusView} />
         <Stack.Screen name="Introvertido" component={IntrovertidoView} />
         <Stack.Screen name="Terapia" component={TerapiaView} />
+        <Stack.Screen name="Desfralde" component={DesfraldeView} />
+        
         
     </Stack.Navigator>
     </NavigationContainer>
