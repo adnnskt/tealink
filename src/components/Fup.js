@@ -22,9 +22,10 @@ export default props => {
             <View style= {style.ballonsTxt}>
             </View>
 
-            </View>
+            
             <View style= {style.ballonsTxt}>
-
+            </View>
+            
         </View>
         
         </>
@@ -36,9 +37,10 @@ const style = StyleSheet.create({
 
     container: {
         flex: 1,
-        height: '100%',
+        //height: '100%',
         justifyContent: 'space-around',
         backgroundColor: '#bc90f5',
+        alignItems: 'center',
     },
     background: {
         position: 'absolute',
@@ -48,7 +50,7 @@ const style = StyleSheet.create({
         height: '100%',
     }, 
     ballonsTxt: {
-        height: '40%',
+        height: '20%',
         width: '95%',
         borderColor: 'red',
         borderWidth: 2,
