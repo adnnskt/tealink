@@ -24,8 +24,13 @@ export default props => {
 
             
             <View style= {style.ballonsTxt}>
+                <Image
+                    style= {style.img}
+                    source= {item.image}
+                    resizeMode='contain'
+                    >
             </View>
-            
+
         </View>
         
         </>
@@ -50,7 +55,7 @@ const style = StyleSheet.create({
         height: '100%',
     }, 
     ballonsTxt: {
-        height: '20%',
+        height: '40%',
         width: '95%',
         borderColor: 'red',
         borderWidth: 2,
