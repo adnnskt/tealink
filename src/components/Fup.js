@@ -16,7 +16,15 @@ export default props => {
         <LinearGradient
             colors={['rgba(25,0,255,0.15449929971988796)', 'rgba(248,247,255,0)','rgba(251,251,251,0.9136029411764706)']}
             style={style.background}
-        ></LinearGradient>
+
+
+        />
+            <View style= {style.ballonsTxt}>
+            </View>
+
+            </View>
+            <View style= {style.ballonsTxt}>
+
         </View>
         
         </>
@@ -28,6 +36,7 @@ const style = StyleSheet.create({
 
     container: {
         flex: 1,
+        height: '100%',
         justifyContent: 'space-around',
         backgroundColor: '#bc90f5',
     },
@@ -38,6 +47,12 @@ const style = StyleSheet.create({
         top: 0,
         height: '100%',
     }, 
+    ballonsTxt: {
+        height: '40%',
+        width: '95%',
+        borderColor: 'red',
+        borderWidth: 2,
+    },  
     
 
 })
