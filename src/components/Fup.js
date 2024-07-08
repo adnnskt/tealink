@@ -3,8 +3,7 @@ import { Text, Image, View, StyleSheet,  Pressable, ScrollView, Modal, Switch} f
 import { LinearGradient } from 'expo-linear-gradient'
 import { FontAwesome } from '@expo/vector-icons';
 
-const menino = require("../../src/img/meninoBanheiro.jpg") 
-const meninoDormindo = require("../../src/img/meninoDormindo.jpg") 
+const timido = require("../../src/img/timido.jpg") 
 
 
 export default props => {
@@ -23,12 +22,12 @@ export default props => {
             </View>
 
             
-            <View style= {style.ballonsTxt}>
+            <View style= {style.imgCover}>
                 <Image
                     style= {style.img}
-                    source= {item.image}
-                    resizeMode='contain'
-                    >
+                    source= {timido}
+                    resizeMode='cover'
+                    />
             </View>
 
         </View>
@@ -60,6 +59,17 @@ const style = StyleSheet.create({
         borderColor: 'red',
         borderWidth: 2,
     },  
-    
+    imgCover: {
+        height: '40%',
+        width: '100%',
+        levitation: 4,
+        //borderColor: 'red',
+        //borderWidth: 2,
+    },
+
+    img: {
+        width: '100%',
+        height: '100%', 
+      },
 
 })
