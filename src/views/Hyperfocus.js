@@ -1,16 +1,20 @@
-import React  from 'react';
+import React, {useState} from "react";
+import { LinearGradient } from 'expo-linear-gradient'
 import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
 
 const {UIManager} = NativeModules;
 
 UIManager.setLayoutAnimationEnabledExperimental &&
         UIManager.setLayoutAnimationEnabledExperimental(true);
-    
+
+const timido = require("../../src/img/timido.jpg") 
+const lupaIlustra = require("../../src/img/lupaIlustra.jpg") 
+
 
 export default class App extends React.Component {
-
+    
     state = {
-        views: Array(5).fill({ w: '20%', h: '70%' }),
+        views: Array(5).fill({ w: '20%', h: '85%' }),
       };
 
       _onPress = (index) => {
@@ -88,42 +92,87 @@ export default class App extends React.Component {
     } 
     
     render() {
-        return (
-        <>
+        return(
+            <>
             <View style={style.container}>
-                <Text style={style.txtG}>
-                Abaixo algumas ideias que podem ser úteis para auxiliar com o hiperfoco.
-                </Text>
-                <View style={style.containerOptions}>
-                {this.state.views.map((view, index) => (
-                    <View key={index} style={style.boxOptions}>
-                    <View style={[style.box, { width: view.w, height: view.h }]}>
-                        {view.w === '20%' ? null : this.sendText(index)}
-                    </View>
-                    <TouchableOpacity
-                        onPress={() => this._onPress(index)}
-                        style={style.touchButton}
-                    >
-                        <View style={style.button}>
-                        <Text style={style.buttonText}>⬌</Text>
+            <LinearGradient
+                colors={['rgba(25,0,255,0.15449929971988796)', 'rgba(248,247,255,0)','rgba(251,251,251,0.9136029411764706)']}
+                style={style.background}
+
+
+            />
+                <View style= {style.ballonsTxt}>
+                    <View style={style.containerOptions}>
+                    {this.state.views.map((view, index) => (
+                        <View key={index} style={style.boxOptions}>
+                        <View style={[style.box, { width: view.w, height: view.h }]}>
+                            {view.w === '20%' ? null : this.sendText(index)}
                         </View>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => this._onPress(index)}
+                            style={style.touchButton}
+                        >
+                            <View style={style.button}>
+                            <Text style={style.buttonText}>⬌</Text>
+                            </View>
+                        </TouchableOpacity>
+                        </View>
+                    ))}
                     </View>
-                ))}
                 </View>
+       
+                <View style= {style.imgCover}>
+                    <Image
+                        style= {style.img}
+                        source= {lupaIlustra}
+                        resizeMode='cover'
+                        />
+                </View>
+
             </View>
-        </>
-        );
+            
+            </>
+        )
     }
 }
+
 
 const style = StyleSheet.create({
 
     container: {
-        height: '100%',
-        backgroundColor: '#e4e9fb',
+        flex: 1,
+        //height: '100%',
+        justifyContent: 'space-around',
+        backgroundColor: '#bc90f5',
+        alignItems: 'center',
     },
-    txtG: {
+    background: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        height: '100%',
+    }, 
+    ballonsTxt: {
+        height: '60%',
+        width: '100%',
+        //borderColor: 'red',
+        //borderWidth: 2,
+    },  
+    imgCover: {
+        height: '40%',
+        width: '100%',
+        levitation: 4,
+        //borderColor: 'red',
+        //borderWidth: 2,
+    },
+
+    img: {
+        width: '100%',
+        height: '100%', 
+      },
+
+      txtG: {
         //fontFamily: 'aria-busy', 
         paddingLeft: '2%',
         fontSize: 20,
@@ -132,7 +181,7 @@ const style = StyleSheet.create({
     },
     containerOptions: {
         width: '100%', 
-        height: '80%',
+        height: '100%',
         //borderColor: 'red',
         //borderWidth: 2,
     },
@@ -158,7 +207,7 @@ const style = StyleSheet.create({
         color: '#fff',
         fontSize: 10,
         paddingLeft: '7%',
-        paddingTop: '5%',
+        paddingTop: '3%',
       },
 
       txtBold:{
@@ -186,7 +235,6 @@ const style = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 20,
-      },
+      },  
 
 })
-
