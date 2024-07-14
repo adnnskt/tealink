@@ -14,7 +14,7 @@ const lupaIlustra = require("../../src/img/lupaIlustra.jpg")
 export default class App extends React.Component {
     
     state = {
-        views: Array(5).fill({ w: '20%', h: '70%' }),
+        views: Array(5).fill({ w: '20%', h: '85%' }),
       };
 
       _onPress = (index) => {
@@ -156,8 +156,8 @@ const style = StyleSheet.create({
     ballonsTxt: {
         height: '60%',
         width: '100%',
-        borderColor: 'red',
-        borderWidth: 2,
+        //borderColor: 'red',
+        //borderWidth: 2,
     },  
     imgCover: {
         height: '40%',
@@ -181,7 +181,7 @@ const style = StyleSheet.create({
     },
     containerOptions: {
         width: '100%', 
-        height: '80%',
+        height: '100%',
         //borderColor: 'red',
         //borderWidth: 2,
     },
@@ -207,7 +207,7 @@ const style = StyleSheet.create({
         color: '#fff',
         fontSize: 10,
         paddingLeft: '7%',
-        paddingTop: '5%',
+        paddingTop: '3%',
       },
 
       txtBold:{
