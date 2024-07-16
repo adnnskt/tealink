@@ -7,14 +7,18 @@ export default props => {
 
 
 
-
-
     return (
         <>
             <View style={style.container}>
+                    <View style={style.boxSides}>
+                        <View style={style.leftSide}>
 
-            </View>
+                        </View>
+                        <View style={style.rightSide}>
 
+                        </View>
+                    </View>  
+           </View>
         </>
     )
 }
@@ -22,9 +26,33 @@ export default props => {
 const style = StyleSheet.create({
 
     container: {
-        flex: 1,
+        //flex: 1,
         backgroundColor: '#f5cee7',
-        justifyContent: 'space-around',
+        //justifyContent: 'space-around',
+    },
+
+    scroll:{
+        width:'100%',
+        height: '100%',
+
+    },
+    boxSides:{
+        flexDirection: 'row',
+        width: '100%',
+        height: '100%',
+    },
+
+    leftSide: {
+        width:'50%',
+        height: '100%',
+        backgroundColor: 'red',
+
+    },
+    rightSide: {
+        width:'50%',
+        height: '100%',
+        backgroundColor: 'blue',
+
     },
 
 
