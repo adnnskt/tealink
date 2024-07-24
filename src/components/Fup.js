@@ -15,7 +15,7 @@ export default props => {
 
                         </View>
                         <View style={style.rightSide}>
-
+                            <View style={style.rContent}></View>
                         </View>
                     </View>  
            </View>
@@ -52,8 +52,14 @@ const style = StyleSheet.create({
         width:'50%',
         height: '100%',
         backgroundColor: 'blue',
-        paddingTop: '2%',
+        paddingTop: '10%',
+        alignItems: 'center',
       },
-
+    rContent:{
+        width:'95%',
+        height:'20%',
+        backgroundColor:'green',
+       
+    },
 
 })
