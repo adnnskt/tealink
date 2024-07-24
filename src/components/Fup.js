@@ -52,8 +52,8 @@ const style = StyleSheet.create({
         width:'50%',
         height: '100%',
         backgroundColor: 'blue',
-
-    },
+        paddingTop: '2%',
+      },
 
 
 })
