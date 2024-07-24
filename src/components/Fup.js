@@ -12,10 +12,22 @@ export default props => {
             <View style={style.container}>
                     <View style={style.boxSides}>
                         <View style={style.leftSide}>
+                            <View style={style.lContent}></View>
+                            <View style={style.lContent}></View>
+                            <View style={style.lContent}></View>
+                            <View style={style.lContent}></View>
+                            <View style={style.lContent}></View>
+                            
 
                         </View>
                         <View style={style.rightSide}>
                             <View style={style.rContent}></View>
+                            <View style={style.rContent}></View>
+                            <View style={style.rContent}></View>
+                            <View style={style.rContent}></View>
+                            <View style={style.rContent}></View>
+                            
+                            
                         </View>
                     </View>  
            </View>
@@ -46,7 +58,13 @@ const style = StyleSheet.create({
         width:'50%',
         height: '100%',
         backgroundColor: 'red',
-
+        alignItems: 'center',
+        justifyContent:'space-around'
+    },
+    lContent: {
+        width:'95%',
+        height:'15%',
+        backgroundColor:'grey',
     },
     rightSide: {
         width:'50%',
@@ -54,12 +72,13 @@ const style = StyleSheet.create({
         backgroundColor: 'blue',
         paddingTop: '10%',
         alignItems: 'center',
-      },
+        justifyContent:'space-around',
+    },
     rContent:{
         width:'95%',
-        height:'20%',
-        backgroundColor:'green',
-       
+        height:'15%',
+        backgroundColor:'grey',
+
     },
 
 })
