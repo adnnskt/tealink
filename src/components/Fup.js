@@ -59,26 +59,29 @@ const style = StyleSheet.create({
         height: '100%',
         backgroundColor: 'red',
         alignItems: 'center',
-        justifyContent:'space-around'
+        justifyContent:'space-around',
+        
     },
     lContent: {
         width:'95%',
-        height:'15%',
+        height:'8%',
         backgroundColor:'grey',
+        borderRadius: 50,
+
     },
     rightSide: {
         width:'50%',
         height: '100%',
         backgroundColor: 'blue',
-        paddingTop: '10%',
+        paddingTop: '15%',
         alignItems: 'center',
         justifyContent:'space-around',
     },
     rContent:{
         width:'95%',
-        height:'15%',
+        height:'8%',
         backgroundColor:'grey',
-
+        borderRadius: 50,
     },
 
 })
