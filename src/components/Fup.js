@@ -103,12 +103,18 @@ return (
                     
                 </View>
                 <View style={style.rightSide}>
-                    <View style={style.rContent}></View>
-                    <View style={style.rContent}></View>
-                    <View style={style.rContent}></View>
-                    <View style={style.rContent}></View>
-                    <View style={style.rContent}></View>
-                    
+                {jsonList.slice(6,10).map(item => (
+                        <Pressable
+                            key={item.id}
+                            style={style.rContent}
+                            onPress={() => {
+                                setSelectedItem(item);
+                                setModalVisible(true)
+                                }}
+                        >
+                            <Text style={style.txtItem}>{item.name}</Text>
+                        </Pressable>
+                    ))}
                     
                 </View>
             </View>  
@@ -139,31 +145,44 @@ const style = StyleSheet.create({
     leftSide: {
         width:'50%',
         height: '100%',
-        backgroundColor: 'red',
+        backgroundColor: '#f5cee7',
         alignItems: 'center',
         justifyContent:'space-around',
         
     },
     lContent: {
         width:'95%',
-        height:'8%',
+        height:'10%',
         backgroundColor:'grey',
         borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#e8b6fa',
+        elevation: 5,
 
     },
     rightSide: {
         width:'50%',
         height: '100%',
-        backgroundColor: 'blue',
+        backgroundColor: '#f7bee3',
         paddingTop: '15%',
         alignItems: 'center',
         justifyContent:'space-around',
     },
     rContent:{
         width:'95%',
-        height:'8%',
+        height:'10%',
         backgroundColor:'grey',
         borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#eabefa',
+        elevation: 5,
+        
+    },
+    txtItem: {
+        fontSize: 13,
+        padding: '1%',
     },
 
 })
