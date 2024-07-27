@@ -235,10 +235,7 @@ const style = StyleSheet.create({
         backgroundColor: '#eabefa',
         borderRadius: 50,
         elevation: 5,
-    },
-    txtItem: {
-        paddingLeft: '3%',
-    },  
+    }, 
     modalStyle: {
         height: '98%',
         width: '95%',
