@@ -81,7 +81,30 @@ export default props => {
         
     ]
 
+    const InterModal = (props) => {
+        const {text, image} = props
 
+        return(
+        <>
+            <View style= {style.imgCover}>
+                <Image
+                        style= {style.img}
+                        source= {image}
+                        resizeMode='cover'
+                        >
+                </Image>
+                <View style= {style.txtContainer}>
+                    <View style={style.overTxt}>
+                        <ScrollView>
+                            <Text>{text}</Text>
+                        </ScrollView>
+                    </View>
+                </View>
+            </View>    
+        </>
+        )
+
+    }
 
 return (
     <>
@@ -118,6 +141,27 @@ return (
                     
                 </View>
             </View>  
+            <Modal
+                animationType="fade"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                Alert.alert('Modal has been closed.');
+                setModalVisible(!modalVisible);
+                }}>
+                <View style={style.modalContainer}>
+                    <View style={style.modalStyle}>
+                        <InterModal image = {selectedItem.img} text = {selectedItem.txt}/>
+                        <View style={style.overBtnClose}>
+                            <Pressable onPress={() => setModalVisible(!modalVisible)} >
+                                <View style={style.buttonClose}>
+                                    <Text> Fechar </Text>
+                                </View>
+                            </Pressable>
+                        </View>
+                    </View>
+                </View>
+            </Modal> 
         </View>
     </>
   )
@@ -185,4 +229,71 @@ const style = StyleSheet.create({
         padding: '1%',
     },
 
+    listItem: {
+        height: '5%',
+        width: '95%',
+        backgroundColor: '#eabefa',
+        borderRadius: 50,
+        elevation: 5,
+    },
+    txtItem: {
+        paddingLeft: '3%',
+    },  
+    modalStyle: {
+        height: '98%',
+        width: '95%',
+        backgroundColor: '#b4a6f7',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderRadius: 30,
+        elevation: 5,
+    },
+    modalContainer: {
+        flex: 1,
+        paddingTop: '2%',
+        justifyContent: 'center',
+        alignItems: 'center',
+  
+    },
+    txtContainer: {
+        height: '110%',
+        width: '100%',
+        paddingTop: '3%',
+        elevation: 4,
+    },
+    overTxt: {
+        height: '100%',
+        width: '100%',
+        padding: '3%',
+        backgroundColor: '#c8c6f7',
+        borderRadius: 20,
+        elevation: 5,
+        borderWidth: 0.5,
+        borderColor: 'white',
+    },
+    overBtnClose:{
+        paddingBottom: '1%',
+        height: '7%',
+        width: '90%',
+    },
+    buttonClose: {
+        height: '100%',
+        width: '100%',
+        backgroundColor: '#8fb2f7',
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 5,
+        borderRadius: 40,
+    }, 
+    imgCover: {
+        width: '90%',
+        height: '45%', 
+        justifyContent: 'space-between',
+        paddingTop: '5%',
+
+    },  
+    img: {
+        width: '100%',
+        height: '100%', 
+      },
 })
