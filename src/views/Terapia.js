@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { Text, Image, View, StyleSheet,  Pressable, ScrollView, Modal} from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
 const aba = require("../../src/img/aba.jpg") 
 const to = require("../../src/img/TO.jpg") 
 const fala = require("../../src/img/terapiaFala.jpg") 
@@ -13,7 +14,6 @@ const musicoterapia = require("../../src/img/musicoterapia.jpg")
 
 
 export default props => {
-
     const [modalVisible, setModalVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState({img: null, txt: null});
 
@@ -106,22 +106,41 @@ export default props => {
 
     }
 
-    return(
+return (
     <>
-       <View style = {style.container}>
-            {jsonList.map(item => (
-                <Pressable
-                    key={item.id}
-                    style={style.listItem}
-                    onPress={() => {
-                        setSelectedItem(item);
-                        setModalVisible(true)
-                         }}
-                >
-                    <Text style={style.txtItem}>{item.name}</Text>
-                </Pressable>
-                
-            ))}
+        <View style={style.container}>
+            <View style={style.boxSides}>
+                <View style={style.leftSide}>
+                    {jsonList.slice(0,5).map(item => (
+                        <Pressable
+                            key={item.id}
+                            style={style.lContent}
+                            onPress={() => {
+                                setSelectedItem(item);
+                                setModalVisible(true)
+                                }}
+                        >
+                            <Text style={style.txtItem}>{item.name}</Text>
+                        </Pressable>
+                    ))}
+                    
+                </View>
+                <View style={style.rightSide}>
+                {jsonList.slice(6,10).map(item => (
+                        <Pressable
+                            key={item.id}
+                            style={style.rContent}
+                            onPress={() => {
+                                setSelectedItem(item);
+                                setModalVisible(true)
+                                }}
+                        >
+                            <Text style={style.txtItem}>{item.name}</Text>
+                        </Pressable>
+                    ))}
+                    
+                </View>
+            </View>  
             <Modal
                 animationType="fade"
                 transparent={true}
@@ -142,20 +161,72 @@ export default props => {
                         </View>
                     </View>
                 </View>
-            </Modal>            
-       </View>         
-    
+            </Modal> 
+        </View>
     </>
-    )
+  )
 }
-
 
 const style = StyleSheet.create({
 
     container: {
-        flex: 1,
+        //flex: 1,
         backgroundColor: '#f5cee7',
-        justifyContent: 'space-around',
+        //justifyContent: 'space-around',
+    },
+
+    scroll:{
+        width:'100%',
+        height: '100%',
+
+    },
+    boxSides:{
+        flexDirection: 'row',
+        width: '100%',
+        height: '100%',
+    },
+
+    leftSide: {
+        width:'50%',
+        height: '100%',
+        backgroundColor: '#f5cee7',
+        alignItems: 'center',
+        justifyContent:'space-around',
+        
+    },
+    lContent: {
+        width:'95%',
+        height:'10%',
+        backgroundColor:'grey',
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#e8b6fa',
+        elevation: 5,
+
+    },
+    rightSide: {
+        width:'50%',
+        height: '100%',
+        backgroundColor: '#f7bee3',
+        paddingTop: '15%',
+        alignItems: 'center',
+        justifyContent:'space-around',
+    },
+    rContent:{
+        width:'95%',
+        height:'10%',
+        backgroundColor:'grey',
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#eabefa',
+        elevation: 5,
+        
+    },
+    txtItem: {
+        fontSize: 13,
+        padding: '1%',
     },
 
     listItem: {
@@ -164,10 +235,7 @@ const style = StyleSheet.create({
         backgroundColor: '#eabefa',
         borderRadius: 50,
         elevation: 5,
-    },
-    txtItem: {
-        paddingLeft: '3%',
-    },  
+    }, 
     modalStyle: {
         height: '98%',
         width: '95%',
@@ -225,5 +293,4 @@ const style = StyleSheet.create({
         width: '100%',
         height: '100%', 
       },
-
 })
