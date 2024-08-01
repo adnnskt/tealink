@@ -109,59 +109,7 @@ export default props => {
 return (
     <>
         <View style={style.container}>
-            <View style={style.boxSides}>
-                <View style={style.leftSide}>
-                    {jsonList.slice(0,5).map(item => (
-                        <Pressable
-                            key={item.id}
-                            style={style.lContent}
-                            onPress={() => {
-                                setSelectedItem(item);
-                                setModalVisible(true)
-                                }}
-                        >
-                            <Text style={style.txtItem}>{item.name}</Text>
-                        </Pressable>
-                    ))}
-                    
-                </View>
-                <View style={style.rightSide}>
-                {jsonList.slice(6,10).map(item => (
-                        <Pressable
-                            key={item.id}
-                            style={style.rContent}
-                            onPress={() => {
-                                setSelectedItem(item);
-                                setModalVisible(true)
-                                }}
-                        >
-                            <Text style={style.txtItem}>{item.name}</Text>
-                        </Pressable>
-                    ))}
-                    
-                </View>
-            </View>  
-            <Modal
-                animationType="fade"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                Alert.alert('Modal has been closed.');
-                setModalVisible(!modalVisible);
-                }}>
-                <View style={style.modalContainer}>
-                    <View style={style.modalStyle}>
-                        <InterModal image = {selectedItem.img} text = {selectedItem.txt}/>
-                        <View style={style.overBtnClose}>
-                            <Pressable onPress={() => setModalVisible(!modalVisible)} >
-                                <View style={style.buttonClose}>
-                                    <Text> Fechar </Text>
-                                </View>
-                            </Pressable>
-                        </View>
-                    </View>
-                </View>
-            </Modal> 
+            
         </View>
     </>
   )
