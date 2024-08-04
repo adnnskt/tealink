@@ -10,6 +10,9 @@ export default props => {
 return (
     <>
         <View style={style.container}>
+            <View style={style.ballons}>
+
+            </View>
            <View style={style.imgCover}>
                 <Image   
                     style= {style.img}
@@ -28,8 +31,14 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#f5cee7',
-        //justifyContent: 'space-around',
+        justifyContent: 'space-around',
     },
+    ballons: {
+        width: '100%',
+        height: '55%',
+        borderWidth: 2,
+        borderColor: 'red',
+    },      
     imgCover: {
         width: '70%',
         height: '40%',
