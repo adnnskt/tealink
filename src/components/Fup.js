@@ -11,7 +11,9 @@ return (
     <>
         <View style={style.container}>
             <View style={style.ballons}>
+                <View style={style.ballon}>
 
+                </View>
             </View>
            <View style={style.imgCover}>
                 <Image   
@@ -35,10 +37,21 @@ const style = StyleSheet.create({
     },
     ballons: {
         width: '100%',
-        height: '55%',
+        height: '58%',
         borderWidth: 2,
         borderColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
     },      
+    ballon: {
+        width: '85%',
+        height: '55%',
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: 'grey',
+        borderRadius: 40,
+        //padding: '2%',
+    },  
     imgCover: {
         width: '70%',
         height: '40%',
