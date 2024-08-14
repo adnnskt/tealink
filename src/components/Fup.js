@@ -14,7 +14,9 @@ return (
                 <View style={style.ballon}>
 
                 </View>
-                <View style={style.think1}> </View>
+                <View style={style.think1}></View>
+                <View style={style.think2}></View>
+                <View style={style.think3}></View>
             </View>
            <View style={style.imgCover}>
                 <Image   
@@ -65,11 +67,20 @@ const style = StyleSheet.create({
     think2: {
         width: '10%',
         height: '10%',
-        borderRadius: 60,
+        borderRadius: 50,
         backgroundColor: 'white',        
         borderWidth: 1,
         borderColor: 'grey',
-        elevation: 5
+        elevation: 5,
+    },
+    think3: {
+        width: '5%',
+        height: '5%',
+        borderRadius: 50,
+        backgroundColor: 'white',        
+        borderWidth: 1,
+        borderColor: 'grey',
+        elevation: 5,
     },
     imgCover: {
         width: '70%',
