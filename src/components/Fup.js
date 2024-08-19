@@ -16,7 +16,7 @@ return (
                 </View>
                 
                 <View style={style.think1} />
-                <View>
+                <View style={style.overThink2}>
                     <View style={style.think2} />
                 </View>
                 <View>
@@ -69,9 +69,14 @@ const style = StyleSheet.create({
         borderColor: 'grey',
         elevation: 5
     },
-    think2: {
-        width: '10%',
+    overThink2: {
+        width: '100%',
         height: '10%',
+        paddingLeft: '35%',
+    },
+    think2: {
+        width: '15%',
+        height: '100%',
         borderRadius: 50,
         backgroundColor: 'white',        
         borderWidth: 1,
