@@ -14,9 +14,14 @@ return (
                 <View style={style.ballon}>
 
                 </View>
-                <View style={style.think1}></View>
-                <View style={style.think2}></View>
-                <View style={style.think3}></View>
+                
+                <View style={style.think1} />
+                <View>
+                    <View style={style.think2} />
+                </View>
+                <View>
+                    <View style={style.think3} />
+                </View>
             </View>
            <View style={style.imgCover}>
                 <Image   
