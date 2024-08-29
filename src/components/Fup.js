@@ -22,13 +22,13 @@ return (
                         <Text style={style.bold}>Tipos de Medicação</Text>{'\n'}{'\n'}
                         Existem diferentes classes de medicamentos que podem ser usados, dependendo dos sintomas apresentados:{'\n'}{'\n'}
 
-                        Antipsicóticos: Como o risperidona e aripiprazol, são frequentemente usados para tratar irritabilidade e agressividade.{'\n'}{'\n'}
+                        <Text style={style.bold}>Antipsicóticos:</Text> Como o risperidona e aripiprazol, são frequentemente usados para tratar irritabilidade e agressividade.{'\n'}{'\n'}
 
-                        Estimulantes: Como metilfenidato, que pode ser prescrito para sintomas de déficit de atenção e hiperatividade (TDAH) em crianças com TEA.{'\n'}{'\n'}
+                        <Text style={style.bold}>Estimulantes:</Text> Como metilfenidato, que pode ser prescrito para sintomas de déficit de atenção e hiperatividade (TDAH) em crianças com TEA.{'\n'}{'\n'}
 
-                        Inibidores Seletivos da Recaptação de Serotonina (ISRS): Usados para tratar ansiedade, depressão e comportamentos repetitivos.{'\n'}{'\n'}
+                        <Text style={style.bold}>Inibidores Seletivos da Recaptação de Serotonina (ISRS):</Text> Usados para tratar ansiedade, depressão e comportamentos repetitivos.{'\n'}{'\n'}
 
-                        Antiepilépticos: Para pacientes que apresentam crises epilépticas, que são mais comuns em pessoas com TEA.{'\n'}{'\n'}
+                        <Text style={style.bold}>Antiepilépticos:</Text> Para pacientes que apresentam crises epilépticas, que são mais comuns em pessoas com TEA.{'\n'}{'\n'}
 
                         Considerações e Cuidados
                         A decisão de iniciar um tratamento medicamentoso deve ser feita com cautela, levando em consideração os benefícios e os possíveis efeitos colaterais. É essencial que o tratamento seja monitorado por um psiquiatra ou neurologista especializado em TEA, que poderá ajustar a dosagem ou mudar a medicação conforme necessário.{'\n'}{'\n'}
@@ -36,6 +36,7 @@ return (
                         Além disso, o uso de medicação deve ser visto como parte de um plano de tratamento mais amplo, que pode incluir terapia comportamental, intervenções educacionais e suporte familiar. A medicação pode ajudar a reduzir os sintomas, mas não substitui a importância de outras formas de tratamento e suporte.{'\n'}{'\n'}
                         </Text>
                     </ScrollView>
+                    
                 </View>
                 
                 <View style={style.think1} />
