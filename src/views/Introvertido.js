@@ -17,13 +17,13 @@ export default props => {
             id: '1',
             image: isolamento,
             txt: 'Isolamento',
-            longTxt: "Ao cuidar de alguém dentro do espectro autista com problemas de isolamento, é fundamental estabelecer uma rotina consistente e previsível, proporcionando um ambiente seguro que reduza a ansiedade. Respeitar os limites individuais, oferecer atividades que correspondam aos interesses da pessoa e explorar formas alternativas de comunicação são abordagens essenciais para promover a interação social e o bem-estar da pessoa autista."
+            longTxt: "Ao cuidar de alguém dentro do espectro autista com problemas de isolamento, é fundamental estabelecer uma rotina consistente e previsível, proporcionando um ambiente seguro que reduza a ansiedade. \n\nRespeitar os limites individuais, oferecer atividades que correspondam aos interesses da pessoa e explorar formas alternativas de comunicação são abordagens essenciais para promover a interação social e o bem-estar da pessoa autista."
         },
         {
             id: '2',
             image: poucosAmigos,
             txt: 'Poucos amigos',
-            longTxt: "Uma dica essencial ao cuidar de alguém no espectro autista com poucos amigos é incentivar a participação em atividades que facilitem a formação de novas amizades, como grupos relacionados aos seus interesses. Apoiar a prática de habilidades sociais, através de jogos de role-playing ou atividades estruturadas, é fundamental para aumentar a confiança e a habilidade da pessoa em interagir com os outros, promovendo assim um maior envolvimento social e a possibilidade de estabelecer novas conexões."
+            longTxt: "Uma dica essencial ao cuidar de alguém no espectro autista com poucos amigos é incentivar a participação em atividades que facilitem a formação de novas amizades, como grupos relacionados aos seus interesses. \n\nApoiar a prática de habilidades sociais, através de jogos de role-playing ou atividades estruturadas, é fundamental para aumentar a confiança e a habilidade da pessoa em interagir com os outros, promovendo assim um maior envolvimento social e a possibilidade de estabelecer novas conexões."
         },
         {
             id: '3',
