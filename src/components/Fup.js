@@ -1,18 +1,33 @@
-import React, {useState} from "react";
-import { LinearGradient } from 'expo-linear-gradient'
-import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Text, Image, View, StyleSheet, ImageBackground, useWindowDimensions, ScrollView, Modal, Pressable, FlatList} from 'react-native'
+import React,  { useCallback }   from "react";
+import {Platform, UIManager, LayoutAnimation, Text, Image, View, StyleSheet, ScrollView} from 'react-native'
+import { useFocusEffect } from '@react-navigation/native'; // Importa o useFocusEffect para animações ao focar na tela
 const doctor = require("../../src/img/doctor.png") 
 
+if (
+    Platform.OS === 'android' &&
+    UIManager.setLayoutAnimationEnabledExperimental
+  ) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+  }
 
 export default props => {
-    const toggleBox = () => {
+
+
+    const Animation = () => {
         LayoutAnimation.configureNext({
-          duration: 500,
+          duration: 200,
           create: {type: 'linear', property: 'opacity'},
           update: {type: 'spring', springDamping: 0.4},
           delete: {type: 'linear', property: 'opacity'},
         })
     };
+
+
+    useFocusEffect(
+        useCallback(() => {
+            Animation(); // Chama a animação toda vez que a tela é focada
+        }, [])
+    );
 
 return (
     <>
