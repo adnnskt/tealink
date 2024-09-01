@@ -5,7 +5,14 @@ const doctor = require("../../src/img/doctor.png")
 
 
 export default props => {
-    
+    const toggleBox = () => {
+        LayoutAnimation.configureNext({
+          duration: 500,
+          create: {type: 'linear', property: 'opacity'},
+          update: {type: 'spring', springDamping: 0.4},
+          delete: {type: 'linear', property: 'opacity'},
+        })
+    };
 
 return (
     <>
@@ -36,7 +43,7 @@ return (
                         Além disso, o uso de medicação deve ser visto como parte de um plano de tratamento mais amplo, que pode incluir terapia comportamental, intervenções educacionais e suporte familiar. A medicação pode ajudar a reduzir os sintomas, mas não substitui a importância de outras formas de tratamento e suporte.{'\n'}{'\n'}
                         </Text>
                     </ScrollView>
-                    
+
                 </View>
                 
                 <View style={style.think1} />
