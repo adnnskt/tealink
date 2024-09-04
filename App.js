@@ -179,6 +179,8 @@ function App() {
         <Stack.Screen name="Introvertido" component={IntrovertidoView} />
         <Stack.Screen name="Terapia" component={TerapiaView} />
         <Stack.Screen name="Desfralde" component={DesfraldeView} />
+        <Stack.Screen name="Medicamento" component={MedicamentoView} />
+        
         
         
     </Stack.Navigator>

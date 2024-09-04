@@ -43,7 +43,7 @@ export default props => {
                     <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Desfralde', {user: data})}>
                         <Card image={desfralde} text='Desfralde'/>
                     </TouchableHighlight>
-                    <TouchableHighlight style= {style.card} onPress = {null}>
+                    <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Medicamento', {user: data})}>
                         <Card image={remedio} text='Medicação'/>
                     </TouchableHighlight>
                 </View>
