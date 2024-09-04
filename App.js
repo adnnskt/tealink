@@ -18,6 +18,8 @@ import Hyperfocus from './src/views/Hyperfocus'
 import Introvertido from './src/views/Introvertido'
 import Terapia from './src/views/Terapia'
 import Desfralde from './src/views/Desfralde'
+import Medicamento from './src/views/Medicamento'
+
 
 import {decode, encode} from 'base-64'
 if (!global.btoa) {  global.btoa = encode }
@@ -61,6 +63,18 @@ function IntrovertidoView({route}){
     />
   )
 }
+
+
+function MedicamentoView({route}){
+  const data = route.params
+  return(
+    <Medicamento 
+      user = {data.user}
+    />
+  )
+}
+
+
 
 function TerapiaView({route}){
   const data = route.params
