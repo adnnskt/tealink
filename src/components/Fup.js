@@ -1,27 +1,49 @@
-import React,  { useCallback }   from "react";
-import {Platform, UIManager, LayoutAnimation, Text, Image, View, StyleSheet, ScrollView} from 'react-native'
-import { useFocusEffect } from '@react-navigation/native'; // Importa o useFocusEffect para animações ao focar na tela
-const doctor = require("../../src/img/doctor.png") 
+import { useState, useEffect } from 'react';
+import { Platform, Text, View, StyleSheet } from 'react-native';
 
+import * as Location from 'expo-location';
 
-export default props => {
+export default function App() {
+  const [location, setLocation] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
 
+  useEffect(() => {
+    (async () => {
+      
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        return;
+      }
 
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+    })();
+  }, []);
 
-return (
-    <>
-        <View style={style.container}>
-            
-        </View>
-    </>
-  )
+  let text = 'Waiting..';
+  if (errorMsg) {
+    text = errorMsg;
+  } else if (location) {
+    text = JSON.stringify(location);
+  }
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.paragraph}>{text}</Text>
+    </View>
+  );
 }
 
-const style = StyleSheet.create({
-
-    container: {
-        flex: 1,
-        backgroundColor: '#f5cee7',
-        justifyContent: 'space-around',
-    }
-})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  paragraph: {
+    fontSize: 18,
+    textAlign: 'center',
+  },
+});
