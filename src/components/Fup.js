@@ -36,6 +36,11 @@ export default function App() {
   );
 }
 
+/*
+  {"coords": {"accuracy": 600,"longitude":-122.083922,"Altitude":0,"heading":0,"latitude":37.4220936}}
+
+*/
+
 //longitude: -122.083922 latitude: 37.4220936
 
 const styles = StyleSheet.create({
