@@ -25,13 +25,14 @@ export default function App() {
   if (errorMsg) {
     text = errorMsg;
   } else if (location) {
-    text = JSON.stringify(location);
+    text = JSON.stringify(location.coords.longitude);
+    textLat = JSON.stringify(location.coords.latitude);
+    
   }
-  console.warn(text);
   
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>{text}</Text>
+      <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
     </View>
   );
 }
