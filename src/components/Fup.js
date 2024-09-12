@@ -27,13 +27,16 @@ export default function App() {
   } else if (location) {
     text = JSON.stringify(location);
   }
-
+  console.warn(text);
+  
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>{text}</Text>
     </View>
   );
 }
+
+//longitude: -122.083922 latitude: 37.4220936
 
 const styles = StyleSheet.create({
   container: {
