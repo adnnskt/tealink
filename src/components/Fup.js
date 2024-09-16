@@ -22,6 +22,7 @@ export default function App() {
   }, []);
 
   let text = 'Waiting..';
+  let textLat = '';
   if (errorMsg) {
     text = errorMsg;
   } else if (location) {
