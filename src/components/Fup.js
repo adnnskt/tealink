@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Platform, Text, View, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Platform, Text, View, FlatList, StyleSheet } from 'react-native';
 import axios from 'axios';
 
 import * as Location from 'expo-location';
@@ -35,7 +35,7 @@ export default function App() {
   const fetchClinics = async (latitude, longitude) => {
     const apiKey = 'AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU';
     const type = 'health'; // Tipo genérico para clínicas de saúde
-    const keyword = 'psicologia, psiquiatria'; // Especializações desejadas
+    const keyword = 'hospital'; // psicologia, psiquiatria Especializações desejadas
   
     const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&type=${type}&keyword=${keyword}&key=${apiKey}`;
   
@@ -48,13 +48,36 @@ export default function App() {
     }
   };
 
+  const ClinicList = () => {
+    const [clinics, setClinics] = useState([]);
+  
+    useEffect(() => {
+      const getClinics = async () => {
+        //const location = await getLocation();
+        const results = await fetchClinics(textLat, text);
+        setClinics(results);
+      };
+  
+      getClinics();
+    }, [])
+    return clinics
+  };
 
+  //let clinicsList = ClinicList()
   // chave googleAPI AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU
+  // <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
+
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
+      
+      <Text>Clínicas Próximas:</Text>
+      <FlatList
+        data={ClinicList()}
+        keyExtractor={(item) => item.place_id}
+        renderItem={({ item }) => <Text>{item.name}</Text>}
+      />
     </View>
-  );
+  )
 }
 
 /*
