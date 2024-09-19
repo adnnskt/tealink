@@ -6,6 +6,7 @@ import * as Location from 'expo-location';
 
 export default function App() {
   const [location, setLocation] = useState(null);
+  const [clinics, setClinics] = useState([]);
   const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
@@ -41,10 +42,9 @@ export default function App() {
   
     try {
       const response = await axios.get(url);
-      return response.data.results;
+      setClinics(response.data.results);
     } catch (error) {
       console.error('Erro ao buscar clínicas:', error);
-      return [];
     }
   };
 
