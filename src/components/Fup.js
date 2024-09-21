@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Platform, Text, View, FlatList, StyleSheet } from 'react-native';
+import { Platform, Text, View, FlatList, StyleSheet, Image } from 'react-native';
 import axios from 'axios';
 
 import * as Location from 'expo-location';
@@ -96,7 +96,7 @@ export default function App() {
       <FlatList
         data={ClinicList()}
         keyExtractor={(item) => item.place_id}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
+        renderItem={renderClinicItem}
       />
     </View>
   )
@@ -105,6 +105,7 @@ export default function App() {
 /*
   {"coords": {"accuracy": 600,"longitude":-122.083922,"Altitude":0,"heading":0,"latitude":37.4220936}}
 
+  ({ item }) => <Text>{item.name}</Text>  
 */
 
 //longitude: -122.083922 latitude: 37.4220936
