@@ -80,7 +80,7 @@ export default function App() {
           <Image
             style={styles.photo}
             source={{
-              uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=MY_API_KEY`,
+              uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU`,
             }}
           />
         )}
@@ -105,7 +105,8 @@ export default function App() {
 /*
   {"coords": {"accuracy": 600,"longitude":-122.083922,"Altitude":0,"heading":0,"latitude":37.4220936}}
 
-  ({ item }) => <Text>{item.name}</Text>  
+  ({ item }) => <Text>{item.name}</Text> 
+   renderClinicItem 
 */
 
 //longitude: -122.083922 latitude: 37.4220936
