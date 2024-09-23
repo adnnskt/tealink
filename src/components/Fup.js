@@ -3,67 +3,57 @@ import { Text, View, FlatList, StyleSheet, Image } from 'react-native';
 import axios from 'axios';
 import * as Location from 'expo-location';
 
+
 export default function App() {
   const [location, setLocation] = useState(null);
+  const [clinics, setClinics] = useState([]);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [loading, setLoading] = useState(true); // Estado de carregamento
+  const [fetchError, setFetchError] = useState(null); // Para capturar o erro ao buscar as clínicas
 
   useEffect(() => {
     (async () => {
-      
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
         setErrorMsg('Permission to access location was denied');
+        setLoading(false); // Finaliza o carregamento em caso de erro
         return;
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      setLocation(location);
+      setLocation(location.coords);
+      setLoading(false); // Finaliza o carregamento após obter a localização
     })();
   }, []);
 
-  let text = 'Waiting..';
-  let textLat = '';
+  useEffect(() => {
+    const fetchClinics = async (latitude, longitude) => {
+      const apiKey = 'AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU'; // Insira sua chave aqui
+      const type = 'health'; // Tipo genérico para clínicas de saúde
+      const keyword = 'psicologia, psiquiatria'; // Especializações desejadas
+
+      const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&type=${type}&keyword=${keyword}&key=${apiKey}`;
+
+      try {
+        const response = await axios.get(url);
+        setClinics(response.data.results);
+      } catch (error) {
+        //setFetchError('Erro ao buscar clínicas. Tente novamente mais tarde.');
+        //console.error('Erro ao buscar clínicas:', error); // Mantenha o erro no console para depuração
+      }
+    };
+
+    if (location) {
+      fetchClinics(location.latitude, location.longitude);
+    }
+  }, [location]);
+
+  let text = 'Carregando...';
   if (errorMsg) {
     text = errorMsg;
-  } else if (location) {
-    text = JSON.stringify(location.coords.longitude);
-    textLat = JSON.stringify(location.coords.latitude);
-    
+  } else if (!location && !loading) {
+    text = 'Localização não disponível';
   }
-
-  const fetchClinics = async (latitude, longitude) => {
-    const apiKey = 'AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU';
-    const type = 'health'; // Tipo genérico para clínicas de saúde
-    const keyword = 'hospital'; // psicologia, psiquiatria Especializações desejadas
-  
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&type=${type}&keyword=${keyword}&key=${apiKey}`;
-  
-    try {
-      const response = await axios.get(url);
-      return response.data.results;
-    } catch (error) {
-      console.error('Erro ao buscar clínicas:', error);
-      return [];
-    }
-  };
-  const ClinicList = () => {
-    const [clinics, setClinics] = useState([]);
-  
-    useEffect(() => {
-      const getClinics = async () => {
-        //const location = await getLocation();
-        const results = await fetchClinics(textLat, text);
-        setClinics(results);
-      };
-  
-      getClinics();
-    }, [])
-    return clinics
-  };
-
-  //let clinicsList = ClinicList()
-  // chave googleAPI AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU
-  // <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
 
   const renderClinicItem = ({ item }) => {
     return (
@@ -87,18 +77,23 @@ export default function App() {
     );
   };
 
-
   return (
     <View style={styles.container}>
-      
-      <Text>Clínicas Próximas:</Text>
-      <FlatList
-        data={ClinicList()}
-        keyExtractor={(item) => item.place_id}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
-      />
+      <Text style={styles.title}>Clínicas Próximas:</Text>
+      {loading ? (
+        <Text style={styles.loadingText}>{text}</Text>
+      ) : fetchError ? ( // Caso ocorra erro ao buscar clínicas
+        <Text style={styles.errorText}>{fetchError}</Text>
+      ) : (
+        <FlatList
+          data={clinics}
+          keyExtractor={(item) => item.place_id}
+          renderItem={renderClinicItem}
+          ListEmptyComponent={<Text style={styles.loadingText}>Nenhuma clínica encontrada.</Text>}
+        />
+      )}
     </View>
-  )
+  );
 }
 
 /*
