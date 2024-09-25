@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, StyleSheet, Image } from 'react-native';
+import { Text, View, FlatList, StyleSheet, Image, Button } from 'react-native';
 import axios from 'axios';
 import * as Location from 'expo-location';
 
@@ -7,6 +7,7 @@ import * as Location from 'expo-location';
 export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [clinics, setClinics] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -47,8 +48,9 @@ export default function App() {
       return [];
     }
   };
+  
   const ClinicList = () => {
-    const [clinics, setClinics] = useState([]);
+    //const [clinics, setClinics] = useState([]);
   
     useEffect(() => {
       const getClinics = async () => {
@@ -96,9 +98,15 @@ export default function App() {
       
       <Text>Clínicas Próximas:</Text>
       <FlatList
-        data={ClinicList()}
+        data={clinics}
         keyExtractor={(item) => item.place_id}
         renderItem={({ item }) => <Text>{item.name}</Text> }
+      />
+      <Button 
+        title='List'
+        style={styles.button} 
+        onPress={() => ClinicList()} 
+      
       />
     </View>
   )
@@ -171,6 +179,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginTop: 10,
   },
+  button:{
+    width:'20%',
+    height:'20%',
+    backgroundColor: 'blue',
+
+
+  }
 });
 
 
