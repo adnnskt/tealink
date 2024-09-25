@@ -39,7 +39,25 @@ export default function App() {
     const keyword = 'hospital'; // psicologia, psiquiatria Especializações desejadas
   
     const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=${type}&keyword=${keyword}&key=${apiKey}`;
-  
+    
+    clinicsData = ''
+    const response = await axios.get(url);
+    clinicsData = response.data.results
+    clinicsData != '' ? setClinics(clinicsData) : setClinics([])
+    
+    console.warn(clinics)
+
+    /*
+    try {
+      const response = await axios.get(url);
+      clinicsData = response.data.results
+      setClinics(clinicsData); // Atualiza o estado clinics com os resultados
+    } catch (error) {
+      console.error('Erro ao buscar clínicas:', error);
+      setClinics([]); // Define clinics como uma lista vazia em caso de erro
+    }
+    */
+    /*
     try {
       const response = await axios.get(url);
       return response.data.results;
@@ -47,8 +65,17 @@ export default function App() {
       console.error('Erro ao buscar clínicas:', error);
       return [];
     }
+    */
   };
   
+  const handleFetchClinics = () => {
+    if (textLat && text) {
+      fetchClinics(textLat, text);
+    } else {
+      console.warn('Localização ainda não obtida.');
+    }
+  };
+
   const ClinicList = () => {
     //const [clinics, setClinics] = useState([]);
   
@@ -66,7 +93,6 @@ export default function App() {
   };
 
 
-
   //let clinicsList = ClinicList()
   // chave googleAPI AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU
   // <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
@@ -76,19 +102,6 @@ export default function App() {
       <View style={styles.card}>
         <Text style={styles.clinicName}>{item.name}</Text>
         <Text style={styles.address}>{item.vicinity}</Text>
-        {item.rating && (
-          <Text style={styles.rating}>
-            {`Avaliação: ${item.rating} (${item.user_ratings_total} avaliações)`}
-          </Text>
-        )}
-        {item.photos && item.photos.length > 0 && (
-          <Image
-            style={styles.photo}
-            source={{
-              uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU`,
-            }}
-          />
-        )}
       </View>
     );
   };
@@ -100,12 +113,12 @@ export default function App() {
       <FlatList
         data={clinics}
         keyExtractor={(item) => item.place_id}
-        renderItem={({ item }) => <Text>{item.name}</Text> }
+        renderItem={renderClinicItem}
       />
       <Button 
         title='List'
         style={styles.button} 
-        onPress={() => ClinicList()} 
+        onPress={handleFetchClinics} 
       
       />
     </View>
