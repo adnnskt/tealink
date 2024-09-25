@@ -56,11 +56,14 @@ export default function App() {
         const results = await fetchClinics(textLat, text);
         setClinics(results);
       };
-  
+      console.warn(clinics)
+
       getClinics();
     }, [])
     return clinics
   };
+
+
 
   //let clinicsList = ClinicList()
   // chave googleAPI AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU
@@ -88,7 +91,6 @@ export default function App() {
     );
   };
 
-
   return (
     <View style={styles.container}>
       
@@ -96,7 +98,7 @@ export default function App() {
       <FlatList
         data={ClinicList()}
         keyExtractor={(item) => item.place_id}
-        renderItem={({ item }) => renderClinicItem}
+        renderItem={({ item }) => <Text>{item.name}</Text> }
       />
     </View>
   )
@@ -109,6 +111,8 @@ export default function App() {
   ({ item }) => <Text>{item.name}</Text> 
    renderClinicItem 
 */
+
+
 
 //longitude: -122.083922 latitude: 37.4220936
 
