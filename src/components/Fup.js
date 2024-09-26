@@ -39,15 +39,7 @@ export default function App() {
     const keyword = 'hospital'; // psicologia, psiquiatria Especializações desejadas
   
     const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=${type}&keyword=${keyword}&key=${apiKey}`;
-    
-    clinicsData = ''
-    const response = await axios.get(url);
-    clinicsData = response.data.results
-    clinicsData != '' ? setClinics(clinicsData) : setClinics([])
-    
-    console.warn(clinics)
-
-    /*
+  
     try {
       const response = await axios.get(url);
       clinicsData = response.data.results
@@ -56,16 +48,7 @@ export default function App() {
       console.error('Erro ao buscar clínicas:', error);
       setClinics([]); // Define clinics como uma lista vazia em caso de erro
     }
-    */
-    /*
-    try {
-      const response = await axios.get(url);
-      return response.data.results;
-    } catch (error) {
-      console.error('Erro ao buscar clínicas:', error);
-      return [];
-    }
-    */
+  
   };
   
   const handleFetchClinics = () => {
