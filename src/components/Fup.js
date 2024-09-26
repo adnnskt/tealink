@@ -85,6 +85,10 @@ export default function App() {
       <View style={styles.card}>
         <Text style={styles.clinicName}>{item.name}</Text>
         <Text style={styles.address}>{item.vicinity}</Text>
+        <Text style={styles.rating}>
+            {`Avaliação: ${item.rating} (${item.user_ratings_total} avaliações)`}
+        </Text>
+        
       </View>
     );
   };
