@@ -57,6 +57,7 @@ export default function App() {
     } else {
       console.warn('Localização ainda não obtida.');
     }
+    console.warn(clinics)
   };
 
   const ClinicList = () => {
@@ -88,6 +89,14 @@ export default function App() {
         <Text style={styles.rating}>
             {`Avaliação: ${item.rating} (${item.user_ratings_total} avaliações)`}
         </Text>
+        <Text style={styles.rating}>
+            {`Telefone: ${item.formatted_phone_number}`}
+        </Text>
+        <Text style={styles.rating}>
+            {`web site: ${item.website}`}
+        </Text>
+      
+
         
       </View>
     );
