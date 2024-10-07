@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList, StyleSheet, Image, Button } from 'react-native';
 import axios from 'axios';
 import * as Location from 'expo-location';
+import { Linking } from 'react-native';
 
 
 export default function App() {
@@ -77,11 +78,18 @@ export default function App() {
   };
 
 
+
   //let clinicsList = ClinicList()
   // chave googleAPI AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU
   // <Text style={styles.paragraph}>long{text} lat{textLat}</Text>
 
   const renderClinicItem = ({ item }) => {
+
+    const openInGoogleMaps = () => {
+      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.name)}&query_place_id=${item.place_id}`;
+      Linking.openURL(googleMapsUrl);
+    };
+
     return (
       <View style={styles.card}>
         <Text style={styles.clinicName}>{item.name}</Text>
@@ -94,6 +102,9 @@ export default function App() {
         </Text>
         <Text style={styles.rating}>
             {`web site: ${item.website}`}
+        </Text>
+        <Text style={styles.link} onPress={openInGoogleMaps}>
+         Mais detalhes
         </Text>
       
 
@@ -194,7 +205,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
 
 
-  }
+  },
+  link: {
+    fontSize: 16,
+    marginTop: 10,
+    color: 'blue',
+    textDecorationLine: 'underline',
+  },
 });
 
 
