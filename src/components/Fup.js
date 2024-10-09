@@ -113,7 +113,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.groupOptions}>
       
+      </View>
       <Text>Clínicas Próximas:</Text>
       <FlatList
         data={clinics}
@@ -147,6 +149,12 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#fff',
+  },
+  groupOptions: {
+    width: '100%',
+    height: '15%',
+    borderWidth: 4,
+    borderColor: 'red',
   },
   title: {
     fontSize: 24,
