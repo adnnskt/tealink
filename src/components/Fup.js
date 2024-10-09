@@ -114,7 +114,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.groupOptions}>
-      
+          <View style={styles.option}>
+            <Text style={styles.textOption}>psiquiatria infantil</Text>
+          </View>
       </View>
       <Text>Clínicas Próximas:</Text>
       <FlatList
@@ -153,8 +155,20 @@ const styles = StyleSheet.create({
   groupOptions: {
     width: '100%',
     height: '15%',
+    padding: '2%',
     borderWidth: 4,
     borderColor: 'red',
+  },
+  option: {
+    height: '45%',
+    width: '40%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    backgroundColor: 'grey',
+  },
+  textOption: {
+    color: 'white',
   },
   title: {
     fontSize: 24,
