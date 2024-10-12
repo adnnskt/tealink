@@ -114,12 +114,33 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.groupOptions}>
-          <View style={styles.option}>
-            <Text style={styles.textOption}>Psiquiatria</Text>
+          <View style={styles.subGroupOptions}>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Psiquiatria</Text>
+            </View>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Neurologia</Text>
+            </View>
           </View>
-          <View style={styles.option}>
-            <Text style={styles.textOption}>Neurologia</Text>
+
+          <View style={styles.subGroupOptions}>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Fisioterapia</Text>
+            </View>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Psicologia</Text>
+            </View>
           </View>
+
+          <View style={styles.subGroupOptions}>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Clinica TEA</Text>
+            </View>
+            <View style={styles.option}>
+              <Text style={styles.textOption}>Psicologia</Text>
+            </View>
+          </View>
+
       </View>
       <Text>Clínicas Próximas:</Text>
       <FlatList
@@ -159,13 +180,21 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '15%',
     justifyContent: 'space-between',
-    padding: '2%',
+    flexDirection: 'row',
+    padding: '1%',
     borderWidth: 4,
     borderColor: 'red',
   },
+  subGroupOptions: {
+    height: '100%',
+    width: '30%',
+    borderWidth: 4,
+    borderColor: 'red',
+    justifyContent: 'space-between',
+  },
   option: {
     height: '45%',
-    width: '40%',
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
