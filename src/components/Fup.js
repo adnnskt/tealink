@@ -115,7 +115,10 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.groupOptions}>
           <View style={styles.option}>
-            <Text style={styles.textOption}>psiquiatria infantil</Text>
+            <Text style={styles.textOption}>Psiquiatria</Text>
+          </View>
+          <View style={styles.option}>
+            <Text style={styles.textOption}>Neurologia</Text>
           </View>
       </View>
       <Text>Clínicas Próximas:</Text>
@@ -155,6 +158,7 @@ const styles = StyleSheet.create({
   groupOptions: {
     width: '100%',
     height: '15%',
+    justifyContent: 'space-between',
     padding: '2%',
     borderWidth: 4,
     borderColor: 'red',
@@ -166,6 +170,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     backgroundColor: 'grey',
+    elevation: 5,
   },
   textOption: {
     color: 'white',
