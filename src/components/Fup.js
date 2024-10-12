@@ -137,7 +137,7 @@ export default function App() {
               <Text style={styles.textOption}>Clinica TEA</Text>
             </View>
             <View style={styles.option}>
-              <Text style={styles.textOption}>Psicologia</Text>
+              <Text style={styles.textOption}>Pediatria</Text>
             </View>
           </View>
 
@@ -182,14 +182,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     padding: '1%',
-    borderWidth: 4,
-    borderColor: 'red',
+    //borderWidth: 4,
+    //borderColor: 'red',
   },
   subGroupOptions: {
     height: '100%',
     width: '30%',
-    borderWidth: 4,
-    borderColor: 'red',
+    //borderWidth: 4,
+    //borderColor: 'red',
     justifyContent: 'space-between',
   },
   option: {
