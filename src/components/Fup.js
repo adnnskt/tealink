@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, StyleSheet, Image, Button } from 'react-native';
+import { Text, View, FlatList, StyleSheet, Image, Button, Pressable } from 'react-native';
 import axios from 'axios';
 import * as Location from 'expo-location';
 import { Linking } from 'react-native';
@@ -9,7 +9,9 @@ export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const [clinics, setClinics] = useState([]);
+  const [selectedOption, setSelectedOption] = useState('');
 
+  
   useEffect(() => {
     (async () => {
       
@@ -110,6 +112,8 @@ export default function App() {
       </View>
     );
   };
+
+  
 
   return (
     <View style={styles.container}>
