@@ -121,30 +121,48 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.groupOptions}>
           <View style={styles.subGroupOptions}>
-            <View style={styles.option}>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Psiquiatria')}
+            >  
               <Text style={styles.textOption}>Psiquiatria</Text>
-            </View>
-            <View style={styles.option}>
+            </Pressable>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Neurologia')}
+            >
               <Text style={styles.textOption}>Neurologia</Text>
-            </View>
+            </Pressable>
           </View>
 
           <View style={styles.subGroupOptions}>
-            <View style={styles.option}>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Fisioterapia')}
+            >
               <Text style={styles.textOption}>Fisioterapia</Text>
-            </View>
-            <View style={styles.option}>
+            </Pressable>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Psicologia')}
+            >
               <Text style={styles.textOption}>Psicologia</Text>
-            </View>
+            </Pressable>
           </View>
 
           <View style={styles.subGroupOptions}>
-            <View style={styles.option}>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Clinica TEA')}
+            >
               <Text style={styles.textOption}>Clinica TEA</Text>
-            </View>
-            <View style={styles.option}>
+            </Pressable>
+            <Pressable 
+              style={styles.option}
+              onPress={() => handleOptionPress('Pediatria')}
+            >
               <Text style={styles.textOption}>Pediatria</Text>
-            </View>
+            </Pressable>
           </View>
 
       </View>
