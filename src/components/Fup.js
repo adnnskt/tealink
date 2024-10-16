@@ -113,7 +113,9 @@ export default function App() {
     );
   };
 
-  
+  const handleOptionPress = (option) => {
+    setSelectedOption(option);
+  };
 
   return (
     <View style={styles.container}>
