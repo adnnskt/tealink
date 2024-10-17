@@ -135,7 +135,13 @@ export default function App() {
               <Text style={styles.textOption}>Psiquiatria</Text>
             </Pressable>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Neurologia')}
             >
               <Text style={styles.textOption}>Neurologia</Text>
@@ -144,13 +150,25 @@ export default function App() {
 
           <View style={styles.subGroupOptions}>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Fisioterapia')}
             >
               <Text style={styles.textOption}>Fisioterapia</Text>
             </Pressable>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Psicologia')}
             >
               <Text style={styles.textOption}>Psicologia</Text>
@@ -159,13 +177,25 @@ export default function App() {
 
           <View style={styles.subGroupOptions}>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Clinica TEA')}
             >
               <Text style={styles.textOption}>Clinica TEA</Text>
             </Pressable>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Pediatria')}
             >
               <Text style={styles.textOption}>Pediatria</Text>
