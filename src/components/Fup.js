@@ -115,6 +115,7 @@ export default function App() {
 
   const handleOptionPress = (option) => {
     setSelectedOption(option);
+    //console.warn(option)
   };
 
   return (
@@ -125,7 +126,8 @@ export default function App() {
               style={ ({pressed}) => [
                 
                 {
-                  backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'grey',
+                  backgroundColor: pressed ? 'red' : 'grey',
+                  transform: [{ scale: pressed ? 0.95 : 1 }],
                 },
                 styles.option]}
               onPress={() => handleOptionPress('Psiquiatria')}
@@ -227,7 +229,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    backgroundColor: 'grey',
+    //backgroundColor: 'grey',
     elevation: 5,
   },
   textOption: {
