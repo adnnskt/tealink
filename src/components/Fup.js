@@ -122,7 +122,12 @@ export default function App() {
       <View style={styles.groupOptions}>
           <View style={styles.subGroupOptions}>
             <Pressable 
-              style={styles.option}
+              style={ ({pressed}) => [
+                
+                {
+                  backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'grey',
+                },
+                styles.option]}
               onPress={() => handleOptionPress('Psiquiatria')}
             >  
               <Text style={styles.textOption}>Psiquiatria</Text>
