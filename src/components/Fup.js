@@ -8,14 +8,9 @@ export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const [clinics, setClinics] = useState([]);
-  const [buttonColors, setButtonColors] = useState({
-    Psiquiatria: 'grey',
-    Neurologia: 'grey',
-    Fisioterapia: 'grey',
-    Psicologia: 'grey',
-    'Clinica TEA': 'grey',
-    Pediatria: 'grey',
-  });
+  const [activeOptions, setActiveOptions] = useState([]); // Estado para armazenar as opções ativas
+
+  const optionsList = ['Psiquiatria', 'Neurologia', 'Fisioterapia', 'Psicologia', 'Clinica TEA', 'Pediatria'];
 
   useEffect(() => {
     (async () => {
@@ -29,9 +24,10 @@ export default function App() {
     })();
   }, []);
 
-  const fetchClinics = async (latitude, longitude) => {
+  const fetchClinics = async (latitude, longitude, keywords) => {
     const apiKey = 'AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU';
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=health&keyword=hospital&key=${apiKey}`;
+    const keywordParam = keywords.join('|'); // Concatena as palavras-chave com "|"
+    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=health&keyword=${keywordParam}&key=${apiKey}`;
 
     try {
       const response = await axios.get(url);
@@ -45,17 +41,22 @@ export default function App() {
   const handleFetchClinics = () => {
     if (location) {
       const { latitude, longitude } = location.coords;
-      fetchClinics(latitude, longitude);
+      if (activeOptions.length > 0) {
+        fetchClinics(latitude, longitude, activeOptions);
+      } else {
+        console.warn('Nenhuma opção selecionada.');
+      }
     } else {
       console.warn('Localização ainda não obtida.');
     }
   };
 
   const handleOptionPress = (option) => {
-    setButtonColors((prevColors) => ({
-      ...prevColors,
-      [option]: prevColors[option] === 'grey' ? 'red' : 'grey',
-    }));
+    setActiveOptions((prevOptions) =>
+      prevOptions.includes(option)
+        ? prevOptions.filter((opt) => opt !== option) // Remove se já estiver selecionado
+        : [...prevOptions, option] // Adiciona se não estiver
+    );
   };
 
   const renderClinicItem = ({ item }) => (
@@ -77,12 +78,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.groupOptions}>
-        {Object.keys(buttonColors).map((option) => (
+        {optionsList.map((option) => (
           <Pressable
             key={option}
             style={({ pressed }) => [
               {
-                backgroundColor: buttonColors[option],
+                backgroundColor: activeOptions.includes(option) ? 'red' : 'grey',
                 transform: [{ scale: pressed ? 0.95 : 1 }],
               },
               styles.option,
