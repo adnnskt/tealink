@@ -10,6 +10,8 @@ export default function App() {
   const [errorMsg, setErrorMsg] = useState(null);
   const [clinics, setClinics] = useState([]);
   const [selectedOption, setSelectedOption] = useState('');
+  const [optionColor, setOptionColor] = useState('grey');
+  
 
   
   useEffect(() => {
@@ -115,6 +117,7 @@ export default function App() {
 
   const handleOptionPress = (option) => {
     setSelectedOption(option);
+
     //console.warn(option)
   };
 
