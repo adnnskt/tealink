@@ -83,7 +83,7 @@ export default function App() {
             key={option}
             style={({ pressed }) => [
               {
-                backgroundColor: activeOptions.includes(option) ? 'red' : 'grey',
+                backgroundColor: activeOptions.includes(option) ? '#282640' : 'grey',
                 transform: [{ scale: pressed ? 0.95 : 1 }],
               },
               styles.option,
