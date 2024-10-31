@@ -10,7 +10,7 @@ export default function App() {
   const [clinics, setClinics] = useState([]);
   const [activeOptions, setActiveOptions] = useState([]); // Estado para armazenar as opções ativas
 
-  const optionsList = ['Psiquiatria', 'Neurologia', 'Fisioterapia', 'Psicologia', 'Clinica TEA', 'Pediatria'];
+  const optionsList = ['Psiquiatria', 'Neurologia', 'Fisioterapia', 'Psicologia', 'Clinica Autismo', 'Pediatria'];
 
   useEffect(() => {
     (async () => {
