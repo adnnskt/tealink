@@ -10,6 +10,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 //import Entypo from '@expo/vector-icons/Entypo';
 import Home from './src/components/Home'
 import Calendar from './src/components/Calendar'
+import Place from './src/components/Place'
 import Registration from './src/components/Registration'
 import Login from './src/components/Login'
 import Fup from './src/components/Fup'
@@ -104,6 +105,14 @@ function CalendarScreen() {
   );
 }
 
+function PlaceScreen() {
+  return (
+    
+    <Place />
+    
+  );
+}
+
 function FupScreen() {
   return (
     
@@ -130,9 +139,11 @@ function MyTabs({route}) {
               iconName = focused ? 'home' : 'home';
             } else if (route.name === 'Calendário') {
               iconName = focused ? 'calendar' : 'calendar';
+            } else if (route.name === 'Clinica') {
+              iconName = focused ? 'map-marker' : 'map-marker';
             } else if (route.name === 'Acompanhamento') {
               iconName = focused ? 'bar-chart' : 'bar-chart';
-            }
+            } 
             
             // You can return any component that you like here!
             return <FontAwesome name={iconName} size={size} color={color} />;
@@ -143,7 +154,10 @@ function MyTabs({route}) {
       >
         <Tab.Screen name="Home" component={HomeScreen} initialParams={{user: data.user}}/>
         <Tab.Screen name="Calendário" component={CalendarScreen} />
+        <Tab.Screen name="Clinica" component={PlaceScreen} />
         <Tab.Screen name="Acompanhamento" component={FupScreen} />
+        
+
       </Tab.Navigator>
   );
 }
