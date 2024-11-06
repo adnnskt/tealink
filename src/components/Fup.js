@@ -5,75 +5,7 @@ import * as Location from 'expo-location';
 import { Linking } from 'react-native';
 
 export default function App() {
-  const [location, setLocation] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
-  const [clinics, setClinics] = useState([]);
-  const [activeOptions, setActiveOptions] = useState([]); // Estado para armazenar as opções ativas
-
-  const optionsList = ['Psiquiatria', 'Neurologia', 'Fisioterapia', 'Psicologia', 'Clinica Autismo', 'Pediatria'];
-
-  useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        setErrorMsg('Permission to access location was denied');
-        return;
-      }
-      let location = await Location.getCurrentPositionAsync({});
-      setLocation(location);
-    })();
-  }, []);
-
-  const fetchClinics = async (latitude, longitude, keywords) => {
-    const apiKey = 'AIzaSyB3p0i5EHtJoTDF2RfHD8Fnov-5uoyEMHU';
-    const keywordParam = keywords.join('|'); // Concatena as palavras-chave com "|"
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=health&keyword=${keywordParam}&key=${apiKey}`;
-
-    try {
-      const response = await axios.get(url);
-      setClinics(response.data.results);
-    } catch (error) {
-      console.error('Erro ao buscar clínicas:', error);
-      setClinics([]);
-    }
-  };
-
-  const handleFetchClinics = () => {
-    if (location) {
-      const { latitude, longitude } = location.coords;
-      if (activeOptions.length > 0) {
-        fetchClinics(latitude, longitude, activeOptions);
-      } else {
-        console.warn('Nenhuma opção selecionada.');
-      }
-    } else {
-      console.warn('Localização ainda não obtida.');
-    }
-  };
-
-  const handleOptionPress = (option) => {
-    setActiveOptions((prevOptions) =>
-      prevOptions.includes(option)
-        ? prevOptions.filter((opt) => opt !== option) // Remove se já estiver selecionado
-        : [...prevOptions, option] // Adiciona se não estiver
-    );
-  };
-
-  const renderClinicItem = ({ item }) => (
-    <View style={styles.card}>
-      <Text style={styles.clinicName}>{item.name}</Text>
-      <Text style={styles.address}>{item.vicinity}</Text>
-      <Text style={styles.rating}>{`Avaliação: ${item.rating} (${item.user_ratings_total} avaliações)`}</Text>
-      <Text style={styles.link} onPress={() => openInGoogleMaps(item)}>
-        Mais detalhes
-      </Text>
-    </View>
-  );
-
-  const openInGoogleMaps = (item) => {
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.name)}&query_place_id=${item.place_id}`;
-    Linking.openURL(url);
-  };
+ 
 
   return (
     <View style={styles.container}>
