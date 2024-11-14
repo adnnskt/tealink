@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList, StyleSheet, Button, Pressable, Image } from 'react-native';
 const logo = require("../../src/img/logo.png") 
+import Card from './Card'
+const backGround = require("../../src/img/background.png") 
+const hiperfoco = require("../../src/img/hiperfoco.png") 
+const crise = require("../../src/img/crise.png") 
+const introvertido = require("../../src/img/introvertido.png") 
+const terapia = require("../../src/img/terapia.png") 
+const desfralde = require("../../src/img/desfralde.png") 
+const remedio = require("../../src/img/remedio.png") 
+const logo = require("../../src/img/logo.png") 
 
 
 export default function App() {
