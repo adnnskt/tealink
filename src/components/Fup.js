@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, StyleSheet, Button, Pressable, Image } from 'react-native';
+import { Text, View, FlatList, StyleSheet, Button, Pressable, Image, ScrollView } from 'react-native';
 const logo = require("../../src/img/logo.png") 
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
@@ -14,6 +14,32 @@ const logo = require("../../src/img/logo.png")
 
 export default function App() {
  
+  let jsonList =  [
+    {
+        id: '1',
+        image: crise,
+        txt: 'Crise',
+    },
+    {
+        id: '2',
+        image: hiperfoco,
+        txt: 'Hiperfoco',
+    },
+]
+
+
+
+  const Item = ({item}) => (
+    <>
+        <View style={[style.item, {width}]}>
+          <View style={style.flex}>
+            <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Crise', {user: data})}>
+                <Card image={crise} text='Crise'/>
+            </TouchableHighlight>
+          </View>
+        </View> 
+    </>
+)
 
   return (
     <View style={styles.container}>
