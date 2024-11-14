@@ -10,7 +10,7 @@ export default props =>{
             <View style={style.card}>
                 <Image
                     source={props.image} 
-                    resizeMode="cover"
+                    resizeMode="contain"
                     style={style.image}>
                 </Image>
                 <Text style={style.text}>{props.text}</Text>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, StyleSheet, Button, Pressable, Image, ScrollView } from 'react-native';
+import { Text, View, FlatList, StyleSheet, useWindowDimensions, Button, Pressable, TouchableHighlight, Image, ScrollView } from 'react-native';
 const logo = require("../../src/img/logo.png") 
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
@@ -9,7 +9,6 @@ const introvertido = require("../../src/img/introvertido.png")
 const terapia = require("../../src/img/terapia.png") 
 const desfralde = require("../../src/img/desfralde.png") 
 const remedio = require("../../src/img/remedio.png") 
-const logo = require("../../src/img/logo.png") 
 
 
 export default function App() {
@@ -27,14 +26,15 @@ export default function App() {
     },
 ]
 
+const {width} = useWindowDimensions()
 
 
   const Item = ({item}) => (
     <>
-        <View style={[style.item, {width}]}>
-          <View style={style.flex}>
-            <TouchableHighlight style= {style.card} onPress = {()=> props.navigation.navigate('Crise', {user: data})}>
-                <Card image={crise} text='Crise'/>
+        <View style={[styles.item, {width}]}>
+          <View style={styles.flex}>
+            <TouchableHighlight styles= {styles.card} onPress = {null /*()=> props.navigation.navigate(item.txt, {user: data})*/}>
+                <Card image={item.image} text={item.txt}/>
             </TouchableHighlight>
           </View>
         </View> 
@@ -52,6 +52,17 @@ export default function App() {
             </Image>
         </View>
       </View>
+      <View style = {styles.listView}>
+                <FlatList
+                    data={jsonList}
+                    renderItem={({item}) => <Item item={item}/>}
+                    keyExtractor={item => item.id}
+                    horizontal
+                    showsHorizontalScrollIndicator
+                    pagingEnabled
+                    bounces={false}
+                />
+        </View>
     </View>
   );
 }
@@ -60,6 +71,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    //height: '100%',
+    //with:'100%',
+    justifyContent: 'space-between',
+    alignItems:'space-between',
     backgroundColor: '#fff',
   },
   logo: {
@@ -85,5 +100,32 @@ const styles = StyleSheet.create({
     height:'80%',
     width: '100%',
   },
+  item: {
+    width:'100%',
+    
+  },
+  flex: {
+    //flexGrow: 1,
+    flexDirection: 'row',
+    height: '100%',
+    width: '100%',
+    justifyContent: "space-around",
+    alignItems: 'center',
+},
+  listView: {
+    height:'30%',
+    width: '95%',
+},
+  card: {
+    //backgroundColor: "#fdf3f3",
+    height: '80%',
+    width: '80%',        
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 10,
+    //boxShadow: '2%', 
+    //shadowColor: 'black',
+},
   
 });
