@@ -33,7 +33,7 @@ const {width} = useWindowDimensions()
     <>
         <View style={[styles.item, {width}]}>
           <View style={styles.flex}>
-            <TouchableHighlight styles= {styles.card} onPress = {null /*()=> props.navigation.navigate(item.txt, {user: data})*/}>
+            <TouchableHighlight style= {styles.card} onPress = {null /*()=> props.navigation.navigate(item.txt, {user: data})*/}>
                 <Card image={item.image} text={item.txt}/>
             </TouchableHighlight>
           </View>
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   card: {
     //backgroundColor: "#fdf3f3",
     height: '80%',
-    width: '80%',        
+    width: '30%',        
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
