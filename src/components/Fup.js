@@ -24,6 +24,16 @@ export default function App() {
         image: hiperfoco,
         txt: 'Hiperfoco',
     },
+    {
+      id: '3',
+      image: introvertido,
+      txt: 'introvertido',
+    },
+    {
+      id: '4',
+      image: terapia,
+      txt: 'terapia',
+    },
 ]
 
 const {width} = useWindowDimensions()
