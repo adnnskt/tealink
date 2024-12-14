@@ -111,15 +111,15 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   item: {
-    width:'100%',
+    width:'30%',
     
   },
   flex: {
     //flexGrow: 1,
     flexDirection: 'row',
     height: '100%',
-    width: '100%',
-    justifyContent: "space-around",
+    width: '30%',
+    justifyContent: "space-between",
     alignItems: 'center',
 },
   listView: {
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   card: {
     //backgroundColor: "#fdf3f3",
     height: '80%',
-    width: '30%',        
+    width: '100%',        
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',

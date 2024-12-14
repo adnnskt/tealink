@@ -4,7 +4,7 @@ import {TouchableOpacity, LayoutAnimation, NativeModules, TouchableHighlight, Te
 const aba = require("../../src/img/aba.jpg") 
 const to = require("../../src/img/TO.jpg") 
 const fala = require("../../src/img/terapiaFala.jpg") 
-const interPrecoce = require("../..Hiperfoco/src/img/intervencaoPrecoce.jpg") 
+const interPrecoce = require("../../src/img/intervencaoPrecoce.jpg") 
 const sensorial = require("../../src/img/sensorial.jpg") 
 const social = require("../../src/img/social.jpg") 
 const denver = require("../../src/img/denver.jpg") 
