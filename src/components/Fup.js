@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: '100%',
     width: '30%',
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: 'center',
 },
   listView: {
