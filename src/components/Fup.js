@@ -62,8 +62,8 @@ const {width} = useWindowDimensions()
             </Image>
         </View>
       </View>
-      <View style = {styles.listView}>
-                <FlatList
+      <View style = {styles.listView}> 
+                <FlatList //adicionar uma list container
                     data={jsonList}
                     renderItem={({item}) => <Item item={item}/>}
                     keyExtractor={item => item.id}
