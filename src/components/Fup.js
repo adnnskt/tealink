@@ -36,12 +36,12 @@ export default function App() {
     },
 ]
 
-const {width} = useWindowDimensions()
+//const {width} = useWindowDimensions()
 
 
   const Item = ({item}) => (
     <>
-        <View style={[styles.item, {width}]}>
+        <View style={styles.item}>
           <View style={styles.flex}>
             <TouchableHighlight style= {styles.card} onPress = {null /*()=> props.navigation.navigate(item.txt, {user: data})*/}>
                 <Card image={item.image} text={item.txt}/>
@@ -63,14 +63,16 @@ const {width} = useWindowDimensions()
         </View>
       </View>
       <View style = {styles.listView}> 
-                <FlatList //adicionar uma list container
+                <FlatList //adicionar uma view list container
                     data={jsonList}
                     renderItem={({item}) => <Item item={item}/>}
                     keyExtractor={item => item.id}
                     horizontal
-                    showsHorizontalScrollIndicator
-                    pagingEnabled
-                    bounces={false}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{ paddingHorizontal: 10 }}
+                    //pagingEnabled
+                    //bounces={false}
+                    //style={styles.list}
                 />
         </View>
     </View>
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   item: {
-    width:'30%',
+    marginHorizontal: 5,
     
   },
   flex: {
@@ -122,14 +124,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: 'center',
 },
+  list: {
+    width: '90%',
+  },
   listView: {
     height:'30%',
     width: '95%',
 },
   card: {
     //backgroundColor: "#fdf3f3",
-    height: '80%',
-    width: '100%',        
+    height: 170,
+    width: 120,        
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',

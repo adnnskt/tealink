@@ -31,6 +31,8 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         elevation: 10,
+        //borderWidth: 5,
+        //borderColor: 'red',
         //boxShadow: '2%', 
         //shadowColor: 'black',
     },
