@@ -27,12 +27,22 @@ export default function App() {
     {
       id: '3',
       image: introvertido,
-      txt: 'introvertido',
+      txt: 'Introvertido',
     },
     {
       id: '4',
       image: terapia,
-      txt: 'terapia',
+      txt: 'Terapia',
+    },
+    {
+      id: '5',
+      image: desfralde,
+      txt: 'Desfralde',
+    },
+    {
+      id: '6',
+      image: remedio,
+      txt: 'Remedio',
     },
 ]
 
