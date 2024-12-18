@@ -68,8 +68,8 @@ export default function App() {
                     renderItem={({item}) => <Item item={item}/>}
                     keyExtractor={item => item.id}
                     horizontal
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{ paddingHorizontal: 10 }}
+                    showsHorizontalScrollIndicator={true}
+                    contentContainerStyle={{ paddingHorizontal: 15 }}
                     //pagingEnabled
                     //bounces={false}
                     //style={styles.list}
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   item: {
-    marginHorizontal: 5,
+    marginHorizontal: 15,
     
   },
   flex: {
