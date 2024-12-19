@@ -85,6 +85,17 @@ export default function App() {
                     //style={styles.list}
                 />
         </View>
+
+        <View style={styles.fupContainer}>
+          <View style={styles.fupViwe}>
+          
+          </View>    
+          <View style={styles.fupViwe}>
+          
+          </View>    
+        
+        </View>
+        
     </View>
   );
 }
@@ -152,5 +163,17 @@ const styles = StyleSheet.create({
     //boxShadow: '2%', 
     //shadowColor: 'black',
 },
-  
+  fupContainer: {
+    height: '40%',
+    width: '95%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fupViwe: {
+    width: '45%',
+    height: '95%',
+    borderWidth: 2,
+    borderColor: 'red'
+  }
 });
