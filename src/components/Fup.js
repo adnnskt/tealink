@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
 },
   fupContainer: {
     height: '40%',
-    width: '95%',
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
