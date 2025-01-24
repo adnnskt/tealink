@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList, StyleSheet, useWindowDimensions, Button, Pressable, TouchableHighlight, Image, ScrollView } from 'react-native';
 const logo = require("../../src/img/logo.png") 
+const charts = require("../../src/img/charts.png") 
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 const hiperfoco = require("../../src/img/hiperfoco.png") 
@@ -88,7 +89,11 @@ export default function App() {
 
         <View style={styles.fupContainer}>
           <View style={styles.fupViwe}>
-            
+            <Image
+              source={charts} 
+              resizeMode= "contain"//"cover"
+              style={styles.image}>    
+            </Image>
           </View>    
           <View style={styles.fupViwe}>
           
