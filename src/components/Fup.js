@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
 
-    borderWidth: 3,
-    borderColor: 'blue',
+    //borderWidth: 3,
+    //borderColor: 'blue',
   },
   image: {
     height:'80%',
