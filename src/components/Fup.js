@@ -88,7 +88,7 @@ export default function App() {
 
         <View style={styles.fupContainer}>
           <View style={styles.fupViwe}>
-          
+            
           </View>    
           <View style={styles.fupViwe}>
           
