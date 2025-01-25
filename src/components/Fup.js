@@ -92,13 +92,13 @@ export default function App() {
             <Image
               source={charts} 
               resizeMode= "contain"//"cover"
-              style={styles.image}>    
+              style={styles.imageChart}>    
             </Image>
 
             <Image
               source={charts} 
               resizeMode= "contain"//"cover"
-              style={styles.image}>    
+              style={styles.imageChart}>    
             </Image>
           </View>    
           <View style={styles.fupViwe}>
@@ -144,6 +144,10 @@ const styles = StyleSheet.create({
     height:'80%',
     width: '100%',
   },
+  imageChart: {
+    height:'80%',
+    width: '98%',
+  },
   item: {
     marginHorizontal: 15,
     
@@ -182,10 +186,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   fupViwe: {
-    width: '45%',
+    width: '48%',
     height: '95%',
-    borderWidth: 2,
-    borderColor: 'red',
+    //borderWidth: 2,
+    //borderColor: 'red',
     alignItems: 'center',
     justifyContent: 'space-around', 
   }
