@@ -94,6 +94,12 @@ export default function App() {
               resizeMode= "contain"//"cover"
               style={styles.image}>    
             </Image>
+
+            <Image
+              source={charts} 
+              resizeMode= "contain"//"cover"
+              style={styles.image}>    
+            </Image>
           </View>    
           <View style={styles.fupViwe}>
           
@@ -179,6 +185,8 @@ const styles = StyleSheet.create({
     width: '45%',
     height: '95%',
     borderWidth: 2,
-    borderColor: 'red'
+    borderColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'space-around', 
   }
 });
