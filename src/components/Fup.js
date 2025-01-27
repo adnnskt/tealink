@@ -188,8 +188,9 @@ const styles = StyleSheet.create({
   fupViwe: {
     width: '48%',
     height: '95%',
-    //borderWidth: 2,
-    //borderColor: 'red',
+    borderRightWidth: 1,
+    padding: '2%',
+    borderRightColor: 'grey',
     alignItems: 'center',
     justifyContent: 'space-around', 
   }
