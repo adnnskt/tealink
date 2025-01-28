@@ -89,17 +89,21 @@ export default function App() {
 
         <View style={styles.fupContainer}>
           <View style={styles.fupViwe}>
-            <Image
-              source={charts} 
-              resizeMode= "contain"//"cover"
-              style={styles.imageChart}>    
-            </Image>
+            <View>
+              <Image
+                source={charts} 
+                resizeMode="contain" // "cover"
+                style={styles.imageChart}>    
+              </Image>
+            </View>
 
-            <Image
-              source={charts} 
-              resizeMode= "contain"//"cover"
-              style={styles.imageChart}>    
-            </Image>
+            <View>
+              <Image
+                source={charts} 
+                resizeMode="contain" // "cover"
+                style={styles.imageChart}>    
+              </Image>
+            </View>
           </View>    
           <View style={styles.fupViwe}>
           
