@@ -89,7 +89,7 @@ export default function App() {
 
         <View style={styles.fupContainer}>
           <View style={styles.fupViwe}>
-            <View>
+            <View style={styles.imgChart}>
               <Image
                 source={charts} 
                 resizeMode="contain" // "cover"
@@ -97,7 +97,7 @@ export default function App() {
               </Image>
             </View>
 
-            <View>
+            <View style={styles.imgChart}>
               <Image
                 source={charts} 
                 resizeMode="contain" // "cover"
@@ -197,5 +197,11 @@ const styles = StyleSheet.create({
     borderRightColor: 'grey',
     alignItems: 'center',
     justifyContent: 'space-around', 
+  },
+  imgChart: {
+    height: '40%',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });
