@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList, StyleSheet, useWindowDimensions, Button, Pressable, TouchableHighlight, Image, ScrollView } from 'react-native';
 const logo = require("../../src/img/logo.png") 
 const charts = require("../../src/img/charts.png") 
+const ConsultaDoctor = require("../../src/img/ConsultaDoctor.png") 
 import Card from './Card'
 const backGround = require("../../src/img/background.png") 
 const hiperfoco = require("../../src/img/hiperfoco.png") 
@@ -106,7 +107,13 @@ export default function App() {
             </View>
           </View>    
           <View style={styles.fupViwe}>
-          
+            <View style={styles.imgConsulta}>
+              <Image
+                source={ConsultaDoctor} 
+                resizeMode="contain" // "cover"
+                style={styles.imageChart}>    
+              </Image>
+            </View>
           </View>    
         
         </View>
@@ -203,5 +210,12 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },  
+  imgConsulta: {
+    height: '100%',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
+    
 });
