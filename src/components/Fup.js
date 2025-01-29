@@ -55,7 +55,7 @@ export default function App() {
     <>
         <View style={styles.item}>
           <View style={styles.flex}>
-            <TouchableHighlight style= {styles.card} onPress = {null /*()=> props.navigation.navigate(item.txt, {user: data})*/}>
+            <TouchableHighlight style= {styles.card} onPress = {()=> props.navigation.navigate(item.txt, {user: data})}>
                 <Card image={item.image} text={item.txt}/>
             </TouchableHighlight>
           </View>
