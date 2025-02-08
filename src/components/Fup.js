@@ -13,7 +13,7 @@ const desfralde = require("../../src/img/desfralde.png")
 const remedio = require("../../src/img/remedio.png") 
 
 
-export default function App() {
+export default props=> {
  
   //const data = props.user
 
