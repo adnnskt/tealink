@@ -15,7 +15,7 @@ const remedio = require("../../src/img/remedio.png")
 
 export default function App() {
  
-  const data = props.user
+  //const data = props.user
 
   let jsonList =  [
     {
