@@ -31,7 +31,7 @@ const analytics = getAnalytics(app);
 */
 
 const firebase = initializeApp(firebaseConfig);
-const auth = initializeAuth(app, {
+const auth = initializeAuth(firebase, {
   persistence: getReactNativePersistence(ReactNativeAsyncStorage)
 });
 const db = getFirestore(firebase);
