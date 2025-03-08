@@ -30,23 +30,6 @@ export default function CadastroEvento() {
         placeholder="Digite o nome do evento"
       />
 
-      <Text style={styles.label}>Data</Text>
-      <TextInput
-        style={styles.input}
-        value={data}
-        onChangeText={setData}
-        placeholder="Digite a data do evento"
-      />
-
-      <Text style={styles.label}>Descrição</Text>
-      <TextInput
-        style={styles.input}
-        value={descricao}
-        onChangeText={setDescricao}
-        placeholder="Digite a descrição do evento"
-        multiline
-      />
-
       <Text style={styles.label}>Tags</Text>
       <View style={styles.tagsContainer}>
         {predefinedTags.map((tag) => (
@@ -62,6 +45,23 @@ export default function CadastroEvento() {
           </TouchableOpacity>
         ))}
       </View>
+
+      <Text style={styles.label}>Data</Text>
+      <TextInput
+        style={styles.input}
+        value={data}
+        onChangeText={setData}
+        placeholder="Digite a data do evento"
+      />
+
+      <Text style={styles.label}>Descrição</Text>
+      <TextInput
+        style={styles.inputDesc}
+        value={descricao}
+        onChangeText={setDescricao}
+        placeholder="Digite a descrição do evento"
+        multiline
+      />
 
       <Button title="Salvar Evento" onPress={handleSalvar} />
     </ScrollView>
@@ -80,6 +80,13 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    marginBottom: 16,
+    paddingHorizontal: 8,
+  },
+  inputDesc: {
+    height: 200,
     borderColor: '#ccc',
     borderWidth: 1,
     marginBottom: 16,
