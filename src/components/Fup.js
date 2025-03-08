@@ -31,7 +31,7 @@ export default function CadastroEvento() {
 
       <Text style={styles.label}>Descrição</Text>
       <TextInput
-        style={styles.input}
+        style={styles.inputDesc}
         value={descricao}
         onChangeText={setDescricao}
         placeholder="Digite a descrição do evento"
@@ -55,6 +55,14 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 30,
+    marginBottom: 16,
+    paddingHorizontal: 8,
+  },
+  inputDesc: {
+    height: 200,
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 30,
