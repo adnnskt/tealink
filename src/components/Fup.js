@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
 export default function CadastroEvento() {
   const [nome, setNome] = useState('');
   const [data, setData] = useState('');
   const [descricao, setDescricao] = useState('');
+  const [tags, setTags] = useState([]);
+  
+  const predefinedTags = ['Crise', 'Choro', 'N1/N2 fora do banheiro', 'Insonia'];
 
   const handleSalvar = () => {
     // Lógica para salvar o evento
-    console.log('Evento salvo:', { nome, data, descricao });
+    console.log('Evento salvo:', { nome, data, descricao, tags });
+  };
+
+  const toggleTag = (tag) => {
+    setTags((prevTags) =>
+      prevTags.includes(tag) ? prevTags.filter((t) => t !== tag) : [...prevTags, tag]
+    );
   };
 
   return (
@@ -31,12 +40,28 @@ export default function CadastroEvento() {
 
       <Text style={styles.label}>Descrição</Text>
       <TextInput
-        style={styles.inputDesc}
+        style={styles.input}
         value={descricao}
         onChangeText={setDescricao}
         placeholder="Digite a descrição do evento"
         multiline
       />
+
+      <Text style={styles.label}>Tags</Text>
+      <View style={styles.tagsContainer}>
+        {predefinedTags.map((tag) => (
+          <TouchableOpacity
+            key={tag}
+            style={[
+              styles.tag,
+              tags.includes(tag) && styles.tagSelected,
+            ]}
+            onPress={() => toggleTag(tag)}
+          >
+            <Text style={styles.tagText}>{tag}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
 
       <Button title="Salvar Evento" onPress={handleSalvar} />
     </ScrollView>
@@ -57,16 +82,26 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: '#ccc',
     borderWidth: 1,
-    borderRadius: 30,
     marginBottom: 16,
     paddingHorizontal: 8,
   },
-  inputDesc: {
-    height: 200,
+  tagsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 16,
+  },
+  tag: {
+    padding: 10,
     borderColor: '#ccc',
     borderWidth: 1,
-    borderRadius: 30,
-    marginBottom: 16,
-    paddingHorizontal: 8,
+    borderRadius: 20,
+    marginRight: 8,
+    marginBottom: 8,
+  },
+  tagSelected: {
+    backgroundColor: '#ddd',
+  },
+  tagText: {
+    fontSize: 14,
   },
 });
