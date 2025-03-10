@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
   },
   tag: {
     padding: 10,
-    borderColor: '#ccc',
+    borderColor: '#fff',
+    backgroundColor: '#a4bceb',
     borderWidth: 1,
     borderRadius: 20,
     marginRight: 8,
