@@ -7,7 +7,7 @@ export default function CadastroEvento() {
   const [descricao, setDescricao] = useState('');
   const [tags, setTags] = useState([]);
   
-  const predefinedTags = ['Crise', 'Choro', 'N1/N2 fora do banheiro', 'Insonia'];
+  const predefinedTags = ['Crise', 'Comportamento', 'Ajuste com medicação', 'Insonia'];
 
   const handleSalvar = () => {
     // Lógica para salvar o evento
