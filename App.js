@@ -86,7 +86,7 @@ function TerapiaView({route}){
   )
 }
 
-function DesfraldeView({route}){user: data
+function DesfraldeView({route}){
   const data = route.params
   return(
     <Desfralde 
@@ -160,8 +160,8 @@ function MyTabs({route}) {
       >
         <Tab.Screen name="Home" component={HomeScreen} initialParams={{user: data.user}}/>
         <Tab.Screen name="Calendário" component={CalendarScreen} />
-        <Tab.Screen name="Clinica" component={PlaceScreen} />
-        <Tab.Screen name="Acompanhamento" component={FupScreen} />
+        <Tab.Screen name="Clinica" component={PlaceScreen} initialParams={{user: data.user}}/>
+        <Tab.Screen name="Acompanhamento" component={FupScreen} initialParams={{user: data.user}}/>
         
 
       </Tab.Navigator>
