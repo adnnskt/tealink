@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
-export default function CadastroEvento() {
+export default function CadastroEvento({user}) {
   const [nome, setNome] = useState('');
   const [data, setData] = useState('');
   const [descricao, setDescricao] = useState('');
   const [tags, setTags] = useState([]);
   
-  const predefinedTags = ['Crise', 'Comportamento', 'Ajuste com medicação', 'Insonia', 'Escolar', 'Outros'];
+  const dataUser = user
+  console.warn(dataUser)
+
+  const predefinedTags = ['Crises', 'Comportamento', 'Ajuste com medicação', 'Insonia', 'Escolar', 'Outros'];
 
   const handleSalvar = () => {
     // Lógica para salvar o evento

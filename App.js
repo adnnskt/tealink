@@ -86,7 +86,7 @@ function TerapiaView({route}){
   )
 }
 
-function DesfraldeView({route}){
+function DesfraldeView({route}){user: data
   const data = route.params
   return(
     <Desfralde 
@@ -105,18 +105,24 @@ function CalendarScreen() {
   );
 }
 
-function PlaceScreen() {
+function PlaceScreen({route}) {
+  const data = route.params
   return (
     
-    <Place />
+    <Place 
+      user = {data.user}
+    />
     
   );
 }
 
-function FupScreen() {
+function FupScreen({route}) {
+  const data = route.params
   return (
     
-    <Fup />
+    <Fup 
+      user = {data.user}
+    />
     
   );
 }
