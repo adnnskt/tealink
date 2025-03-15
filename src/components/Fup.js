@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import {db, collection, addDoc, FieldValue } from '../firebase/config'
+
 
 export default function CadastroEvento({user}) {
   const [nome, setNome] = useState('');
@@ -8,13 +10,25 @@ export default function CadastroEvento({user}) {
   const [tags, setTags] = useState([]);
   
   const dataUser = user
-  console.warn(dataUser)
+  //console.warn(dataUser)
 
   const predefinedTags = ['Crises', 'Comportamento', 'Ajuste com medicação', 'Insonia', 'Escolar', 'Outros'];
 
-  const handleSalvar = () => {
-    // Lógica para salvar o evento
-    console.log('Evento salvo:', { nome, data, descricao, tags });
+  const handleSalvar = async function (){
+    try {
+      const docRef = await addDoc(collection(db, "events"), {
+        nome,
+        data,
+        descricao,
+        tags,
+        userId: dataUser, // Supondo que o objeto user tenha um campo id
+        createdAt: FieldValue.serverTimestamp(),    
+      });
+    
+        console.log('Evento salvo com sucesso!');
+    } catch (error) {
+      console.error('Erro ao salvar o evento: ', error);
+    }
   };
 
   const toggleTag = (tag) => {
