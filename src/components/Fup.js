@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import {db, collection, addDoc, FieldValue } from '../firebase/config'
+import { Text, View, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
+import {db, collection, addDoc } from '../firebase/config'
 
 
 export default function CadastroEvento({user}) {
@@ -8,7 +8,9 @@ export default function CadastroEvento({user}) {
   const [data, setData] = useState('');
   const [descricao, setDescricao] = useState('');
   const [tags, setTags] = useState([]);
-  
+  const [successMessage, setSuccessMessage] = useState('');
+
+
   const dataUser = user
   //console.warn(dataUser)
 
@@ -22,12 +24,21 @@ export default function CadastroEvento({user}) {
         descricao,
         tags,
         userId: dataUser, // Supondo que o objeto user tenha um campo id
-        createdAt: FieldValue.serverTimestamp(),    
+        createdAt: new Date(),   
+ 
       });
+      setSuccessMessage('Evento salvo com sucesso!');
+      // Limpar os campos do formulário
+      setNome('');
+      setData('');
+      setDescricao('');
+      setTags([]);
+      // Exibir um alerta de sucesso
+      Alert.alert('Sucesso', 'Evento salvo com sucesso!');
     
-        console.log('Evento salvo com sucesso!');
     } catch (error) {
       console.error('Erro ao salvar o evento: ', error);
+      Alert.alert('Erro', 'Erro ao salvar o evento.');
     }
   };
 
